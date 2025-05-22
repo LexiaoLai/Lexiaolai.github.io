@@ -32,8 +32,8 @@ author:
   email            : "lai.lexiao@hku.hk" 
 
   # Academic websites
-  academia         : "https://arxiv.org/search/?query=Lai%2C+Lexiao&searchtype=all&source=header"
-  arxiv            : # URL - Update with the correct link to your profile
+  academia         : # URL
+  arxiv            : "https://arxiv.org/search/?query=Lai%2C+Lexiao&searchtype=all&source=header"
   googlescholar    : "https://scholar.google.com/citations?user=pMOxAswAAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "https://orcid.org/my-orcid?orcid=0000-0001-9022-446X"
