@@ -11,26 +11,94 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preprints and Publications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        ol {
+            counter-reset: item;
+            padding-left: 0;
+        }
+        li {
+            display: block;
+            margin-bottom: 15px;
+        }
+        li:before {
+            content: counter(item) ".";
+            counter-increment: item;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .publication {
+            margin-bottom: 5px;
+        }
+        .links {
+            font-size: 0.9em;
+        }
+        .links a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Preprints and Publications</h2>
+    <ol>
+        <li>
+            <div class="publication">(with Junren Chen and Arian Maleki) Phase transitions in phase-only compressed sensing, <em>arXiv preprint</em>, 2025</div>
+            <div class="links">[<a href="https://arxiv.org/abs/2501.11905">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz) Nonsmooth rank-one symmetric matrix factorization landscape, <em>Optimization Letters</em>, 2025</div>
+            <div class="links">[<a href="https://link.springer.com/article/10.1007/s11590-025-02195-4">doi</a>] [<a href="https://arxiv.org/abs/2410.17487">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz and Xiaopeng Li) Proximal random reshuffling under local Lipschitz continuity, <em>arXiv preprint</em>, 2024</div>
+            <div class="links">[<a href="https://arxiv.org/abs/2408.07182">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz) Sufficient conditions for instability of the subgradient method with constant step size, <em>SIAM Journal on Optimization</em>, 2024</div>
+            <div class="links">[<a href="https://epubs.siam.org/doi/abs/10.1137/22M1535723">doi</a>] [<a href="https://arxiv.org/abs/2211.14852">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz and Xiaopeng Li) Convergence of the momentum method for semialgebraic functions with locally Lipschitz gradients, <em>SIAM Journal on Optimization</em>, 2023</div>
+            <div class="links">[<a href="https://epubs.siam.org/doi/10.1137/23M1545720">doi</a>] [<a href="https://arxiv.org/abs/2307.03331">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz) Global stability of first-order methods for coercive tame functions, <em>Mathematical Programming</em>, 2023</div>
+            <div class="links">[<a href="https://link.springer.com/article/10.1007/s10107-023-02020-9">doi</a>] [<a href="https://arxiv.org/abs/2308.00899">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz) Lyapunov stability of the subgradient method with constant step size, <em>Mathematical Programming</em>, 2023</div>
+            <div class="links">[<a href="https://doi.org/10.1007/s10107-023-01936-6">doi</a>] [<a href="https://arxiv.org/abs/2211.14850">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Cédric Josz) Nonsmooth rank-one matrix factorization landscape, <em>Optimization Letters</em>, 2021</div>
+            <div class="links">[<a href="https://doi.org/10.1007/s11590-021-01819-9">doi</a>] [<a href="https://arxiv.org/abs/2211.14848">preprint</a>]</div>
+        </li>
+        <li>
+            <div class="publication">(with Elliot Cartee, Qianli Song, and Alexander Vladimirsky) Time-dependent surveillance-evasion games, <em>58th IEEE Conference on Decision and Control</em>, 2019</div>
+            <div class="links">[<a href="https://eikonal-equation.github.io/TimeDependent_SEG/">website</a>] [<a href="https://ieeexplore-ieee-org.ezproxy.cul.columbia.edu/document/9029329">doi</a>] [<a href="https://arxiv.org/abs/1903.01332">preprint</a>]</div>
+        </li>
+    </ol>
+</body>
 
