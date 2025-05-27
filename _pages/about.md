@@ -8,11 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathematics](https://hkumath.hku.hk/web/index.php) at the University of Hong Kong. My research is in nonconvex optimization, applied semialgebraic geometry, and data science. I received my Ph.D. degree from Columbia University in May 2024.
+I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathematics](https://hkumath.hku.hk/web/index.php) at the University of Hong Kong. My research is in nonconvex optimization, applied semialgebraic geometry, and data science. I received my Ph.D. degree from Columbia University.
 
 [[Curriculum Vitae](/Lai_Lexiao_CV.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=pMOxAswAAAAJ&hl=en)]
 
 **Email:** Lai dot Lexiao at hku dot hk
+
+**Prospective Students:** I am actively looking for a self-motivated Ph.D. student starting in *Fall 2026*, who is interested in the theory of optimization and/or data science. Ideal candidates will have a solid background in mathematics, with proficiency in programming being highly desirable. If you are interested in working with me, please email me your CV and transcripts.
 
 ## Preprints and Publications
 1. (with Junren Chen and Arian Maleki) Phase transitions in phase-only compressed sensing, *arXiv preprint*, 2025 [[preprint](https://arxiv.org/abs/2501.11905)]
