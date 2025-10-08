@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathematics](https://hkumath.hku.hk/web/index.php) at the University of Hong Kong. My research is in nonconvex optimization, applied semialgebraic geometry, and data science. I received my Ph.D. degree from Columbia University.
+I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathematics](https://hkumath.hku.hk/web/index.php) at the University of Hong Kong. My research is in nonconvex optimization, applied semialgebraic geometry, and data science. I received my Ph.D. degree from Columbia University. I am advising PhD students Mingzhi Song and Kaiwei Yang.
 
 [[Curriculum Vitae](/Lai_Lexiao_CV.pdf)] [[Google Scholar](https://scholar.google.com/citations?user=pMOxAswAAAAJ&hl=en)]
 
