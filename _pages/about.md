@@ -17,6 +17,7 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 **Prospective Students:** I am actively looking for a self-motivated Ph.D. student starting in *Fall 2026*, who is interested in the theory of optimization and/or data science. Ideal candidates will have a solid background in mathematics, with proficiency in programming being highly desirable. If you are interested in working with me, please email me your CV and transcripts.
 
 ## Publications
+1. Phase transitions in phase-only compressed sensing (with Junren Chen and Arian Maleki), *IEEE International Symposium on Information Theory (ISIT)*, 2025 [[preprint](https://arxiv.org/abs/2501.11905)] [[proceeding](https://ieeexplore.ieee.org/document/11195421)]
 1. Nonsmooth rank-one symmetric matrix factorization landscape (with Cédric Josz), *Optimization Letters*, 2025 [[journal](https://link.springer.com/article/10.1007/s11590-025-02195-4)] [[preprint](https://arxiv.org/abs/2410.17487)]
 1. Sufficient conditions for instability of the subgradient method with constant step size (with Cédric Josz), *SIAM Journal on Optimization*, 2024 [[journal](https://epubs.siam.org/doi/abs/10.1137/22M1535723)] [[preprint](https://arxiv.org/abs/2211.14852)]
 1. Convergence of the momentum method for semialgebraic functions with locally Lipschitz gradients (with Cédric Josz and Xiaopeng Li), *SIAM Journal on Optimization*, 2023 [[journal](https://epubs.siam.org/doi/10.1137/23M1545720)] [[preprint](https://arxiv.org/abs/2307.03331)]
@@ -27,7 +28,6 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 
 
 ## Preprints
-1. Phase transitions in phase-only compressed sensing (with Junren Chen and Arian Maleki), 2025 [[preprint](https://arxiv.org/abs/2501.11905)]
 1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), 2024  [[preprint](https://arxiv.org/abs/2408.07182)]
 
 <br><br><br><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Gdy9sgTo6hTpkNAjMHFIYVC3ZGv6K11WYiFCowwOQJQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
