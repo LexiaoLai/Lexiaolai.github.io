@@ -16,6 +16,10 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 
 **Prospective Students:** I am actively looking for a self-motivated Ph.D. student starting in *Fall 2026*, who is interested in the theory of optimization and/or data science. Ideal candidates will have a solid background in mathematics, with proficiency in programming being highly desirable. If you are interested in working with me, please email me your CV and transcripts.
 
+## Preprints
+1. On the diameter of subgradient sequences in o-minimal structures (with Mingzhi Song), 2025 [[preprint](https://arxiv.org/abs/2511.06868)]
+1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), 2024  [[preprint](https://arxiv.org/abs/2408.07182)]
+
 ## Publications
 1. Phase transitions in phase-only compressed sensing (with Junren Chen and Arian Maleki), *IEEE International Symposium on Information Theory (ISIT)*, 2025 [[proceeding](https://ieeexplore.ieee.org/document/11195421)] [[preprint](https://arxiv.org/abs/2501.11905)] 
 1. Nonsmooth rank-one symmetric matrix factorization landscape (with Cédric Josz), *Optimization Letters*, 2025 [[journal](https://link.springer.com/article/10.1007/s11590-025-02195-4)] [[preprint](https://arxiv.org/abs/2410.17487)]
@@ -27,7 +31,5 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 1. Time-dependent surveillance-evasion games (with Elliot Cartee, Qianli Song, and Alexander Vladimirsky), *IEEE Conference on Decision and Control (CDC)*, 2019 [[website](https://eikonal-equation.github.io/TimeDependent_SEG/)] [[proceeding](https://ieeexplore-ieee-org.ezproxy.cul.columbia.edu/document/9029329)] [[preprint](https://arxiv.org/abs/1903.01332)]
 
 
-## Preprints
-1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), 2024  [[preprint](https://arxiv.org/abs/2408.07182)]
 
 <br><br><br><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Gdy9sgTo6hTpkNAjMHFIYVC3ZGv6K11WYiFCowwOQJQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
