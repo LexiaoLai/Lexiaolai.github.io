@@ -15,6 +15,7 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 **Email:** Lai dot Lexiao at hku dot hk
 
 ## Preprints
+1. Global convergence of the subgradient method for robust signal recovery (with Zesheng Cai and Tiansheng Li), 2026 [[preprint](https://arxiv.org/abs/2601.10062)]
 1. Non-convex self-concordant functions: Practical algorithms and complexity analysis (with Donald Goldfarb, Tianyi Lin, and Jiayu Zhang), 2025 [[preprint](https://arxiv.org/abs/2511.15019)]
 1. On the diameter of subgradient sequences in o-minimal structures (with Mingzhi Song), 2025 [[preprint](https://arxiv.org/abs/2511.06868)]
 1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), 2024  [[preprint](https://arxiv.org/abs/2408.07182)]
