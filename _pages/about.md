@@ -32,7 +32,3 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 1. Lyapunov stability of the subgradient method with constant step size (with Cédric Josz), *Mathematical Programming*, 2023 [[journal](https://doi.org/10.1007/s10107-023-01936-6)] [[preprint](https://arxiv.org/abs/2211.14850)]
 1. Nonsmooth rank-one matrix factorization landscape (with Cédric Josz), *Optimization Letters*, 2021 [[journal](https://doi.org/10.1007/s11590-021-01819-9)] [[preprint](https://arxiv.org/abs/2211.14848)]
 1. Time-dependent surveillance-evasion games (with Elliot Cartee, Qianli Song, and Alexander Vladimirsky), *IEEE Conference on Decision and Control (CDC)*, 2019 [[website](https://eikonal-equation.github.io/TimeDependent_SEG/)] [[proceeding](https://ieeexplore-ieee-org.ezproxy.cul.columbia.edu/document/9029329)] [[preprint](https://arxiv.org/abs/1903.01332)]
-
-
-
-<br><br><br><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Gdy9sgTo6hTpkNAjMHFIYVC3ZGv6K11WYiFCowwOQJQ&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
