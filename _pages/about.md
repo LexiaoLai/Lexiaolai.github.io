@@ -14,6 +14,9 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 
 **Email:** Lai dot Lexiao at hku dot hk
 
+## Postdoc Opening
+I am recruiting a postdoctoral fellow at HKU Mathematics. The start date is flexible, and the position is open until filled. Interested applicants may send a single PDF containing a CV, 1-2 representative papers, contact information for two referees, and a brief research plan by email.
+
 ## Preprints
 1. Convergence of difference inclusions via a diameter criterion (with Mingzhi Song), 2026 [[preprint](https://arxiv.org/abs/2605.14345)]
 1. Manifold constrained steepest descent (with Kaiwei Yang), 2026 [[preprint](https://arxiv.org/abs/2601.21487)]
