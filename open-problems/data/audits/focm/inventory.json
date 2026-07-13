@@ -1,0 +1,3556 @@
+[
+  {
+    "doi": "10.1007/s10208-023-09603-0",
+    "title": "Subexponential-Time Algorithms for Sparse PCA",
+    "authors": [
+      "Yunzi Ding",
+      "Dmitriy Kunisky",
+      "Alexander S. Wein",
+      "Afonso S. Bandeira"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-01-19",
+    "volume": "24",
+    "issue": "3",
+    "pages": "865-914",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09603-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/1907.11635",
+      "local_text_path": "text/10.1007_s10208-023-09603-0__arxiv_1907.11635.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09605-y",
+    "title": "On the Sample Complexity of Stabilizing Linear Dynamical Systems from Data",
+    "authors": [
+      "Steffen W. R. Werner",
+      "Benjamin Peherstorfer"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-01-23",
+    "volume": "24",
+    "issue": "3",
+    "pages": "955-987",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09605-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2203.00474",
+      "local_text_path": "text/10.1007_s10208-023-09605-y__arxiv_2203.00474.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09606-x",
+    "title": "Optimal Polynomial Meshes Exist on any Multivariate Convex Domain",
+    "authors": [
+      "Feng Dai",
+      "Andriy Prymak"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-01-23",
+    "volume": "24",
+    "issue": "3",
+    "pages": "989-1018",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09606-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.14111",
+      "local_text_path": "text/10.1007_s10208-023-09606-x__arxiv_2205.14111.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09604-z",
+    "title": "A Stirling-Type Formula for the Distribution of the Length of Longest Increasing Subsequences",
+    "authors": [
+      "Folkmar Bornemann"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-01-26",
+    "volume": "24",
+    "issue": "3",
+    "pages": "915-953",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09604-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09604-z",
+      "local_text_path": "text/10.1007_s10208-023-09604-z__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-022-09602-7",
+    "title": "Correction to: Conormal Spaces and Whitney Stratifications",
+    "authors": [
+      "Martin Helmer",
+      "Vidit Nanda"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-02-01",
+    "volume": "24",
+    "issue": "3",
+    "pages": "1077-1084",
+    "doi_url": "https://doi.org/10.1007/s10208-022-09602-7",
+    "record_type": "correction",
+    "screening_eligibility": "excluded_nonresearch",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-022-09602-7",
+      "local_text_path": "text/10.1007_s10208-022-09602-7__springer.txt"
+    },
+    "notes": "Excluded before full-text problem screening: record classified as correction."
+  },
+  {
+    "doi": "10.1007/s10208-023-09615-w",
+    "title": "A New Approach to Handle Curved Meshes in the Hybrid High-Order Method",
+    "authors": [
+      "Liam Yemm"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-04-18",
+    "volume": "24",
+    "issue": "3",
+    "pages": "1049-1076",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09615-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09615-w",
+      "local_text_path": "text/10.1007_s10208-023-09615-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09611-0",
+    "title": "Nodal Auxiliary Space Preconditioning for the Surface de Rham Complex",
+    "authors": [
+      "Yuwen Li"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-04-19",
+    "volume": "24",
+    "issue": "3",
+    "pages": "1019-1048",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09611-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2107.07978",
+      "local_text_path": "text/10.1007_s10208-023-09611-0__arxiv_2107.07978.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09609-8",
+    "title": "Symmetry and Invariant Bases in Finite Element Exterior Calculus",
+    "authors": [
+      "Martin W. Licht"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-04-27",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1185-1224",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09609-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09609-8",
+      "local_text_path": "text/10.1007_s10208-023-09609-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09612-z",
+    "title": "Multi-index Sequential Monte Carlo Ratio Estimators for Bayesian Inverse problems",
+    "authors": [
+      "Ajay Jasra",
+      "Kody J. H. Law",
+      "Neil Walton",
+      "Shangda Yang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-05-08",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1249-1304",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09612-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09612-z",
+      "local_text_path": "text/10.1007_s10208-023-09612-z__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09613-y",
+    "title": "Bias in the Representative Volume Element method: Periodize the Ensemble Instead of Its Realizations",
+    "authors": [
+      "Nicolas Clozeau",
+      "Marc Josien",
+      "Felix Otto",
+      "Qiang Xu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-05-30",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1305-1387",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09613-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09613-y",
+      "local_text_path": "text/10.1007_s10208-023-09613-y__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09614-x",
+    "title": "High-Order Lohner-Type Algorithm for Rigorous Computation of Poincaré Maps in Systems of Delay Differential Equations with Several Delays",
+    "authors": [
+      "Robert Szczelina",
+      "Piotr Zgliczyński"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-06-09",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1389-1454",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09614-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09614-x",
+      "local_text_path": "text/10.1007_s10208-023-09614-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09610-1",
+    "title": "Further $$\\exists {\\mathbb {R}}$$-Complete Problems with PSD Matrix Factorizations",
+    "authors": [
+      "Yaroslav Shitov"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-06-22",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1225-1248",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09610-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "inaccessible",
+    "full_text_route": null,
+    "notes": "Publisher full text was access-restricted; exact-title, DOI, author, arXiv, OpenAlex, Semantic Scholar, and general web searches did not locate a matching manuscript."
+  },
+  {
+    "doi": "10.1007/s10208-023-09607-w",
+    "title": "Proof of the Theory-to-Practice Gap in Deep Learning via Sampling Complexity bounds for Neural Network Approximation Spaces",
+    "authors": [
+      "Philipp Grohs",
+      "Felix Voigtlaender"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-07-12",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1085-1143",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09607-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09607-w",
+      "local_text_path": "text/10.1007_s10208-023-09607-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09617-8",
+    "title": "Symmetric Bases for Finite Element Exterior Calculus Spaces",
+    "authors": [
+      "Yakov Berchenko-Kogan"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-07-25",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1485-1515",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09617-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2112.06065",
+      "local_text_path": "text/10.1007_s10208-023-09617-8__arxiv_2112.06065.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09616-9",
+    "title": "Optimality of Robust Online Learning",
+    "authors": [
+      "Zheng-Chu Guo",
+      "Andreas Christmann",
+      "Lei Shi"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-07-26",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1455-1483",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09616-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2304.10060",
+      "local_text_path": "text/10.1007_s10208-023-09616-9__arxiv_2304.10060.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09608-9",
+    "title": "BGG Sequences with Weak Regularity and Applications",
+    "authors": [
+      "Andreas Čap",
+      "Kaibo Hu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-07-27",
+    "volume": "24",
+    "issue": "4",
+    "pages": "1145-1184",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09608-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09608-9",
+      "local_text_path": "text/10.1007_s10208-023-09608-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09618-7",
+    "title": "Improved Resolution Estimate for the Two-Dimensional Super-Resolution and a New Algorithm for Direction of Arrival Estimation with Uniform Rectangular Array",
+    "authors": [
+      "Ping Liu",
+      "Habib Ammari"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-08-01",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1517-1566",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09618-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09618-7",
+      "local_text_path": "text/10.1007_s10208-023-09618-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09619-6",
+    "title": "Implicitisation and Parameterisation in Polynomial Functors",
+    "authors": [
+      "Andreas Blatter",
+      "Jan Draisma",
+      "Emanuele Ventura"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-08-28",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1567-1593",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09619-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09619-6",
+      "local_text_path": "text/10.1007_s10208-023-09619-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09620-z",
+    "title": "How Much Can One Learn a Partial Differential Equation from Its Solution?",
+    "authors": [
+      "Yuchen He",
+      "Hongkai Zhao",
+      "Yimin Zhong"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1595-1641",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09620-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.04602",
+      "local_text_path": "text/10.1007_s10208-023-09620-z__arxiv_2204.04602.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09622-x",
+    "title": "A New Approach to the Analysis of Parametric Finite Element Approximations to Mean Curvature Flow",
+    "authors": [
+      "Genming Bai",
+      "Buyang Li"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1673-1737",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09622-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "author_manuscript",
+      "url": "https://doi.org/10.1007/s10208-023-09622-x",
+      "local_text_path": "text/10.1007_s10208-023-09622-x__author.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09623-w",
+    "title": "Toward Computational Morse–Floer Homology: Forcing Results for Connecting Orbits by Computing Relative Indices of Critical Points",
+    "authors": [
+      "Jan Bouwe van den Berg",
+      "Marcio Gameiro",
+      "Jean-Philippe Lessard",
+      "Rob Van der Vorst"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1739-1776",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09623-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.09205",
+      "local_text_path": "text/10.1007_s10208-023-09623-w__arxiv_2206.09205.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09624-9",
+    "title": "From Kernel Methods to Neural Networks: A Unifying Variational Formulation",
+    "authors": [
+      "Michael Unser"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1779-1818",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09624-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09624-9",
+      "local_text_path": "text/10.1007_s10208-023-09624-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09627-6",
+    "title": "A Construction of $$C^r$$ Conforming Finite Element Spaces in Any Dimension",
+    "authors": [
+      "Jun Hu",
+      "Ting Lin",
+      "Qingyu Wu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1941-1977",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09627-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2103.14924",
+      "local_text_path": "text/10.1007_s10208-023-09627-6__arxiv_2103.14924.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09628-5",
+    "title": "Convex Analysis on Hadamard Spaces and Scaling Problems",
+    "authors": [
+      "Hiroshi Hirai"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1979-2016",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09628-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2203.03193",
+      "local_text_path": "text/10.1007_s10208-023-09628-5__arxiv_2203.03193.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09629-4",
+    "title": "Approximation of Deterministic Mean Field Games with Control-Affine Dynamics",
+    "authors": [
+      "Justina Gianatti",
+      "Francisco J. Silva"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "6",
+    "pages": "2017-2061",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09629-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.09854",
+      "local_text_path": "text/10.1007_s10208-023-09629-4__arxiv_2212.09854.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09631-w",
+    "title": "Approximation of Generating Function Barcode for Hamiltonian Diffeomorphisms",
+    "authors": [
+      "Pazit Haim-Kislev",
+      "Ofir Karin"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "24",
+    "issue": "6",
+    "pages": "2109-2162",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09631-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.02288",
+      "local_text_path": "text/10.1007_s10208-023-09631-w__arxiv_2204.02288.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09632-9",
+    "title": "Gaussian Beam Ansatz for Finite Difference Wave Equations",
+    "authors": [
+      "Umberto Biccari",
+      "Enrique Zuazua"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-17",
+    "volume": "25",
+    "issue": "1",
+    "pages": "1-54",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09632-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.13976",
+      "local_text_path": "text/10.1007_s10208-023-09632-9__arxiv_2209.13976.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09621-y",
+    "title": "Error Analysis for 2D Stochastic Navier–Stokes Equations in Bounded Domains with Dirichlet Data",
+    "authors": [
+      "Dominic Breit",
+      "Andreas Prohl"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-10-26",
+    "volume": "24",
+    "issue": "5",
+    "pages": "1643-1672",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09621-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09621-y",
+      "local_text_path": "text/10.1007_s10208-023-09621-y__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09633-8",
+    "title": "Communication Lower Bounds for Nested Bilinear Algorithms via Rank Expansion of Kronecker Products",
+    "authors": [
+      "Caleb Ju",
+      "Yifan Zhang",
+      "Edgar Solomonik"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-11-06",
+    "volume": "25",
+    "issue": "1",
+    "pages": "55-101",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09633-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2107.09834",
+      "local_text_path": "text/10.1007_s10208-023-09633-8__arxiv_2107.09834.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09626-7",
+    "title": "Wavenumber-Explicit hp-FEM Analysis for Maxwell’s Equations with Impedance Boundary Conditions",
+    "authors": [
+      "J. M. Melenk",
+      "S. A. Sauter"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-11-14",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1871-1939",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09626-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09626-7",
+      "local_text_path": "text/10.1007_s10208-023-09626-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09630-x",
+    "title": "On the Representation and Learning of Monotone Triangular Transport Maps",
+    "authors": [
+      "Ricardo Baptista",
+      "Youssef Marzouk",
+      "Olivier Zahm"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-11-16",
+    "volume": "24",
+    "issue": "6",
+    "pages": "2063-2108",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09630-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2009.10303",
+      "local_text_path": "text/10.1007_s10208-023-09630-x__arxiv_2009.10303.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09636-5",
+    "title": "Fast Optimistic Gradient Descent Ascent (OGDA) Method in Continuous and Discrete Time",
+    "authors": [
+      "Radu Ioan Boţ",
+      "Ernö Robert Csetnek",
+      "Dang-Khoa Nguyen"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-11-29",
+    "volume": "25",
+    "issue": "1",
+    "pages": "163-222",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09636-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09636-5",
+      "local_text_path": "text/10.1007_s10208-023-09636-5__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09635-6",
+    "title": "Efficient Random Walks on Riemannian Manifolds",
+    "authors": [
+      "Simon Schwarz",
+      "Michael Herrmann",
+      "Anja Sturm",
+      "Max Wardetzky"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-12-01",
+    "volume": "25",
+    "issue": "1",
+    "pages": "145-161",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09635-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09635-6",
+      "local_text_path": "text/10.1007_s10208-023-09635-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09637-4",
+    "title": "Computational Complexity of Decomposing a Symmetric Matrix as a Sum of Positive Semidefinite and Diagonal Matrices",
+    "authors": [
+      "Levent Tunçel",
+      "Stephen A. Vavasis",
+      "Jingye Xu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-12-08",
+    "volume": "25",
+    "issue": "1",
+    "pages": "223-269",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09637-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.05678",
+      "local_text_path": "text/10.1007_s10208-023-09637-4__arxiv_2209.05678.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09634-7",
+    "title": "Extremal Points and Sparse Optimization for Generalized Kantorovich–Rubinstein Norms",
+    "authors": [
+      "Marcello Carioni",
+      "José A. Iglesias",
+      "Daniel Walter"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2023-12-11",
+    "volume": "25",
+    "issue": "1",
+    "pages": "103-144",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09634-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.09167",
+      "local_text_path": "text/10.1007_s10208-023-09634-7__arxiv_2209.09167.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09638-3",
+    "title": "Exotic B-Series and S-Series: Algebraic Structures and Order Conditions for Invariant Measure Sampling",
+    "authors": [
+      "Eugen Bronasco"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-01-19",
+    "volume": "25",
+    "issue": "1",
+    "pages": "271-301",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09638-3",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09638-3",
+      "local_text_path": "text/10.1007_s10208-023-09638-3__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09640-3",
+    "title": "Phaseless Sampling on Square-Root Lattices",
+    "authors": [
+      "Philipp Grohs",
+      "Lukas Liehr"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-08",
+    "volume": "25",
+    "issue": "2",
+    "pages": "351-374",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09640-3",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09640-3",
+      "local_text_path": "text/10.1007_s10208-024-09640-3__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09641-2",
+    "title": "Low-Dimensional Invariant Embeddings for Universal Geometric Learning",
+    "authors": [
+      "Nadav Dym",
+      "Steven J. Gortler"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-08",
+    "volume": "25",
+    "issue": "2",
+    "pages": "375-415",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09641-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09641-2",
+      "local_text_path": "text/10.1007_s10208-024-09641-2__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09644-z",
+    "title": "Analysis of a Modified Regularity-Preserving Euler Scheme for Parabolic Semilinear SPDEs: Total Variation Error Bounds for the Numerical Approximation of the Invariant Distribution",
+    "authors": [
+      "Charles-Edouard Bréhier"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-08",
+    "volume": "25",
+    "issue": "2",
+    "pages": "511-586",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09644-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "inaccessible",
+    "full_text_route": null,
+    "notes": "Publisher full text was access-restricted; exact-title, DOI, author, arXiv, OpenAlex, Semantic Scholar, and general web searches did not locate a matching manuscript."
+  },
+  {
+    "doi": "10.1007/s10208-024-09639-w",
+    "title": "Strong Norm Error Bounds for Quasilinear Wave Equations Under Weak CFL-Type Conditions",
+    "authors": [
+      "Benjamin Dörich"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-13",
+    "volume": "25",
+    "issue": "1",
+    "pages": "303-350",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09639-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09639-w",
+      "local_text_path": "text/10.1007_s10208-024-09639-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09643-0",
+    "title": "On the Existence of Monge Maps for the Gromov–Wasserstein Problem",
+    "authors": [
+      "Théo Dumont",
+      "Théo Lacombe",
+      "François-Xavier Vialard"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-15",
+    "volume": "25",
+    "issue": "2",
+    "pages": "463-510",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09643-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2210.11945",
+      "local_text_path": "text/10.1007_s10208-024-09643-0__arxiv_2210.11945.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09645-y",
+    "title": "Discrete Pseudo-differential Operators and Applications to Numerical Schemes",
+    "authors": [
+      "Erwan Faou",
+      "Benoît Grébert"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-15",
+    "volume": "25",
+    "issue": "2",
+    "pages": "587-630",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09645-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2109.15186",
+      "local_text_path": "text/10.1007_s10208-024-09645-y__arxiv_2109.15186.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09647-w",
+    "title": "Stable Spectral Methods for Time-Dependent Problems and the Preservation of Structure",
+    "authors": [
+      "Arieh Iserles"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-15",
+    "volume": "25",
+    "issue": "2",
+    "pages": "683-723",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09647-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09647-w",
+      "local_text_path": "text/10.1007_s10208-024-09647-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09646-x",
+    "title": "Polynomial Factorization Over Henselian Fields",
+    "authors": [
+      "Maria Alberich-Carramiñana",
+      "Jordi Guàrdia",
+      "Enric Nart",
+      "Adrien Poteaux",
+      "Joaquim Roé",
+      "Martin Weimann"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-02-21",
+    "volume": "25",
+    "issue": "2",
+    "pages": "631-681",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09646-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2207.02139",
+      "local_text_path": "text/10.1007_s10208-024-09646-x__arxiv_2207.02139.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09642-1",
+    "title": "Discrete Helmholtz Decompositions of Piecewise Constant and Piecewise Affine Vector and Tensor Fields",
+    "authors": [
+      "Philipp Bringmann",
+      "Jonas W. Ketteler",
+      "Mira Schedensack"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-03-01",
+    "volume": "25",
+    "issue": "2",
+    "pages": "417-461",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09642-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09642-1",
+      "local_text_path": "text/10.1007_s10208-024-09642-1__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09649-8",
+    "title": "Sparse Spectral Methods for Solving High-Dimensional and Multiscale Elliptic PDEs",
+    "authors": [
+      "Craig Gross",
+      "Mark Iwen"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-04-02",
+    "volume": "25",
+    "issue": "3",
+    "pages": "765-811",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09649-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2302.00752",
+      "local_text_path": "text/10.1007_s10208-024-09649-8__arxiv_2302.00752.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09651-0",
+    "title": "Sum-of-Squares Relaxations for Information Theory and Variational Inference",
+    "authors": [
+      "Francis Bach"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-04-05",
+    "volume": "25",
+    "issue": "3",
+    "pages": "865-903",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09651-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.13285",
+      "local_text_path": "text/10.1007_s10208-024-09651-0__arxiv_2206.13285.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09648-9",
+    "title": "Discrete Weber Inequalities and Related Maxwell Compactness for Hybrid Spaces over Polyhedral Partitions of Domains with General Topology",
+    "authors": [
+      "Simon Lemaire",
+      "Silvano Pitassi"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-04-16",
+    "volume": "25",
+    "issue": "3",
+    "pages": "725-763",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09648-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "institutional_repository",
+      "url": "https://hal.science/hal-04081568v3/document",
+      "local_text_path": "text/10.1007_s10208-024-09648-9__hal.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09650-1",
+    "title": "A Sheaf-Theoretic Construction of Shape Space",
+    "authors": [
+      "Shreya Arya",
+      "Justin Curry",
+      "Sayan Mukherjee"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-05-16",
+    "volume": "25",
+    "issue": "3",
+    "pages": "813-863",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09650-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09650-1",
+      "local_text_path": "text/10.1007_s10208-024-09650-1__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09656-9",
+    "title": "Group-Invariant Max Filtering",
+    "authors": [
+      "Jameson Cahill",
+      "Joseph W. Iverson",
+      "Dustin G. Mixon",
+      "Daniel Packer"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-05-17",
+    "volume": "25",
+    "issue": "3",
+    "pages": "1047-1084",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09656-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09656-9",
+      "local_text_path": "text/10.1007_s10208-024-09656-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09655-w",
+    "title": "Optimal Approximation of Unique Continuation",
+    "authors": [
+      "Erik Burman",
+      "Mihai Nechita",
+      "Lauri Oksanen"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-05-20",
+    "volume": "25",
+    "issue": "3",
+    "pages": "1025-1045",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09655-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09655-w",
+      "local_text_path": "text/10.1007_s10208-024-09655-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09652-z",
+    "title": "Identifiability, the KL Property in Metric Spaces, and Subgradient Curves",
+    "authors": [
+      "A. S. Lewis",
+      "Tonghua Tian"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-05-28",
+    "volume": "25",
+    "issue": "3",
+    "pages": "905-942",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09652-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.02868",
+      "local_text_path": "text/10.1007_s10208-024-09652-z__arxiv_2205.02868.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09654-x",
+    "title": "Convergent Regularization in Inverse Problems and Linear Plug-and-Play Denoisers",
+    "authors": [
+      "Andreas Hauptmann",
+      "Subhadip Mukherjee",
+      "Carola-Bibiane Schönlieb",
+      "Ferdia Sherry"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-06-03",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1087-1120",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09654-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09654-x",
+      "local_text_path": "text/10.1007_s10208-024-09654-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09653-y",
+    "title": "A Local Nearly Linearly Convergent First-Order Method for Nonsmooth Functions with Quadratic Growth",
+    "authors": [
+      "Damek Davis",
+      "Liwei Jiang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-06-14",
+    "volume": "25",
+    "issue": "3",
+    "pages": "943-1024",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09653-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.00064",
+      "local_text_path": "text/10.1007_s10208-024-09653-y__arxiv_2205.00064.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09660-z",
+    "title": "Koszul Complexes and Relative Homological Algebra of Functors Over Posets",
+    "authors": [
+      "Wojciech Chachólski",
+      "Andrea Guidolin",
+      "Isaac Ren",
+      "Martina Scolamiero",
+      "Francesca Tombari"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-06-18",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1121-1165",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09660-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09660-z",
+      "local_text_path": "text/10.1007_s10208-024-09660-z__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09661-y",
+    "title": "Correction to: Lie–Poisson Methods for Isospectral Flows",
+    "authors": [
+      "Klas Modin",
+      "Milo Viviani"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-09",
+    "volume": "25",
+    "issue": "3",
+    "pages": "1085-1086",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09661-y",
+    "record_type": "correction",
+    "screening_eligibility": "excluded_nonresearch",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09661-y",
+      "local_text_path": "text/10.1007_s10208-024-09661-y__springer.txt"
+    },
+    "notes": "Excluded before full-text problem screening: record classified as correction."
+  },
+  {
+    "doi": "10.1007/s10208-024-09657-8",
+    "title": "Algebraic Varieties in Quantum Chemistry",
+    "authors": [
+      "Fabian M. Faulstich",
+      "Bernd Sturmfels",
+      "Svala Sverrisdóttir"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-17",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1167-1198",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09657-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09657-8",
+      "local_text_path": "text/10.1007_s10208-024-09657-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09663-w",
+    "title": "Regularized Stein Variational Gradient Flow",
+    "authors": [
+      "Ye He",
+      "Krishnakumar Balasubramanian",
+      "Bharath K. Sriperumbudur",
+      "Jianfeng Lu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-17",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1199-1257",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09663-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09663-w",
+      "local_text_path": "text/10.1007_s10208-024-09663-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09669-4",
+    "title": "Quantitative Stability of the Pushforward Operation by an Optimal Transport Map",
+    "authors": [
+      "Guillaume Carlier",
+      "Alex Delalande",
+      "Quentin Mérigot"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-19",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1259-1286",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09669-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2401.01088",
+      "local_text_path": "text/10.1007_s10208-024-09669-4__arxiv_2401.01088.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09662-x",
+    "title": "A Polynomial Time Iterative Algorithm for Matching Gaussian Matrices with Non-vanishing Correlation",
+    "authors": [
+      "Jian Ding",
+      "Zhangsong Li"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-22",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1287-1344",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09662-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.13677",
+      "local_text_path": "text/10.1007_s10208-024-09662-x__arxiv_2212.13677.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09665-8",
+    "title": "Resonances as a Computational Tool",
+    "authors": [
+      "Frédéric Rousset",
+      "Katharina Schratz"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-26",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1879-1906",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09665-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.10572",
+      "local_text_path": "text/10.1007_s10208-024-09665-8__arxiv_2405.10572.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09667-6",
+    "title": "Analysis of Langevin Monte Carlo from Poincaré to Log-Sobolev",
+    "authors": [
+      "Sinho Chewi",
+      "Murat A. Erdogdu",
+      "Mufan Li",
+      "Ruoqi Shen",
+      "Matthew S. Zhang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-26",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1345-1395",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09667-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2112.12662",
+      "local_text_path": "text/10.1007_s10208-024-09667-6__arxiv_2112.12662.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09670-x",
+    "title": "Stable Liftings of Polynomial Traces on Tetrahedra",
+    "authors": [
+      "Charles Parker",
+      "Endre Süli"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-07-29",
+    "volume": "25",
+    "issue": "4",
+    "pages": "1397-1461",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09670-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09670-x",
+      "local_text_path": "text/10.1007_s10208-024-09670-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09671-w",
+    "title": "Polynomial and Rational Measure Modifications of Orthogonal Polynomials via Infinite-Dimensional Banded Matrix Factorizations",
+    "authors": [
+      "Timon S. Gutleb",
+      "Sheehan Olver",
+      "Richard Mikaël Slevinsky"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-05",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1463-1505",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09671-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09671-w",
+      "local_text_path": "text/10.1007_s10208-024-09671-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09666-7",
+    "title": "Convergence of Numerical Methods for the Navier–Stokes–Fourier System Driven by Uncertain Initial/Boundary Data",
+    "authors": [
+      "Eduard Feireisl",
+      "Mária Lukáčová-Medvid’ová",
+      "Bangwei She",
+      "Yuhuan Yuan"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-06",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1507-1559",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09666-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09666-7",
+      "local_text_path": "text/10.1007_s10208-024-09666-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09658-7",
+    "title": "Global Convergence of Hessenberg Shifted QR I: Exact Arithmetic",
+    "authors": [
+      "Jess Banks",
+      "Jorge Garza-Vargas",
+      "Nikhil Srivastava"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-13",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1561-1594",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09658-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2111.07976",
+      "local_text_path": "text/10.1007_s10208-024-09658-7__arxiv_2111.07976.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-023-09625-8",
+    "title": "Approximations of Dispersive PDEs in the Presence of Low-Regularity Randomness",
+    "authors": [
+      "Yvonne Alama Bronsard",
+      "Yvain Bruned",
+      "Katharina Schratz"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-15",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1819-1869",
+    "doi_url": "https://doi.org/10.1007/s10208-023-09625-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.02156",
+      "local_text_path": "text/10.1007_s10208-023-09625-8__arxiv_2205.02156.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09668-5",
+    "title": "The Universal Equivariance Properties of Exotic Aromatic B-Series",
+    "authors": [
+      "Adrien Laurent",
+      "Hans Munthe-Kaas"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-16",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1595-1626",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09668-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09668-5",
+      "local_text_path": "text/10.1007_s10208-024-09668-5__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09664-9",
+    "title": "Learning Time-Scales in Two-Layers Neural Networks",
+    "authors": [
+      "Raphaël Berthier",
+      "Andrea Montanari",
+      "Kangjie Zhou"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-22",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1627-1710",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09664-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2303.00055",
+      "local_text_path": "text/10.1007_s10208-024-09664-9__arxiv_2303.00055.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09679-2",
+    "title": "Grounded Persistent Path Homology: A Stable, Topological Descriptor for Weighted Digraphs",
+    "authors": [
+      "Thomas Chaplin",
+      "Heather A. Harrington",
+      "Ulrike Tillmann"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-23",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1711-1776",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09679-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09679-2",
+      "local_text_path": "text/10.1007_s10208-024-09679-2__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09675-6",
+    "title": "New Ramsey Multiplicity Bounds and Search Heuristics",
+    "authors": [
+      "Olaf Parczyk",
+      "Sebastian Pokutta",
+      "Christoph Spiegel",
+      "Tibor Szabó"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-08-26",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1777-1814",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09675-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09675-6",
+      "local_text_path": "text/10.1007_s10208-024-09675-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09672-9",
+    "title": "Signed Barcodes for Multi-parameter Persistence via Rank Decompositions and Rank-Exact Resolutions",
+    "authors": [
+      "Magnus Bakke Botnan",
+      "Steffen Oppermann",
+      "Steve Oudot"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-09-04",
+    "volume": "25",
+    "issue": "5",
+    "pages": "1815-1874",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09672-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09672-9",
+      "local_text_path": "text/10.1007_s10208-024-09672-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09677-4",
+    "title": "Unbiasing Hamiltonian Monte Carlo Algorithms for a General Hamiltonian Function",
+    "authors": [
+      "T. Lelièvre",
+      "R. Santet",
+      "G. Stoltz"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-09-16",
+    "volume": "26",
+    "issue": "1",
+    "pages": "1-74",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09677-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2303.15918",
+      "local_text_path": "text/10.1007_s10208-024-09677-4__arxiv_2303.15918.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09678-3",
+    "title": "The Gromov–Wasserstein Distance Between Spheres",
+    "authors": [
+      "Shreya Arya",
+      "Arnab Auddy",
+      "Ranthony A. Clark",
+      "Sunhyuk Lim",
+      "Facundo Mémoli",
+      "Daniel Packer"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-09-16",
+    "volume": "26",
+    "issue": "1",
+    "pages": "75-130",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09678-3",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09678-3",
+      "local_text_path": "text/10.1007_s10208-024-09678-3__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09676-5",
+    "title": "Explicit A Posteriori Error Representation for Variational Problems and Application to TV-Minimization",
+    "authors": [
+      "Sören Bartels",
+      "Alex Kaltenbach"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-10-18",
+    "volume": "26",
+    "issue": "1",
+    "pages": "131-177",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09676-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09676-5",
+      "local_text_path": "text/10.1007_s10208-024-09676-5__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09687-2",
+    "title": "A Theory of the NEPv Approach for Optimization on the Stiefel Manifold",
+    "authors": [
+      "Ren-Cang Li"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-10-31",
+    "volume": "26",
+    "issue": "1",
+    "pages": "179-244",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09687-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.00091",
+      "local_text_path": "text/10.1007_s10208-024-09687-2__arxiv_2305.00091.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09683-6",
+    "title": "Gabor Phase Retrieval via Semidefinite Programming",
+    "authors": [
+      "Philippe Jaming",
+      "Martin Rathmair"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-07",
+    "volume": "26",
+    "issue": "1",
+    "pages": "245-311",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09683-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09683-6",
+      "local_text_path": "text/10.1007_s10208-024-09683-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09684-5",
+    "title": "Computing the Noncommutative Inner Rank by Means of Operator-Valued Free Probability Theory",
+    "authors": [
+      "Johannes Hoffmann",
+      "Tobias Mai",
+      "Roland Speicher"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-11",
+    "volume": "26",
+    "issue": "1",
+    "pages": "313-348",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09684-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09684-5",
+      "local_text_path": "text/10.1007_s10208-024-09684-5__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09686-3",
+    "title": "Quantitative Convergence of a Discretization of Dynamic Optimal Transport Using the Dual Formulation",
+    "authors": [
+      "Sadashige Ishida",
+      "Hugo Lavenant"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-11",
+    "volume": "26",
+    "issue": "1",
+    "pages": "349-384",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09686-3",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09686-3",
+      "local_text_path": "text/10.1007_s10208-024-09686-3__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09688-1",
+    "title": "Classification of Finite Groups: Recent Developements and Open Problems",
+    "authors": [
+      "Bettina Eick"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-12",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1907-1919",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09688-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09688-1",
+      "local_text_path": "text/10.1007_s10208-024-09688-1__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09681-8",
+    "title": "Proximal Galerkin: A Structure-Preserving Finite Element Method for Pointwise Bound Constraints",
+    "authors": [
+      "Brendan Keith",
+      "Thomas M. Surowiec"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-20",
+    "volume": "26",
+    "issue": "1",
+    "pages": "385-481",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09681-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09681-8",
+      "local_text_path": "text/10.1007_s10208-024-09681-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09680-9",
+    "title": "Tribute to Nick Higham",
+    "authors": [
+      "Alan Edelman"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-22",
+    "volume": "24",
+    "issue": "6",
+    "pages": "1777-1778",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09680-9",
+    "record_type": "tribute",
+    "screening_eligibility": "excluded_nonresearch",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09680-9",
+      "local_text_path": "text/10.1007_s10208-024-09680-9__springer.txt"
+    },
+    "notes": "Excluded before full-text problem screening: record classified as tribute."
+  },
+  {
+    "doi": "10.1007/s10208-024-09674-7",
+    "title": "Constrained and Unconstrained Stable Discrete Minimizations for p-Robust Local Reconstructions in Vertex Patches in the de Rham Complex",
+    "authors": [
+      "Théophile Chaumont-Frelet",
+      "Martin Vohralík"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-11-25",
+    "volume": "26",
+    "issue": "1",
+    "pages": "483-524",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09674-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "institutional_repository",
+      "url": "https://doi.org/10.1007/s10208-024-09674-7",
+      "local_text_path": "text/10.1007_s10208-024-09674-7__hal.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09659-6",
+    "title": "Locally-Verifiable Sufficient Conditions for Exactness of the Hierarchical B-spline Discrete de Rham Complex in $$\\mathbb {R}^n$$",
+    "authors": [
+      "Kendrick Shepherd",
+      "Deepesh Toshniwal"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-12-04",
+    "volume": "26",
+    "issue": "1",
+    "pages": "525-567",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09659-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09659-6",
+      "local_text_path": "text/10.1007_s10208-024-09659-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09682-7",
+    "title": "Generalized Pseudospectral Shattering and Inverse-Free Matrix Pencil Diagonalization",
+    "authors": [
+      "James Demmel",
+      "Ioana Dumitriu",
+      "Ryan Schneider"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-12-09",
+    "volume": "26",
+    "issue": "2",
+    "pages": "569-645",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09682-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09682-7",
+      "local_text_path": "text/10.1007_s10208-024-09682-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09685-4",
+    "title": "Conley Index for Multivalued Maps on Finite Topological Spaces",
+    "authors": [
+      "Jonathan Barmak",
+      "Marian Mrozek",
+      "Thomas Wanner"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2024-12-09",
+    "volume": "26",
+    "issue": "2",
+    "pages": "647-687",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09685-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09685-4",
+      "local_text_path": "text/10.1007_s10208-024-09685-4__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09694-x",
+    "title": "Accuracy Controlled Schemes for the Eigenvalue Problem of the Radiative Transfer Equation",
+    "authors": [
+      "Wolfgang Dahmen",
+      "Olga Mula"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-21",
+    "volume": "26",
+    "issue": "2",
+    "pages": "689-746",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09694-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09694-x",
+      "local_text_path": "text/10.1007_s10208-025-09694-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09690-1",
+    "title": "Sharp Bounds for Max-sliced Wasserstein Distances",
+    "authors": [
+      "March T. Boedihardjo"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-22",
+    "volume": "26",
+    "issue": "2",
+    "pages": "747-778",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09690-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2403.00666",
+      "local_text_path": "text/10.1007_s10208-025-09690-1__arxiv_2403.00666.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09691-0",
+    "title": "Active Manifolds, Stratifications, and Convergence to Local Minima in Nonsmooth Optimization",
+    "authors": [
+      "Damek Davis",
+      "Dmitriy Drusvyatskiy",
+      "Liwei Jiang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-22",
+    "volume": "26",
+    "issue": "2",
+    "pages": "779-861",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09691-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2108.11832",
+      "local_text_path": "text/10.1007_s10208-025-09691-0__arxiv_2108.11832.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09696-9",
+    "title": "Optimal Convergence Rates for the Spectrum of the Graph Laplacian on Poisson Point Clouds",
+    "authors": [
+      "Scott Armstrong",
+      "Raghavendra Venkatraman"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-22",
+    "volume": "26",
+    "issue": "2",
+    "pages": "863-888",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09696-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.08149",
+      "local_text_path": "text/10.1007_s10208-025-09696-9__arxiv_2312.08149.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09693-y",
+    "title": "Optimal Regularization for a Data Source",
+    "authors": [
+      "Oscar Leong",
+      "Eliza O’ Reilly",
+      "Yong Sheng Soh",
+      "Venkat Chandrasekaran"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-27",
+    "volume": "26",
+    "issue": "2",
+    "pages": "889-938",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09693-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.13597",
+      "local_text_path": "text/10.1007_s10208-025-09693-y__arxiv_2212.13597.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09695-w",
+    "title": "Stabilizing Decomposition of Multiparameter Persistence Modules",
+    "authors": [
+      "Håvard Bakke Bjerkevik"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-01-27",
+    "volume": "26",
+    "issue": "2",
+    "pages": "939-998",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09695-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09695-w",
+      "local_text_path": "text/10.1007_s10208-025-09695-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09689-8",
+    "title": "Safely Learning Dynamical Systems",
+    "authors": [
+      "Amir Ali Ahmadi",
+      "Abraar Chaudhry",
+      "Vikas Sindhwani",
+      "Stephen Tu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-02-04",
+    "volume": "26",
+    "issue": "2",
+    "pages": "999-1068",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09689-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.12284",
+      "local_text_path": "text/10.1007_s10208-025-09689-8__arxiv_2305.12284.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09697-8",
+    "title": "Representations of the Symmetric Group are Decomposable in Polynomial Time",
+    "authors": [
+      "Sheehan Olver"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-02-10",
+    "volume": "26",
+    "issue": "2",
+    "pages": "1069-1092",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09697-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09697-8",
+      "local_text_path": "text/10.1007_s10208-025-09697-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09692-z",
+    "title": "Multilinear Hyperquiver Representations",
+    "authors": [
+      "Tommi Muller",
+      "Vidit Nanda",
+      "Anna Seigal"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-02-14",
+    "volume": "26",
+    "issue": "2",
+    "pages": "1093-1135",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09692-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.05622",
+      "local_text_path": "text/10.1007_s10208-025-09692-z__arxiv_2305.05622.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-024-09673-8",
+    "title": "Restarts Subject to Approximate Sharpness: A Parameter-Free and Optimal Scheme For First-Order Methods",
+    "authors": [
+      "Ben Adcock",
+      "Matthew J. Colbrook",
+      "Maksym Neyra-Nesterenko"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-02-18",
+    "volume": "26",
+    "issue": "2",
+    "pages": "1137-1192",
+    "doi_url": "https://doi.org/10.1007/s10208-024-09673-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09673-8",
+      "local_text_path": "text/10.1007_s10208-024-09673-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09702-0",
+    "title": "An Unfiltered Low-Regularity Integrator for the KdV Equation with Solutions Below $$\\mathbf{H^1}$$",
+    "authors": [
+      "Buyang Li",
+      "Yifei Wu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-04",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1321-1380",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09702-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.09320",
+      "local_text_path": "text/10.1007_s10208-025-09702-0__arxiv_2206.09320.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09703-z",
+    "title": "Sums of Squares Certificates for Polynomial Moment Inequalities",
+    "authors": [
+      "Igor Klep",
+      "Victor Magron",
+      "Jurij Volčič"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-04",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1381-1423",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09703-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2306.05761",
+      "local_text_path": "text/10.1007_s10208-025-09703-z__arxiv_2306.05761.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09705-x",
+    "title": "Non-parametric Learning of Stochastic Differential Equations with Non-asymptotic Fast Rates of Convergence",
+    "authors": [
+      "Riccardo Bonalli",
+      "Alessandro Rudi"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-06",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1497-1552",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09705-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09705-x",
+      "local_text_path": "text/10.1007_s10208-025-09705-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09699-6",
+    "title": "Towards a Fluid Computer",
+    "authors": [
+      "Robert Cardona",
+      "Eva Miranda",
+      "Daniel Peralta-Salas"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-13",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1921-1937",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09699-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09699-6",
+      "local_text_path": "text/10.1007_s10208-025-09699-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09700-2",
+    "title": "Local Space-Preserving Decompositions for the Bubble Transform",
+    "authors": [
+      "Richard Falk",
+      "Ragnar Winther"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-17",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1219-1267",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09700-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09700-2",
+      "local_text_path": "text/10.1007_s10208-025-09700-2__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09698-7",
+    "title": "Adaptive Mesh Refinement for Arbitrary Initial Triangulations",
+    "authors": [
+      "Lars Diening",
+      "Lukas Gehring",
+      "Johannes Storn"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-03-24",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1193-1218",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09698-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09698-7",
+      "local_text_path": "text/10.1007_s10208-025-09698-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09707-9",
+    "title": "Local Geometry Determines Global Landscape in Low-Rank Factorization for Synchronization",
+    "authors": [
+      "Shuyang Ling"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-04-24",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1553-1585",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09707-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.18670",
+      "local_text_path": "text/10.1007_s10208-025-09707-9__arxiv_2311.18670.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09710-0",
+    "title": "Symbolic Summation of Multivariate Rational Functions",
+    "authors": [
+      "Shaoshi Chen",
+      "Lixin Du",
+      "Hanqian Fang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-04-24",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1635-1697",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09710-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.06968",
+      "local_text_path": "text/10.1007_s10208-025-09710-0__arxiv_2204.06968.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09711-z",
+    "title": "A Unified Framework for Multiscale Spectral Generalized FEMs and Low-Rank Approximations to Multiscale PDEs",
+    "authors": [
+      "Chupeng Ma"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-04-29",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1699-1758",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09711-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.08761",
+      "local_text_path": "text/10.1007_s10208-025-09711-z__arxiv_2311.08761.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09704-y",
+    "title": "Reduction of Plane Quartics and Cayley Octads",
+    "authors": [
+      "Raymond van Bommel",
+      "Jordan Docking",
+      "Vladimir Dokchitser",
+      "Reynald Lercier",
+      "Elisa Lorenzo García"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-06-02",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1425-1496",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09704-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09704-y",
+      "local_text_path": "text/10.1007_s10208-025-09704-y__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09706-w",
+    "title": "Uniform Distribution via Lattices: From Point Sets to Sequences",
+    "authors": [
+      "Damir Ferizović"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-06-24",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09706-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2308.13297",
+      "local_text_path": "text/10.1007_s10208-025-09706-w__arxiv_2308.13297.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09712-y",
+    "title": "An Optimal Lower Bound for Smooth Convex Functions",
+    "authors": [
+      "Mihai I. Florea",
+      "Yurii E. Nesterov"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-06-25",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1939-1973",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09712-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2404.18889",
+      "local_text_path": "text/10.1007_s10208-025-09712-y__arxiv_2404.18889.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09722-w",
+    "title": "Gradient Flows and Riemannian Structure in the Gromov-Wasserstein Geometry",
+    "authors": [
+      "Zhengxin Zhang",
+      "Ziv Goldfeld",
+      "Kristjan Greenewald",
+      "Youssef Mroueh",
+      "Bharath K. Sriperumbudur"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-07-08",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1911-2003",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09722-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2407.11800",
+      "local_text_path": "text/10.1007_s10208-025-09722-w__arxiv_2407.11800.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09719-5",
+    "title": "Interlacing Polynomial Method for Matrix Approximation via Generalized Column and Row Selection",
+    "authors": [
+      "Jian-Feng Cai",
+      "Zhiqiang Xu",
+      "Zili Xu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-07-14",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1759-1808",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09719-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.01715",
+      "local_text_path": "text/10.1007_s10208-025-09719-5__arxiv_2312.01715.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09720-y",
+    "title": "Multisymplecticity in Finite Element Exterior Calculus",
+    "authors": [
+      "Ari Stern",
+      "Enrico Zampa"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-07-14",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1809-1858",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09720-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.03657",
+      "local_text_path": "text/10.1007_s10208-025-09720-y__arxiv_2312.03657.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09725-7",
+    "title": "Irreducible Components of Sets of Points in the Plane that Satisfy Distance Conditions",
+    "authors": [
+      "Niels Lubbes",
+      "Mehdi Makhul",
+      "Josef Schicho",
+      "Audie Warren"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-07",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09725-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09725-7",
+      "local_text_path": "text/10.1007_s10208-025-09725-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09729-3",
+    "title": "A Fisher–Rao Gradient Flow for Entropy-Regularised Markov Decision Processes in Polish Spaces",
+    "authors": [
+      "Bekzhan Kerimkulov",
+      "James-Michael Leahy",
+      "David Siska",
+      "Lukasz Szpruch",
+      "Yufei Zhang"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-11",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09729-3",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09729-3",
+      "local_text_path": "text/10.1007_s10208-025-09729-3__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09721-x",
+    "title": "Algorithms for Mean-Field Variational Inference Via Polyhedral Optimization in the Wasserstein Space",
+    "authors": [
+      "Yiheng Jiang",
+      "Sinho Chewi",
+      "Aram-Alexandre Pooladian"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-12",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1859-1910",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09721-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.02849",
+      "local_text_path": "text/10.1007_s10208-025-09721-x__arxiv_2312.02849.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09724-8",
+    "title": "Doubly Regularized Entropic Wasserstein Barycenter",
+    "authors": [
+      "Lénaïc Chizat"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-12",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09724-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09724-8",
+      "local_text_path": "text/10.1007_s10208-025-09724-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09727-5",
+    "title": "Time Splitting and Error Estimates for Nonlinear Schrödinger Equations with a Potential",
+    "authors": [
+      "Rémi Carles"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-12",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09727-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2408.14816",
+      "local_text_path": "text/10.1007_s10208-025-09727-5__arxiv_2408.14816.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09726-6",
+    "title": "Improved global performance guarantees of second-order methods in convex minimization",
+    "authors": [
+      "Pavel Dvurechensky",
+      "Yurii Nesterov"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-13",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09726-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09726-6",
+      "local_text_path": "text/10.1007_s10208-025-09726-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09723-9",
+    "title": "Simple matrix expressions for the curvatures of Grassmannian",
+    "authors": [
+      "Zehua Lai",
+      "Lek-Heng Lim",
+      "Ke Ye"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-08-27",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09723-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2406.11821",
+      "local_text_path": "text/10.1007_s10208-025-09723-9__arxiv_2406.11821.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09701-1",
+    "title": "Planar Regularity Structures",
+    "authors": [
+      "Ludwig Rahm"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-08",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1269-1319",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09701-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09701-1",
+      "local_text_path": "text/10.1007_s10208-025-09701-1__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09728-4",
+    "title": "LieDetect: Detection of Representation Orbits of Compact Lie Groups From Point Clouds",
+    "authors": [
+      "Henrique Ennes",
+      "Raphaël Tinarrage"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-15",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09728-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09728-4",
+      "local_text_path": "text/10.1007_s10208-025-09728-4__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09718-6",
+    "title": "The Wonderful Geometry of the Vandermonde map",
+    "authors": [
+      "Jose Acevedo",
+      "Grigoriy Blekherman",
+      "Sebastian Debus",
+      "Cordian Riener"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-22",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09718-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09718-6",
+      "local_text_path": "text/10.1007_s10208-025-09718-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09733-7",
+    "title": "Recognizing Weighted Means in Geodesic Spaces",
+    "authors": [
+      "Ariel Goodwin",
+      "Adrian S. Lewis",
+      "Genaro López-Acedo",
+      "Adriana Nicolae"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-26",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09733-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2406.03913",
+      "local_text_path": "text/10.1007_s10208-025-09733-7__arxiv_2406.03913.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09735-5",
+    "title": "Covering Number of Real Algebraic Varieties and Beyond: Improved Bounds and Applications",
+    "authors": [
+      "Yifan Zhang",
+      "Joe Kileel"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-26",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09735-5",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.05116",
+      "local_text_path": "text/10.1007_s10208-025-09735-5__arxiv_2311.05116.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09730-w",
+    "title": "Convergence Rates for the Trotter Splitting for Unbounded Operators",
+    "authors": [
+      "Simon Becker",
+      "Niklas Galke",
+      "Lauritz van Luijk",
+      "Robert Salzmann"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-29",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09730-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09730-w",
+      "local_text_path": "text/10.1007_s10208-025-09730-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09736-4",
+    "title": "A Transversality Theorem for Semi-Algebraic Sets with Application to Signal Recovery from the Second Moment and Cryo-EM",
+    "authors": [
+      "Tamir Bendory",
+      "Nadav Dym",
+      "Dan Edidin",
+      "Arun Suresh"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-29",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09736-4",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09736-4",
+      "local_text_path": "text/10.1007_s10208-025-09736-4__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09732-8",
+    "title": "Interval Decomposition of Persistence Modules over a Principal Ideal Domain",
+    "authors": [
+      "Jiajie Luo",
+      "Gregory Henselman-Petrusek"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-09-30",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09732-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2310.07971",
+      "local_text_path": "text/10.1007_s10208-025-09732-8__arxiv_2310.07971.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09731-9",
+    "title": "Riemann-Oracle: A general-purpose Riemannian optimizer to solve nearness problems in matrix theory",
+    "authors": [
+      "Miryam Gnazzo",
+      "Vanni Noferini",
+      "Lauri Nyman",
+      "Federico Poloni"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-10-16",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09731-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09731-9",
+      "local_text_path": "text/10.1007_s10208-025-09731-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09708-8",
+    "title": "The Nullstellensatz and Positivstellensatz for Sparse Tropical Polynomial Systems",
+    "authors": [
+      "Marianne Akian",
+      "Antoine Béreau",
+      "Stéphane Gaubert"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-12-01",
+    "volume": "26",
+    "issue": "3",
+    "pages": "1587-1633",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09708-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.05859",
+      "local_text_path": "text/10.1007_s10208-025-09708-8__arxiv_2312.05859.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09738-2",
+    "title": "Optimal sampling for least-squares approximation",
+    "authors": [
+      "Ben Adcock"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-12-01",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1975-2034",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09738-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2409.02342",
+      "local_text_path": "text/10.1007_s10208-025-09738-2__arxiv_2409.02342.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-025-09739-1",
+    "title": "Preface",
+    "authors": [
+      "Markus Bachmayr",
+      "Albert Cohen",
+      "Evelyne Hubert",
+      "Teresa Krick"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-12-02",
+    "volume": "25",
+    "issue": "6",
+    "pages": "1875-1877",
+    "doi_url": "https://doi.org/10.1007/s10208-025-09739-1",
+    "record_type": "preface",
+    "screening_eligibility": "excluded_nonresearch",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09739-1",
+      "local_text_path": "text/10.1007_s10208-025-09739-1__springer.txt"
+    },
+    "notes": "Excluded before full-text problem screening: record classified as preface."
+  },
+  {
+    "doi": "10.1007/s10208-025-09734-6",
+    "title": "A Discrete Trace Theory for Non-Conforming Polytopal Hybrid Discretisation Methods",
+    "authors": [
+      "Santiago Badia",
+      "Jerome Droniou",
+      "Jai Tushar"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2025-12-03",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-025-09734-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09734-6",
+      "local_text_path": "text/10.1007_s10208-025-09734-6__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09740-2",
+    "title": "Spectrally Accurate Fully Discrete Schemes for Some Nonlocal and Nonlinear Integrable PDEs via Explicit Formulas",
+    "authors": [
+      "Yvonne Alama Bronsard",
+      "Xi Chen",
+      "Matthieu Dolbeault"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-02",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09740-2",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2412.13480",
+      "local_text_path": "text/10.1007_s10208-026-09740-2__arxiv_2412.13480.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09744-y",
+    "title": "Ulam Meets Turing: Constructing Quadratic Maps with Non-Computable Physical Measures",
+    "authors": [
+      "Cristóbal Rojas",
+      "Michael Yampolsky"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-02",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09744-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2501.00006",
+      "local_text_path": "text/10.1007_s10208-026-09744-y__arxiv_2501.00006.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09743-z",
+    "title": "The radius of statistical efficiency",
+    "authors": [
+      "Joshua Cutler",
+      "Mateo Díaz",
+      "Dmitriy Drusvyatskiy"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-06",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09743-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.09676",
+      "local_text_path": "text/10.1007_s10208-026-09743-z__arxiv_2405.09676.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09746-w",
+    "title": "Extended Regge Complex for Linearized Riemann-Cartan Geometry and Cohomology",
+    "authors": [
+      "Snorre H. Christiansen",
+      "Kaibo Hu",
+      "Ting Lin"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-17",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09746-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09746-w",
+      "local_text_path": "text/10.1007_s10208-026-09746-w__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09748-8",
+    "title": "Nearly Self-similar Blowup of Generalized Axisymmetric Navier–Stokes Equations",
+    "authors": [
+      "Thomas Y. Hou"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-25",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09748-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.10916",
+      "local_text_path": "text/10.1007_s10208-026-09748-8__arxiv_2405.10916.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09741-1",
+    "title": "Crouzeix-Raviart elements on simplicial meshes in d dimensions",
+    "authors": [
+      "Nis-Erik Bohne",
+      "Patrick Ciarlet",
+      "Stefan Sauter"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-02-27",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09741-1",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2407.04361",
+      "local_text_path": "text/10.1007_s10208-026-09741-1__arxiv_2407.04361.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09745-x",
+    "title": "Accelerated Gradient Methods for Nonconvex Optimization: Escape Trajectories From Strict Saddle Points and Convergence to Local Minima",
+    "authors": [
+      "Rishabh Dixit",
+      "Mert Gürbüzbalaban",
+      "Waheed U. Bajwa"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-04-01",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09745-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09745-x",
+      "local_text_path": "text/10.1007_s10208-026-09745-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09742-0",
+    "title": "Symmetric Resonance Based Integrators and Forest Formulae",
+    "authors": [
+      "Yvonne Alama Bronsard",
+      "Yvain Bruned",
+      "Georg Maierhofer",
+      "Katharina Schratz"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-04-06",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09742-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.16737",
+      "local_text_path": "text/10.1007_s10208-026-09742-0__arxiv_2305.16737.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09747-9",
+    "title": "Persistence Diagram Bundles: A Multidimensional Generalization of Vineyards",
+    "authors": [
+      "Abigail Hickok"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-04-28",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09747-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2210.05124",
+      "local_text_path": "text/10.1007_s10208-026-09747-9__arxiv_2210.05124.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09752-y",
+    "title": "A Convergent Finite Difference-Quadrature Scheme for the Porous Medium Equation with Nonlocal Pressure",
+    "authors": [
+      "Félix del Teso",
+      "Espen R. Jakobsen"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-01",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09752-y",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09752-y",
+      "local_text_path": "text/10.1007_s10208-026-09752-y__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09751-z",
+    "title": "Generalized Local Polynomial Reproductions",
+    "authors": [
+      "Thomas Hangelbroek",
+      "Christian Rieger",
+      "Grady B. Wright"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-08",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09751-z",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2410.12973",
+      "local_text_path": "text/10.1007_s10208-026-09751-z__arxiv_2410.12973.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09754-w",
+    "title": "Measure-to-Measure Interpolation Using Transformers",
+    "authors": [
+      "Borjan Geshkovski",
+      "Philippe Rigollet",
+      "Domènec Ruiz-Balet"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-10",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09754-w",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2411.04551",
+      "local_text_path": "text/10.1007_s10208-026-09754-w__arxiv_2411.04551.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09750-0",
+    "title": "Multigrid Monte Carlo Revisited: Theory and Bayesian Inference",
+    "authors": [
+      "Yoshihito Kazashi",
+      "Eike Müller",
+      "Robert Scheichl"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-11",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09750-0",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09750-0",
+      "local_text_path": "text/10.1007_s10208-026-09750-0__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09753-x",
+    "title": "Shifted Composition III: Local Error Framework for KL Divergence",
+    "authors": [
+      "Jason M. Altschuler",
+      "Sinho Chewi"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-11",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09753-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2412.17997",
+      "local_text_path": "text/10.1007_s10208-026-09753-x__arxiv_2412.17997.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09758-6",
+    "title": "Exact and Efficient Representation of Totally Anti-Symmetric Functions",
+    "authors": [
+      "Ziang Chen",
+      "Jianfeng Lu"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-11",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09758-6",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.05064",
+      "local_text_path": "text/10.1007_s10208-026-09758-6__arxiv_2311.05064.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09757-7",
+    "title": "Inf-Sup Stability of Parabolic TraceFEM",
+    "authors": [
+      "Lucas Bouck",
+      "Ricardo H. Nochetto",
+      "Mansur Shakipov",
+      "Vladimir Yushutin"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-06-25",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09757-7",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09757-7",
+      "local_text_path": "text/10.1007_s10208-026-09757-7__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09755-9",
+    "title": "The Likelihood Correspondence",
+    "authors": [
+      "Thomas Kahle",
+      "Hal Schenck",
+      "Bernd Sturmfels",
+      "Maximilian Wiesmann"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-07-07",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09755-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09755-9",
+      "local_text_path": "text/10.1007_s10208-026-09755-9__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09756-8",
+    "title": "Interior-Point Methods on Manifolds: Theory and Applications",
+    "authors": [
+      "Hiroshi Hirai",
+      "Harold Nieuwboer",
+      "Michael Walter"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-07-07",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09756-8",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09756-8",
+      "local_text_path": "text/10.1007_s10208-026-09756-8__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09761-x",
+    "title": "First-Order Optimality Conditions for Non-Commutative Optimization Problems",
+    "authors": [
+      "Mateus Araújo",
+      "Igor Klep",
+      "Andrew J. P. Garner",
+      "Tamás Vértesi",
+      "Miguel Navascués"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-07-07",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09761-x",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09761-x",
+      "local_text_path": "text/10.1007_s10208-026-09761-x__springer.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  },
+  {
+    "doi": "10.1007/s10208-026-09763-9",
+    "title": "Validated Enclosure of Renormalization Fixed Points Via Chebyshev Series and the DFT",
+    "authors": [
+      "Maxime Breden",
+      "Jorge Gonzalez",
+      "J. D. Mireles James"
+    ],
+    "journal": "Foundations of Computational Mathematics",
+    "online_publication_date": "2026-07-07",
+    "volume": null,
+    "issue": null,
+    "pages": null,
+    "doi_url": "https://doi.org/10.1007/s10208-026-09763-9",
+    "record_type": "research_article",
+    "screening_eligibility": "eligible_research",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2409.20457",
+      "local_text_path": "text/10.1007_s10208-026-09763-9__arxiv_2409.20457.txt"
+    },
+    "notes": "Full text was located and screened in full."
+  }
+]

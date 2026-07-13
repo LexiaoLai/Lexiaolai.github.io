@@ -1,0 +1,2410 @@
+[
+  {
+    "doi": "10.1007/s10208-023-09603-0",
+    "title": "Subexponential-Time Algorithms for Sparse PCA",
+    "online_publication_date": "2023-01-19",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/1907.11635",
+      "local_text_path": "text/10.1007_s10208-023-09603-0__arxiv_1907.11635.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09605-y",
+    "title": "On the Sample Complexity of Stabilizing Linear Dynamical Systems from Data",
+    "online_publication_date": "2023-01-23",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2203.00474",
+      "local_text_path": "text/10.1007_s10208-023-09605-y__arxiv_2203.00474.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09606-x",
+    "title": "Optimal Polynomial Meshes Exist on any Multivariate Convex Domain",
+    "online_publication_date": "2023-01-23",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.14111",
+      "local_text_path": "text/10.1007_s10208-023-09606-x__arxiv_2205.14111.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09604-z",
+    "title": "A Stirling-Type Formula for the Distribution of the Length of Longest Increasing Subsequences",
+    "online_publication_date": "2023-01-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09604-z",
+      "local_text_path": "text/10.1007_s10208-023-09604-z__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-022-09602-7",
+    "title": "Correction to: Conormal Spaces and Whitney Stratifications",
+    "online_publication_date": "2023-02-01",
+    "record_type": "correction",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-022-09602-7",
+      "local_text_path": "text/10.1007_s10208-022-09602-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "excluded_nonresearch",
+    "rationale": "Excluded before full-text problem screening: record classified as correction."
+  },
+  {
+    "doi": "10.1007/s10208-023-09615-w",
+    "title": "A New Approach to Handle Curved Meshes in the Hybrid High-Order Method",
+    "online_publication_date": "2023-04-18",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09615-w",
+      "local_text_path": "text/10.1007_s10208-023-09615-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09611-0",
+    "title": "Nodal Auxiliary Space Preconditioning for the Surface de Rham Complex",
+    "online_publication_date": "2023-04-19",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2107.07978",
+      "local_text_path": "text/10.1007_s10208-023-09611-0__arxiv_2107.07978.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09609-8",
+    "title": "Symmetry and Invariant Bases in Finite Element Exterior Calculus",
+    "online_publication_date": "2023-04-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09609-8",
+      "local_text_path": "text/10.1007_s10208-023-09609-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09612-z",
+    "title": "Multi-index Sequential Monte Carlo Ratio Estimators for Bayesian Inverse problems",
+    "online_publication_date": "2023-05-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09612-z",
+      "local_text_path": "text/10.1007_s10208-023-09612-z__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09613-y",
+    "title": "Bias in the Representative Volume Element method: Periodize the Ensemble Instead of Its Realizations",
+    "online_publication_date": "2023-05-30",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09613-y",
+      "local_text_path": "text/10.1007_s10208-023-09613-y__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09614-x",
+    "title": "High-Order Lohner-Type Algorithm for Rigorous Computation of Poincaré Maps in Systems of Delay Differential Equations with Several Delays",
+    "online_publication_date": "2023-06-09",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09614-x",
+      "local_text_path": "text/10.1007_s10208-023-09614-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09610-1",
+    "title": "Further $$\\exists {\\mathbb {R}}$$-Complete Problems with PSD Matrix Factorizations",
+    "online_publication_date": "2023-06-22",
+    "record_type": "research_article",
+    "full_text_access": "inaccessible",
+    "full_text_route": null,
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "full_text_inaccessible",
+    "rationale": "Publisher full text was access-restricted; exact-title, DOI, author, arXiv, OpenAlex, Semantic Scholar, and general web searches did not locate a matching manuscript."
+  },
+  {
+    "doi": "10.1007/s10208-023-09607-w",
+    "title": "Proof of the Theory-to-Practice Gap in Deep Learning via Sampling Complexity bounds for Neural Network Approximation Spaces",
+    "online_publication_date": "2023-07-12",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09607-w",
+      "local_text_path": "text/10.1007_s10208-023-09607-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09617-8",
+    "title": "Symmetric Bases for Finite Element Exterior Calculus Spaces",
+    "online_publication_date": "2023-07-25",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2112.06065",
+      "local_text_path": "text/10.1007_s10208-023-09617-8__arxiv_2112.06065.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09616-9",
+    "title": "Optimality of Robust Online Learning",
+    "online_publication_date": "2023-07-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2304.10060",
+      "local_text_path": "text/10.1007_s10208-023-09616-9__arxiv_2304.10060.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09608-9",
+    "title": "BGG Sequences with Weak Regularity and Applications",
+    "online_publication_date": "2023-07-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09608-9",
+      "local_text_path": "text/10.1007_s10208-023-09608-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09618-7",
+    "title": "Improved Resolution Estimate for the Two-Dimensional Super-Resolution and a New Algorithm for Direction of Arrival Estimation with Uniform Rectangular Array",
+    "online_publication_date": "2023-08-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09618-7",
+      "local_text_path": "text/10.1007_s10208-023-09618-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09619-6",
+    "title": "Implicitisation and Parameterisation in Polynomial Functors",
+    "online_publication_date": "2023-08-28",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09619-6",
+      "local_text_path": "text/10.1007_s10208-023-09619-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09620-z",
+    "title": "How Much Can One Learn a Partial Differential Equation from Its Solution?",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.04602",
+      "local_text_path": "text/10.1007_s10208-023-09620-z__arxiv_2204.04602.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09622-x",
+    "title": "A New Approach to the Analysis of Parametric Finite Element Approximations to Mean Curvature Flow",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "author_manuscript",
+      "url": "https://doi.org/10.1007/s10208-023-09622-x",
+      "local_text_path": "text/10.1007_s10208-023-09622-x__author.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09623-w",
+    "title": "Toward Computational Morse–Floer Homology: Forcing Results for Connecting Orbits by Computing Relative Indices of Critical Points",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.09205",
+      "local_text_path": "text/10.1007_s10208-023-09623-w__arxiv_2206.09205.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09624-9",
+    "title": "From Kernel Methods to Neural Networks: A Unifying Variational Formulation",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09624-9",
+      "local_text_path": "text/10.1007_s10208-023-09624-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09627-6",
+    "title": "A Construction of $$C^r$$ Conforming Finite Element Spaces in Any Dimension",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2103.14924",
+      "local_text_path": "text/10.1007_s10208-023-09627-6__arxiv_2103.14924.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09628-5",
+    "title": "Convex Analysis on Hadamard Spaces and Scaling Problems",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2203.03193",
+      "local_text_path": "text/10.1007_s10208-023-09628-5__arxiv_2203.03193.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09629-4",
+    "title": "Approximation of Deterministic Mean Field Games with Control-Affine Dynamics",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.09854",
+      "local_text_path": "text/10.1007_s10208-023-09629-4__arxiv_2212.09854.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09631-w",
+    "title": "Approximation of Generating Function Barcode for Hamiltonian Diffeomorphisms",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.02288",
+      "local_text_path": "text/10.1007_s10208-023-09631-w__arxiv_2204.02288.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09632-9",
+    "title": "Gaussian Beam Ansatz for Finite Difference Wave Equations",
+    "online_publication_date": "2023-10-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.13976",
+      "local_text_path": "text/10.1007_s10208-023-09632-9__arxiv_2209.13976.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09621-y",
+    "title": "Error Analysis for 2D Stochastic Navier–Stokes Equations in Bounded Domains with Dirichlet Data",
+    "online_publication_date": "2023-10-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09621-y",
+      "local_text_path": "text/10.1007_s10208-023-09621-y__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09633-8",
+    "title": "Communication Lower Bounds for Nested Bilinear Algorithms via Rank Expansion of Kronecker Products",
+    "online_publication_date": "2023-11-06",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2107.09834",
+      "local_text_path": "text/10.1007_s10208-023-09633-8__arxiv_2107.09834.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09626-7",
+    "title": "Wavenumber-Explicit hp-FEM Analysis for Maxwell’s Equations with Impedance Boundary Conditions",
+    "online_publication_date": "2023-11-14",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09626-7",
+      "local_text_path": "text/10.1007_s10208-023-09626-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09630-x",
+    "title": "On the Representation and Learning of Monotone Triangular Transport Maps",
+    "online_publication_date": "2023-11-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2009.10303",
+      "local_text_path": "text/10.1007_s10208-023-09630-x__arxiv_2009.10303.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09636-5",
+    "title": "Fast Optimistic Gradient Descent Ascent (OGDA) Method in Continuous and Discrete Time",
+    "online_publication_date": "2023-11-29",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09636-5",
+      "local_text_path": "text/10.1007_s10208-023-09636-5__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09635-6",
+    "title": "Efficient Random Walks on Riemannian Manifolds",
+    "online_publication_date": "2023-12-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09635-6",
+      "local_text_path": "text/10.1007_s10208-023-09635-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09637-4",
+    "title": "Computational Complexity of Decomposing a Symmetric Matrix as a Sum of Positive Semidefinite and Diagonal Matrices",
+    "online_publication_date": "2023-12-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.05678",
+      "local_text_path": "text/10.1007_s10208-023-09637-4__arxiv_2209.05678.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09634-7",
+    "title": "Extremal Points and Sparse Optimization for Generalized Kantorovich–Rubinstein Norms",
+    "online_publication_date": "2023-12-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2209.09167",
+      "local_text_path": "text/10.1007_s10208-023-09634-7__arxiv_2209.09167.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09638-3",
+    "title": "Exotic B-Series and S-Series: Algebraic Structures and Order Conditions for Invariant Measure Sampling",
+    "online_publication_date": "2024-01-19",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-023-09638-3",
+      "local_text_path": "text/10.1007_s10208-023-09638-3__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09640-3",
+    "title": "Phaseless Sampling on Square-Root Lattices",
+    "online_publication_date": "2024-02-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09640-3",
+      "local_text_path": "text/10.1007_s10208-024-09640-3__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09641-2",
+    "title": "Low-Dimensional Invariant Embeddings for Universal Geometric Learning",
+    "online_publication_date": "2024-02-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09641-2",
+      "local_text_path": "text/10.1007_s10208-024-09641-2__springer.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09644-z",
+    "title": "Analysis of a Modified Regularity-Preserving Euler Scheme for Parabolic Semilinear SPDEs: Total Variation Error Bounds for the Numerical Approximation of the Invariant Distribution",
+    "online_publication_date": "2024-02-08",
+    "record_type": "research_article",
+    "full_text_access": "inaccessible",
+    "full_text_route": null,
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "full_text_inaccessible",
+    "rationale": "Publisher full text was access-restricted; exact-title, DOI, author, arXiv, OpenAlex, Semantic Scholar, and general web searches did not locate a matching manuscript."
+  },
+  {
+    "doi": "10.1007/s10208-024-09639-w",
+    "title": "Strong Norm Error Bounds for Quasilinear Wave Equations Under Weak CFL-Type Conditions",
+    "online_publication_date": "2024-02-13",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09639-w",
+      "local_text_path": "text/10.1007_s10208-024-09639-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09643-0",
+    "title": "On the Existence of Monge Maps for the Gromov–Wasserstein Problem",
+    "online_publication_date": "2024-02-15",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2210.11945",
+      "local_text_path": "text/10.1007_s10208-024-09643-0__arxiv_2210.11945.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09645-y",
+    "title": "Discrete Pseudo-differential Operators and Applications to Numerical Schemes",
+    "online_publication_date": "2024-02-15",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2109.15186",
+      "local_text_path": "text/10.1007_s10208-024-09645-y__arxiv_2109.15186.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09647-w",
+    "title": "Stable Spectral Methods for Time-Dependent Problems and the Preservation of Structure",
+    "online_publication_date": "2024-02-15",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09647-w",
+      "local_text_path": "text/10.1007_s10208-024-09647-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09646-x",
+    "title": "Polynomial Factorization Over Henselian Fields",
+    "online_publication_date": "2024-02-21",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2207.02139",
+      "local_text_path": "text/10.1007_s10208-024-09646-x__arxiv_2207.02139.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09642-1",
+    "title": "Discrete Helmholtz Decompositions of Piecewise Constant and Piecewise Affine Vector and Tensor Fields",
+    "online_publication_date": "2024-03-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09642-1",
+      "local_text_path": "text/10.1007_s10208-024-09642-1__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09649-8",
+    "title": "Sparse Spectral Methods for Solving High-Dimensional and Multiscale Elliptic PDEs",
+    "online_publication_date": "2024-04-02",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2302.00752",
+      "local_text_path": "text/10.1007_s10208-024-09649-8__arxiv_2302.00752.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09651-0",
+    "title": "Sum-of-Squares Relaxations for Information Theory and Variational Inference",
+    "online_publication_date": "2024-04-05",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.13285",
+      "local_text_path": "text/10.1007_s10208-024-09651-0__arxiv_2206.13285.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09648-9",
+    "title": "Discrete Weber Inequalities and Related Maxwell Compactness for Hybrid Spaces over Polyhedral Partitions of Domains with General Topology",
+    "online_publication_date": "2024-04-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "institutional_repository",
+      "url": "https://hal.science/hal-04081568v3/document",
+      "local_text_path": "text/10.1007_s10208-024-09648-9__hal.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09650-1",
+    "title": "A Sheaf-Theoretic Construction of Shape Space",
+    "online_publication_date": "2024-05-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09650-1",
+      "local_text_path": "text/10.1007_s10208-024-09650-1__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09656-9",
+    "title": "Group-Invariant Max Filtering",
+    "online_publication_date": "2024-05-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09656-9",
+      "local_text_path": "text/10.1007_s10208-024-09656-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 3,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 3 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09655-w",
+    "title": "Optimal Approximation of Unique Continuation",
+    "online_publication_date": "2024-05-20",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09655-w",
+      "local_text_path": "text/10.1007_s10208-024-09655-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09652-z",
+    "title": "Identifiability, the KL Property in Metric Spaces, and Subgradient Curves",
+    "online_publication_date": "2024-05-28",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.02868",
+      "local_text_path": "text/10.1007_s10208-024-09652-z__arxiv_2205.02868.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09654-x",
+    "title": "Convergent Regularization in Inverse Problems and Linear Plug-and-Play Denoisers",
+    "online_publication_date": "2024-06-03",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09654-x",
+      "local_text_path": "text/10.1007_s10208-024-09654-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09653-y",
+    "title": "A Local Nearly Linearly Convergent First-Order Method for Nonsmooth Functions with Quadratic Growth",
+    "online_publication_date": "2024-06-14",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.00064",
+      "local_text_path": "text/10.1007_s10208-024-09653-y__arxiv_2205.00064.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09660-z",
+    "title": "Koszul Complexes and Relative Homological Algebra of Functors Over Posets",
+    "online_publication_date": "2024-06-18",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09660-z",
+      "local_text_path": "text/10.1007_s10208-024-09660-z__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09661-y",
+    "title": "Correction to: Lie–Poisson Methods for Isospectral Flows",
+    "online_publication_date": "2024-07-09",
+    "record_type": "correction",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09661-y",
+      "local_text_path": "text/10.1007_s10208-024-09661-y__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "excluded_nonresearch",
+    "rationale": "Excluded before full-text problem screening: record classified as correction."
+  },
+  {
+    "doi": "10.1007/s10208-024-09657-8",
+    "title": "Algebraic Varieties in Quantum Chemistry",
+    "online_publication_date": "2024-07-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09657-8",
+      "local_text_path": "text/10.1007_s10208-024-09657-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09663-w",
+    "title": "Regularized Stein Variational Gradient Flow",
+    "online_publication_date": "2024-07-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09663-w",
+      "local_text_path": "text/10.1007_s10208-024-09663-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09669-4",
+    "title": "Quantitative Stability of the Pushforward Operation by an Optimal Transport Map",
+    "online_publication_date": "2024-07-19",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2401.01088",
+      "local_text_path": "text/10.1007_s10208-024-09669-4__arxiv_2401.01088.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09662-x",
+    "title": "A Polynomial Time Iterative Algorithm for Matching Gaussian Matrices with Non-vanishing Correlation",
+    "online_publication_date": "2024-07-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.13677",
+      "local_text_path": "text/10.1007_s10208-024-09662-x__arxiv_2212.13677.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09665-8",
+    "title": "Resonances as a Computational Tool",
+    "online_publication_date": "2024-07-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.10572",
+      "local_text_path": "text/10.1007_s10208-024-09665-8__arxiv_2405.10572.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09667-6",
+    "title": "Analysis of Langevin Monte Carlo from Poincaré to Log-Sobolev",
+    "online_publication_date": "2024-07-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2112.12662",
+      "local_text_path": "text/10.1007_s10208-024-09667-6__arxiv_2112.12662.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09670-x",
+    "title": "Stable Liftings of Polynomial Traces on Tetrahedra",
+    "online_publication_date": "2024-07-29",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09670-x",
+      "local_text_path": "text/10.1007_s10208-024-09670-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09671-w",
+    "title": "Polynomial and Rational Measure Modifications of Orthogonal Polynomials via Infinite-Dimensional Banded Matrix Factorizations",
+    "online_publication_date": "2024-08-05",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09671-w",
+      "local_text_path": "text/10.1007_s10208-024-09671-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09666-7",
+    "title": "Convergence of Numerical Methods for the Navier–Stokes–Fourier System Driven by Uncertain Initial/Boundary Data",
+    "online_publication_date": "2024-08-06",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09666-7",
+      "local_text_path": "text/10.1007_s10208-024-09666-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09658-7",
+    "title": "Global Convergence of Hessenberg Shifted QR I: Exact Arithmetic",
+    "online_publication_date": "2024-08-13",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2111.07976",
+      "local_text_path": "text/10.1007_s10208-024-09658-7__arxiv_2111.07976.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-023-09625-8",
+    "title": "Approximations of Dispersive PDEs in the Presence of Low-Regularity Randomness",
+    "online_publication_date": "2024-08-15",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2205.02156",
+      "local_text_path": "text/10.1007_s10208-023-09625-8__arxiv_2205.02156.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09668-5",
+    "title": "The Universal Equivariance Properties of Exotic Aromatic B-Series",
+    "online_publication_date": "2024-08-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09668-5",
+      "local_text_path": "text/10.1007_s10208-024-09668-5__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09664-9",
+    "title": "Learning Time-Scales in Two-Layers Neural Networks",
+    "online_publication_date": "2024-08-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2303.00055",
+      "local_text_path": "text/10.1007_s10208-024-09664-9__arxiv_2303.00055.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09679-2",
+    "title": "Grounded Persistent Path Homology: A Stable, Topological Descriptor for Weighted Digraphs",
+    "online_publication_date": "2024-08-23",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09679-2",
+      "local_text_path": "text/10.1007_s10208-024-09679-2__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09675-6",
+    "title": "New Ramsey Multiplicity Bounds and Search Heuristics",
+    "online_publication_date": "2024-08-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09675-6",
+      "local_text_path": "text/10.1007_s10208-024-09675-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09672-9",
+    "title": "Signed Barcodes for Multi-parameter Persistence via Rank Decompositions and Rank-Exact Resolutions",
+    "online_publication_date": "2024-09-04",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09672-9",
+      "local_text_path": "text/10.1007_s10208-024-09672-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09677-4",
+    "title": "Unbiasing Hamiltonian Monte Carlo Algorithms for a General Hamiltonian Function",
+    "online_publication_date": "2024-09-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2303.15918",
+      "local_text_path": "text/10.1007_s10208-024-09677-4__arxiv_2303.15918.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09678-3",
+    "title": "The Gromov–Wasserstein Distance Between Spheres",
+    "online_publication_date": "2024-09-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09678-3",
+      "local_text_path": "text/10.1007_s10208-024-09678-3__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 3,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 3 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09676-5",
+    "title": "Explicit A Posteriori Error Representation for Variational Problems and Application to TV-Minimization",
+    "online_publication_date": "2024-10-18",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09676-5",
+      "local_text_path": "text/10.1007_s10208-024-09676-5__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09687-2",
+    "title": "A Theory of the NEPv Approach for Optimization on the Stiefel Manifold",
+    "online_publication_date": "2024-10-31",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.00091",
+      "local_text_path": "text/10.1007_s10208-024-09687-2__arxiv_2305.00091.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09683-6",
+    "title": "Gabor Phase Retrieval via Semidefinite Programming",
+    "online_publication_date": "2024-11-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09683-6",
+      "local_text_path": "text/10.1007_s10208-024-09683-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09684-5",
+    "title": "Computing the Noncommutative Inner Rank by Means of Operator-Valued Free Probability Theory",
+    "online_publication_date": "2024-11-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09684-5",
+      "local_text_path": "text/10.1007_s10208-024-09684-5__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09686-3",
+    "title": "Quantitative Convergence of a Discretization of Dynamic Optimal Transport Using the Dual Formulation",
+    "online_publication_date": "2024-11-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09686-3",
+      "local_text_path": "text/10.1007_s10208-024-09686-3__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09688-1",
+    "title": "Classification of Finite Groups: Recent Developements and Open Problems",
+    "online_publication_date": "2024-11-12",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09688-1",
+      "local_text_path": "text/10.1007_s10208-024-09688-1__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 4,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 4 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09681-8",
+    "title": "Proximal Galerkin: A Structure-Preserving Finite Element Method for Pointwise Bound Constraints",
+    "online_publication_date": "2024-11-20",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09681-8",
+      "local_text_path": "text/10.1007_s10208-024-09681-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 8,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09680-9",
+    "title": "Tribute to Nick Higham",
+    "online_publication_date": "2024-11-22",
+    "record_type": "tribute",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09680-9",
+      "local_text_path": "text/10.1007_s10208-024-09680-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "excluded_nonresearch",
+    "rationale": "Excluded before full-text problem screening: record classified as tribute."
+  },
+  {
+    "doi": "10.1007/s10208-024-09674-7",
+    "title": "Constrained and Unconstrained Stable Discrete Minimizations for p-Robust Local Reconstructions in Vertex Patches in the de Rham Complex",
+    "online_publication_date": "2024-11-25",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "institutional_repository",
+      "url": "https://doi.org/10.1007/s10208-024-09674-7",
+      "local_text_path": "text/10.1007_s10208-024-09674-7__hal.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09659-6",
+    "title": "Locally-Verifiable Sufficient Conditions for Exactness of the Hierarchical B-spline Discrete de Rham Complex in $$\\mathbb {R}^n$$",
+    "online_publication_date": "2024-12-04",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09659-6",
+      "local_text_path": "text/10.1007_s10208-024-09659-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09682-7",
+    "title": "Generalized Pseudospectral Shattering and Inverse-Free Matrix Pencil Diagonalization",
+    "online_publication_date": "2024-12-09",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09682-7",
+      "local_text_path": "text/10.1007_s10208-024-09682-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09685-4",
+    "title": "Conley Index for Multivalued Maps on Finite Topological Spaces",
+    "online_publication_date": "2024-12-09",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09685-4",
+      "local_text_path": "text/10.1007_s10208-024-09685-4__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09694-x",
+    "title": "Accuracy Controlled Schemes for the Eigenvalue Problem of the Radiative Transfer Equation",
+    "online_publication_date": "2025-01-21",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09694-x",
+      "local_text_path": "text/10.1007_s10208-025-09694-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09690-1",
+    "title": "Sharp Bounds for Max-sliced Wasserstein Distances",
+    "online_publication_date": "2025-01-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2403.00666",
+      "local_text_path": "text/10.1007_s10208-025-09690-1__arxiv_2403.00666.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09691-0",
+    "title": "Active Manifolds, Stratifications, and Convergence to Local Minima in Nonsmooth Optimization",
+    "online_publication_date": "2025-01-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2108.11832",
+      "local_text_path": "text/10.1007_s10208-025-09691-0__arxiv_2108.11832.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09696-9",
+    "title": "Optimal Convergence Rates for the Spectrum of the Graph Laplacian on Poisson Point Clouds",
+    "online_publication_date": "2025-01-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.08149",
+      "local_text_path": "text/10.1007_s10208-025-09696-9__arxiv_2312.08149.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09693-y",
+    "title": "Optimal Regularization for a Data Source",
+    "online_publication_date": "2025-01-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2212.13597",
+      "local_text_path": "text/10.1007_s10208-025-09693-y__arxiv_2212.13597.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09695-w",
+    "title": "Stabilizing Decomposition of Multiparameter Persistence Modules",
+    "online_publication_date": "2025-01-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09695-w",
+      "local_text_path": "text/10.1007_s10208-025-09695-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 8,
+    "explicit_problem_count": 4,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 4 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09689-8",
+    "title": "Safely Learning Dynamical Systems",
+    "online_publication_date": "2025-02-04",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.12284",
+      "local_text_path": "text/10.1007_s10208-025-09689-8__arxiv_2305.12284.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09697-8",
+    "title": "Representations of the Symmetric Group are Decomposable in Polynomial Time",
+    "online_publication_date": "2025-02-10",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09697-8",
+      "local_text_path": "text/10.1007_s10208-025-09697-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 5,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09692-z",
+    "title": "Multilinear Hyperquiver Representations",
+    "online_publication_date": "2025-02-14",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.05622",
+      "local_text_path": "text/10.1007_s10208-025-09692-z__arxiv_2305.05622.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-024-09673-8",
+    "title": "Restarts Subject to Approximate Sharpness: A Parameter-Free and Optimal Scheme For First-Order Methods",
+    "online_publication_date": "2025-02-18",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-024-09673-8",
+      "local_text_path": "text/10.1007_s10208-024-09673-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09702-0",
+    "title": "An Unfiltered Low-Regularity Integrator for the KdV Equation with Solutions Below $$\\mathbf{H^1}$$",
+    "online_publication_date": "2025-03-04",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2206.09320",
+      "local_text_path": "text/10.1007_s10208-025-09702-0__arxiv_2206.09320.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09703-z",
+    "title": "Sums of Squares Certificates for Polynomial Moment Inequalities",
+    "online_publication_date": "2025-03-04",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2306.05761",
+      "local_text_path": "text/10.1007_s10208-025-09703-z__arxiv_2306.05761.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09705-x",
+    "title": "Non-parametric Learning of Stochastic Differential Equations with Non-asymptotic Fast Rates of Convergence",
+    "online_publication_date": "2025-03-06",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09705-x",
+      "local_text_path": "text/10.1007_s10208-025-09705-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09699-6",
+    "title": "Towards a Fluid Computer",
+    "online_publication_date": "2025-03-13",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09699-6",
+      "local_text_path": "text/10.1007_s10208-025-09699-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 4,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 4 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09700-2",
+    "title": "Local Space-Preserving Decompositions for the Bubble Transform",
+    "online_publication_date": "2025-03-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09700-2",
+      "local_text_path": "text/10.1007_s10208-025-09700-2__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09698-7",
+    "title": "Adaptive Mesh Refinement for Arbitrary Initial Triangulations",
+    "online_publication_date": "2025-03-24",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09698-7",
+      "local_text_path": "text/10.1007_s10208-025-09698-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09707-9",
+    "title": "Local Geometry Determines Global Landscape in Low-Rank Factorization for Synchronization",
+    "online_publication_date": "2025-04-24",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.18670",
+      "local_text_path": "text/10.1007_s10208-025-09707-9__arxiv_2311.18670.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09710-0",
+    "title": "Symbolic Summation of Multivariate Rational Functions",
+    "online_publication_date": "2025-04-24",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2204.06968",
+      "local_text_path": "text/10.1007_s10208-025-09710-0__arxiv_2204.06968.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 3,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 3 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09711-z",
+    "title": "A Unified Framework for Multiscale Spectral Generalized FEMs and Low-Rank Approximations to Multiscale PDEs",
+    "online_publication_date": "2025-04-29",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.08761",
+      "local_text_path": "text/10.1007_s10208-025-09711-z__arxiv_2311.08761.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09704-y",
+    "title": "Reduction of Plane Quartics and Cayley Octads",
+    "online_publication_date": "2025-06-02",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09704-y",
+      "local_text_path": "text/10.1007_s10208-025-09704-y__springer.txt"
+    },
+    "high_recall_phrase_hits": 4,
+    "explicit_problem_count": 3,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 3 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09706-w",
+    "title": "Uniform Distribution via Lattices: From Point Sets to Sequences",
+    "online_publication_date": "2025-06-24",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2308.13297",
+      "local_text_path": "text/10.1007_s10208-025-09706-w__arxiv_2308.13297.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09712-y",
+    "title": "An Optimal Lower Bound for Smooth Convex Functions",
+    "online_publication_date": "2025-06-25",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2404.18889",
+      "local_text_path": "text/10.1007_s10208-025-09712-y__arxiv_2404.18889.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09722-w",
+    "title": "Gradient Flows and Riemannian Structure in the Gromov-Wasserstein Geometry",
+    "online_publication_date": "2025-07-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2407.11800",
+      "local_text_path": "text/10.1007_s10208-025-09722-w__arxiv_2407.11800.txt"
+    },
+    "high_recall_phrase_hits": 5,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09719-5",
+    "title": "Interlacing Polynomial Method for Matrix Approximation via Generalized Column and Row Selection",
+    "online_publication_date": "2025-07-14",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.01715",
+      "local_text_path": "text/10.1007_s10208-025-09719-5__arxiv_2312.01715.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09720-y",
+    "title": "Multisymplecticity in Finite Element Exterior Calculus",
+    "online_publication_date": "2025-07-14",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.03657",
+      "local_text_path": "text/10.1007_s10208-025-09720-y__arxiv_2312.03657.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09725-7",
+    "title": "Irreducible Components of Sets of Points in the Plane that Satisfy Distance Conditions",
+    "online_publication_date": "2025-08-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09725-7",
+      "local_text_path": "text/10.1007_s10208-025-09725-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 6,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09729-3",
+    "title": "A Fisher–Rao Gradient Flow for Entropy-Regularised Markov Decision Processes in Polish Spaces",
+    "online_publication_date": "2025-08-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09729-3",
+      "local_text_path": "text/10.1007_s10208-025-09729-3__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09721-x",
+    "title": "Algorithms for Mean-Field Variational Inference Via Polyhedral Optimization in the Wasserstein Space",
+    "online_publication_date": "2025-08-12",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.02849",
+      "local_text_path": "text/10.1007_s10208-025-09721-x__arxiv_2312.02849.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09724-8",
+    "title": "Doubly Regularized Entropic Wasserstein Barycenter",
+    "online_publication_date": "2025-08-12",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09724-8",
+      "local_text_path": "text/10.1007_s10208-025-09724-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09727-5",
+    "title": "Time Splitting and Error Estimates for Nonlinear Schrödinger Equations with a Potential",
+    "online_publication_date": "2025-08-12",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2408.14816",
+      "local_text_path": "text/10.1007_s10208-025-09727-5__arxiv_2408.14816.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09726-6",
+    "title": "Improved global performance guarantees of second-order methods in convex minimization",
+    "online_publication_date": "2025-08-13",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09726-6",
+      "local_text_path": "text/10.1007_s10208-025-09726-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09723-9",
+    "title": "Simple matrix expressions for the curvatures of Grassmannian",
+    "online_publication_date": "2025-08-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2406.11821",
+      "local_text_path": "text/10.1007_s10208-025-09723-9__arxiv_2406.11821.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09701-1",
+    "title": "Planar Regularity Structures",
+    "online_publication_date": "2025-09-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09701-1",
+      "local_text_path": "text/10.1007_s10208-025-09701-1__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09728-4",
+    "title": "LieDetect: Detection of Representation Orbits of Compact Lie Groups From Point Clouds",
+    "online_publication_date": "2025-09-15",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09728-4",
+      "local_text_path": "text/10.1007_s10208-025-09728-4__springer.txt"
+    },
+    "high_recall_phrase_hits": 8,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09718-6",
+    "title": "The Wonderful Geometry of the Vandermonde map",
+    "online_publication_date": "2025-09-22",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09718-6",
+      "local_text_path": "text/10.1007_s10208-025-09718-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09733-7",
+    "title": "Recognizing Weighted Means in Geodesic Spaces",
+    "online_publication_date": "2025-09-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2406.03913",
+      "local_text_path": "text/10.1007_s10208-025-09733-7__arxiv_2406.03913.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09735-5",
+    "title": "Covering Number of Real Algebraic Varieties and Beyond: Improved Bounds and Applications",
+    "online_publication_date": "2025-09-26",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.05116",
+      "local_text_path": "text/10.1007_s10208-025-09735-5__arxiv_2311.05116.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09730-w",
+    "title": "Convergence Rates for the Trotter Splitting for Unbounded Operators",
+    "online_publication_date": "2025-09-29",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09730-w",
+      "local_text_path": "text/10.1007_s10208-025-09730-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09736-4",
+    "title": "A Transversality Theorem for Semi-Algebraic Sets with Application to Signal Recovery from the Second Moment and Cryo-EM",
+    "online_publication_date": "2025-09-29",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09736-4",
+      "local_text_path": "text/10.1007_s10208-025-09736-4__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09732-8",
+    "title": "Interval Decomposition of Persistence Modules over a Principal Ideal Domain",
+    "online_publication_date": "2025-09-30",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2310.07971",
+      "local_text_path": "text/10.1007_s10208-025-09732-8__arxiv_2310.07971.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09731-9",
+    "title": "Riemann-Oracle: A general-purpose Riemannian optimizer to solve nearness problems in matrix theory",
+    "online_publication_date": "2025-10-16",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09731-9",
+      "local_text_path": "text/10.1007_s10208-025-09731-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09708-8",
+    "title": "The Nullstellensatz and Positivstellensatz for Sparse Tropical Polynomial Systems",
+    "online_publication_date": "2025-12-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2312.05859",
+      "local_text_path": "text/10.1007_s10208-025-09708-8__arxiv_2312.05859.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09738-2",
+    "title": "Optimal sampling for least-squares approximation",
+    "online_publication_date": "2025-12-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2409.02342",
+      "local_text_path": "text/10.1007_s10208-025-09738-2__arxiv_2409.02342.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-025-09739-1",
+    "title": "Preface",
+    "online_publication_date": "2025-12-02",
+    "record_type": "preface",
+    "full_text_access": "not_applicable",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09739-1",
+      "local_text_path": "text/10.1007_s10208-025-09739-1__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "excluded_nonresearch",
+    "rationale": "Excluded before full-text problem screening: record classified as preface."
+  },
+  {
+    "doi": "10.1007/s10208-025-09734-6",
+    "title": "A Discrete Trace Theory for Non-Conforming Polytopal Hybrid Discretisation Methods",
+    "online_publication_date": "2025-12-03",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-025-09734-6",
+      "local_text_path": "text/10.1007_s10208-025-09734-6__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09740-2",
+    "title": "Spectrally Accurate Fully Discrete Schemes for Some Nonlocal and Nonlinear Integrable PDEs via Explicit Formulas",
+    "online_publication_date": "2026-02-02",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2412.13480",
+      "local_text_path": "text/10.1007_s10208-026-09740-2__arxiv_2412.13480.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09744-y",
+    "title": "Ulam Meets Turing: Constructing Quadratic Maps with Non-Computable Physical Measures",
+    "online_publication_date": "2026-02-02",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2501.00006",
+      "local_text_path": "text/10.1007_s10208-026-09744-y__arxiv_2501.00006.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09743-z",
+    "title": "The radius of statistical efficiency",
+    "online_publication_date": "2026-02-06",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.09676",
+      "local_text_path": "text/10.1007_s10208-026-09743-z__arxiv_2405.09676.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09746-w",
+    "title": "Extended Regge Complex for Linearized Riemann-Cartan Geometry and Cohomology",
+    "online_publication_date": "2026-02-17",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09746-w",
+      "local_text_path": "text/10.1007_s10208-026-09746-w__springer.txt"
+    },
+    "high_recall_phrase_hits": 3,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09748-8",
+    "title": "Nearly Self-similar Blowup of Generalized Axisymmetric Navier–Stokes Equations",
+    "online_publication_date": "2026-02-25",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2405.10916",
+      "local_text_path": "text/10.1007_s10208-026-09748-8__arxiv_2405.10916.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09741-1",
+    "title": "Crouzeix-Raviart elements on simplicial meshes in d dimensions",
+    "online_publication_date": "2026-02-27",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2407.04361",
+      "local_text_path": "text/10.1007_s10208-026-09741-1__arxiv_2407.04361.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09745-x",
+    "title": "Accelerated Gradient Methods for Nonconvex Optimization: Escape Trajectories From Strict Saddle Points and Convergence to Local Minima",
+    "online_publication_date": "2026-04-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09745-x",
+      "local_text_path": "text/10.1007_s10208-026-09745-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 7,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09742-0",
+    "title": "Symmetric Resonance Based Integrators and Forest Formulae",
+    "online_publication_date": "2026-04-06",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2305.16737",
+      "local_text_path": "text/10.1007_s10208-026-09742-0__arxiv_2305.16737.txt"
+    },
+    "high_recall_phrase_hits": 1,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09747-9",
+    "title": "Persistence Diagram Bundles: A Multidimensional Generalization of Vineyards",
+    "online_publication_date": "2026-04-28",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2210.05124",
+      "local_text_path": "text/10.1007_s10208-026-09747-9__arxiv_2210.05124.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09752-y",
+    "title": "A Convergent Finite Difference-Quadrature Scheme for the Porous Medium Equation with Nonlocal Pressure",
+    "online_publication_date": "2026-06-01",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09752-y",
+      "local_text_path": "text/10.1007_s10208-026-09752-y__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09751-z",
+    "title": "Generalized Local Polynomial Reproductions",
+    "online_publication_date": "2026-06-08",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2410.12973",
+      "local_text_path": "text/10.1007_s10208-026-09751-z__arxiv_2410.12973.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09754-w",
+    "title": "Measure-to-Measure Interpolation Using Transformers",
+    "online_publication_date": "2026-06-10",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2411.04551",
+      "local_text_path": "text/10.1007_s10208-026-09754-w__arxiv_2411.04551.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09750-0",
+    "title": "Multigrid Monte Carlo Revisited: Theory and Bayesian Inference",
+    "online_publication_date": "2026-06-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09750-0",
+      "local_text_path": "text/10.1007_s10208-026-09750-0__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09753-x",
+    "title": "Shifted Composition III: Local Error Framework for KL Divergence",
+    "online_publication_date": "2026-06-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2412.17997",
+      "local_text_path": "text/10.1007_s10208-026-09753-x__arxiv_2412.17997.txt"
+    },
+    "high_recall_phrase_hits": 8,
+    "explicit_problem_count": 1,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 1 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09758-6",
+    "title": "Exact and Efficient Representation of Totally Anti-Symmetric Functions",
+    "online_publication_date": "2026-06-11",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2311.05064",
+      "local_text_path": "text/10.1007_s10208-026-09758-6__arxiv_2311.05064.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09757-7",
+    "title": "Inf-Sup Stability of Parabolic TraceFEM",
+    "online_publication_date": "2026-06-25",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09757-7",
+      "local_text_path": "text/10.1007_s10208-026-09757-7__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 2,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 2 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09755-9",
+    "title": "The Likelihood Correspondence",
+    "online_publication_date": "2026-07-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09755-9",
+      "local_text_path": "text/10.1007_s10208-026-09755-9__springer.txt"
+    },
+    "high_recall_phrase_hits": 0,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09756-8",
+    "title": "Interior-Point Methods on Manifolds: Theory and Applications",
+    "online_publication_date": "2026-07-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09756-8",
+      "local_text_path": "text/10.1007_s10208-026-09756-8__springer.txt"
+    },
+    "high_recall_phrase_hits": 7,
+    "explicit_problem_count": 4,
+    "disposition": "screened_full_text_explicit_problem_found",
+    "rationale": "Full text manually reviewed; 4 source-explicit, precisely normalizable problem(s) retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09761-x",
+    "title": "First-Order Optimality Conditions for Non-Commutative Optimization Problems",
+    "online_publication_date": "2026-07-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "publisher_html",
+      "url": "https://link.springer.com/article/10.1007/s10208-026-09761-x",
+      "local_text_path": "text/10.1007_s10208-026-09761-x__springer.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  },
+  {
+    "doi": "10.1007/s10208-026-09763-9",
+    "title": "Validated Enclosure of Renormalization Fixed Points Via Chebyshev Series and the DFT",
+    "online_publication_date": "2026-07-07",
+    "record_type": "research_article",
+    "full_text_access": "full_text_located",
+    "full_text_route": {
+      "kind": "arxiv_preprint",
+      "url": "https://arxiv.org/abs/2409.20457",
+      "local_text_path": "text/10.1007_s10208-026-09763-9__arxiv_2409.20457.txt"
+    },
+    "high_recall_phrase_hits": 2,
+    "explicit_problem_count": 0,
+    "disposition": "screened_full_text_no_retained_problem",
+    "rationale": "Full text manually reviewed; no unresolved source-explicit question met the retention threshold. Historical problems reported as solved, vague future work, and unknown numerical inputs were not retained."
+  }
+]
