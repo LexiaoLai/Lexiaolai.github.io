@@ -24,9 +24,9 @@ I am recruiting a postdoctoral fellow at HKU Mathematics. The start date is flex
 1. Global convergence of the subgradient method for robust signal recovery (with Zesheng Cai and Tiansheng Li), 2026 [[preprint](https://arxiv.org/abs/2601.10062)]
 1. Non-convex self-concordant functions: Practical algorithms and complexity analysis (with Donald Goldfarb, Tianyi Lin, and Jiayu Zhang), 2025 [[preprint](https://arxiv.org/abs/2511.15019)]
 1. On the diameter of subgradient sequences in o-minimal structures (with Mingzhi Song), 2025 [[preprint](https://arxiv.org/abs/2511.06868)]
-1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), 2024  [[preprint](https://arxiv.org/abs/2408.07182)]
 
 ## Publications
+1. Proximal random reshuffling under local Lipschitz continuity (with Cédric Josz and Xiaopeng Li), *Mathematics of Operations Research*, 2026 [[journal](https://pubsonline.informs.org/doi/10.1287/moor.2024.0542)] [[preprint](https://arxiv.org/abs/2408.07182)]
 1. Phase transitions in phase-only compressed sensing (with Junren Chen and Arian Maleki), *IEEE International Symposium on Information Theory (ISIT)*, 2025 [[proceeding](https://ieeexplore.ieee.org/document/11195421)] [[preprint](https://arxiv.org/abs/2501.11905)] 
 1. Nonsmooth rank-one symmetric matrix factorization landscape (with Cédric Josz), *Optimization Letters*, 2025 [[journal](https://link.springer.com/article/10.1007/s11590-025-02195-4)] [[preprint](https://arxiv.org/abs/2410.17487)]
 1. Sufficient conditions for instability of the subgradient method with constant step size (with Cédric Josz), *SIAM Journal on Optimization*, 2024 [[journal](https://epubs.siam.org/doi/abs/10.1137/22M1535723)] [[preprint](https://arxiv.org/abs/2211.14852)]
