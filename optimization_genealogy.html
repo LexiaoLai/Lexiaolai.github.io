@@ -1,0 +1,6104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全球连续优化学者谱系图</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#fafaf9}
+#header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(6px);border-bottom:1px solid #e5e5e7;padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+#header h1{margin:0;font-size:18px;color:#1f2937}
+#header .sub{color:#6b7280;font-size:12px}
+#searchBox{position:relative}
+#searchInput{width:280px;padding:8px 14px;border:1px solid #d1d5db;border-radius:6px;font-size:14px;outline:none}
+#searchInput:focus{border-color:#2563eb;box-shadow:0 0 0 3px rgba(37,99,235,0.12)}
+#suggestions{position:absolute;top:100%;left:0;right:0;background:white;border:1px solid #e5e5e7;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.1);max-height:260px;overflow-y:auto;display:none;z-index:101}
+#suggestions .item{padding:9px 14px;cursor:pointer;font-size:14px;border-bottom:1px solid #f3f4f6}
+#suggestions .item:last-child{border-bottom:none}
+#suggestions .item:hover{background:#f3f4f6}
+#suggestions .item .en{color:#9ca3af;font-size:12px;margin-left:6px}
+#filterBar{display:flex;gap:8px;align-items:center;margin-left:auto}
+.filter-chip{padding:4px 12px;border-radius:14px;font-size:12px;cursor:pointer;border:1px solid #d1d5db;background:white;transition:all .15s}
+.filter-chip.active{color:white}
+.filter-chip[data-kind="core"].active{background:#2563eb;border-color:#2563eb}
+.filter-chip[data-kind="pillar"].active{background:#d97706;border-color:#d97706}
+.filter-chip[data-kind="pioneer"].active{background:#64748b;border-color:#64748b}
+.filter-chip[data-kind="emerging"].active{background:#059669;border-color:#059669}
+#auditBtn{padding:6px 12px;border-radius:6px;font-size:12px;cursor:pointer;border:1px solid #cbd5e1;background:#f8fafc;color:#334155}
+#auditBtn:hover{background:#eef2ff;border-color:#a5b4fc;color:#3730a3}
+#main{display:flex;position:relative;margin-top:58px;height:calc(100vh - 58px)}
+#graphContainer{flex:1;position:relative;overflow:hidden}
+#chart{width:100%;height:100%}
+#detailPanel{width:380px;background:white;border-left:1px solid #e5e5e7;padding:24px;overflow-y:auto;display:none;flex-shrink:0}
+#detailPanel.show{display:block}
+#detailPanel h2{margin:0 0 4px 0;font-size:20px}
+#detailPanel .en-sub{color:#6b7280;font-size:14px;margin-bottom:16px}
+.info-section{margin:14px 0;padding-top:14px;border-top:1px solid #f3f4f6}
+.info-label{font-size:12px;color:#9ca3af;margin-bottom:4px}
+.info-value{font-size:13px;line-height:1.7;color:#374151}
+.person-list{margin:4px 0 0 0;padding-left:18px;font-size:13px}
+.person-list li{margin:3px 0;cursor:pointer;color:#2563eb}
+.person-list li:hover{text-decoration:underline}
+.source-list{margin:6px 0 0;padding-left:18px;font-size:12px;line-height:1.65}
+.source-list a{color:#2563eb;text-decoration:none;word-break:break-word}
+.source-list a:hover{text-decoration:underline}
+.relation-note{color:#64748b;font-size:11px;margin-left:5px}
+.relation-source{color:#2563eb;font-size:11px;margin-left:6px;text-decoration:none}
+.relation-source:hover{text-decoration:underline}
+.status-badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;margin-left:7px;vertical-align:2px;background:#ecfdf5;color:#047857}
+.status-badge.context{background:#f1f5f9;color:#64748b}
+.audit-card{font-size:13px;line-height:1.75;color:#374151}
+.audit-card ul{padding-left:18px}
+#legend{position:absolute;bottom:20px;left:16px;background:rgba(255,255,255,0.95);border:1px solid #e5e5e7;border-radius:8px;padding:12px 16px;font-size:12px;z-index:5}
+#legend .item{display:flex;align-items:center;gap:8px;margin:4px 0}
+#legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+#legend .line{width:24px;height:0;border-top-width:2px;display:inline-block;margin-right:6px}
+#legend .line.solid{border-top-style:solid;border-color:#94a3b8}
+#legend .line.dashed{border-top-style:dashed;border-color:#f59e0b}
+#legend .line.mentor{border-top-style:dashed;border-color:#8b5cf6}
+#legend .line.dotted{border-top-style:dotted;border-color:#cbd5e1}
+#stats{position:absolute;top:12px;right:16px;background:rgba(255,255,255,0.92);border:1px solid #e5e5e7;border-radius:8px;padding:8px 14px;font-size:12px;color:#6b7280;z-index:5}
+.closeBtn{position:absolute;top:12px;right:16px;cursor:pointer;font-size:24px;color:#d1d5db;z-index:10}
+.closeBtn:hover{color:#6b7280}
+@media (max-width:900px){
+  #header{gap:9px;padding:9px 12px}
+  #searchBox,#searchInput{width:100%}
+  #filterBar{width:100%;margin-left:0;overflow-x:auto;padding-bottom:2px}
+  .filter-chip,#auditBtn{white-space:nowrap}
+  #detailPanel{position:absolute;right:0;top:0;bottom:0;z-index:20;width:min(380px,92vw);box-shadow:-8px 0 24px rgba(15,23,42,.12)}
+  #legend{bottom:10px;left:8px;padding:9px 11px}
+}
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>全球连续优化学者谱系图</h1>
+  <span class="sub" id="headerStats">更新于 2026-08-21</span>
+  <div id="searchBox">
+    <input id="searchInput" type="text" placeholder="搜索学者姓名或机构…">
+    <div id="suggestions"></div>
+  </div>
+  <div id="filterBar">
+    <button class="filter-chip active" data-kind="core">● 核心学者</button>
+    <button class="filter-chip active" data-kind="pillar">● 重要节点</button>
+    <button class="filter-chip active" data-kind="pioneer">● 谱系支点</button>
+    <button class="filter-chip active" data-kind="emerging">● 新兴力量</button>
+    <button id="auditBtn" type="button">核验说明</button>
+  </div>
+</div>
+<div id="main">
+  <div id="graphContainer"><div id="chart"></div>
+    <div id="legend">
+      <div class="item"><span class="dot" style="background:#2563eb"></span>核心学者</div>
+      <div class="item"><span class="dot" style="background:#f59e0b"></span>重要节点</div>
+      <div class="item"><span class="dot" style="background:#94a3b8"></span>谱系支点</div>
+      <div class="item"><span class="dot" style="background:#059669"></span>新兴力量</div>
+      <div class="item"><span class="line solid"></span>博士师承</div>
+      <div class="item"><span class="line dashed"></span>博士后指导</div>
+      <div class="item"><span class="line mentor"></span>硕士/阶段指导</div>
+      <div class="item"><span class="line dotted"></span>合作/学术影响（非师承）</div>
+    </div>
+    <div id="stats"></div>
+  </div>
+  <div id="detailPanel">
+    <span class="closeBtn" onclick="document.getElementById('detailPanel').classList.remove('show')">&times;</span>
+    <div id="detailContent"><div style="color:#9ca3af;text-align:center;margin-top:60px;font-size:14px">点击图中节点查看学者详情</div></div>
+  </div>
+</div>
+<script>
+const DATA = {
+ "meta": {
+  "title": "全球连续优化学者谱系与学术网络",
+  "description": "以连续优化为主线，区分正式博士师承、博士后/阶段指导与合作或学术影响。正式关系优先采用学位论文、本人简历、机构主页及 Mathematics Genealogy Project 交叉核对；合作与影响关系不等同于师承。",
+  "updated": "2026-08-21",
+  "scope": "覆盖非线性、凸与非光滑优化、锥与半定规划、随机优化、无导数优化、变分分析、算子分裂及优化与机器学习交叉方向。新兴力量不是排名，而是依据近年专业学会奖项、代表性算法/软件与独立研究影响作出的编辑性标注。"
+ },
+ "nodes": [
+  {
+   "id": "hualuogeng",
+   "name": "华罗庚",
+   "name_en": "Loo-Keng Hua",
+   "affiliation": "中国科学院数学研究所",
+   "region": "内地",
+   "titles": [
+    "中国科学院学部委员",
+    "中国运筹学推广运动发起者"
+   ],
+   "tier": "pioneer",
+   "research": "数论、统筹法、优选法推广",
+   "phd": "无博士学位",
+   "bio": "中国近代数学奠基人之一，60年代推广统筹法与优选法，是中国运筹学普及化的源头人物。",
+   "sources": [
+    "中科院数学所史料"
+   ]
+  },
+  {
+   "id": "xuguozhi",
+   "name": "许国志",
+   "name_en": "Guozhi Xu",
+   "affiliation": "中国科学院系统科学研究所",
+   "region": "内地",
+   "titles": [
+    "中国工程院院士(1995)",
+    "中国系统工程学会理事长"
+   ],
+   "tier": "pioneer",
+   "research": "运筹学、系统工程",
+   "phd": "美国堪萨斯大学 1953",
+   "bio": "中国运筹学与系统工程主要创建人之一，筹建中国第一个运筹学研究室(1956)。",
+   "sources": [
+    "中国工程院官网"
+   ]
+  },
+  {
+   "id": "hanjiye",
+   "name": "韩继业",
+   "name_en": "Jiye Han",
+   "affiliation": "中科院数学与系统科学研究院",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会终身成就奖(2014)",
+    "中国运筹学会会士"
+   ],
+   "tier": "pioneer",
+   "research": "非线性规划、互补问题、变分不等式",
+   "phd": "1957年北京大学数学力学系毕业（无博士制度）",
+   "bio": "中国运筹学奠基人之一，培养了胡旭东、孙德锋、徐大川等知名优化学者。",
+   "sources": [
+    "中国运筹学会",
+    "MGP id=155576"
+   ]
+  },
+  {
+   "id": "xuguanghui",
+   "name": "徐光煇",
+   "name_en": "Guang-Hui Xu",
+   "affiliation": "中科院数学与系统科学研究院",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会终身成就奖(2020)",
+    "中国运筹学会理事长(1988-1996)",
+    "IFORS副主席(1992-1996)"
+   ],
+   "tier": "pioneer",
+   "research": "排队论、随机运筹学",
+   "phd": "1957年北京大学数学力学系毕业",
+   "bio": "中国随机服务系统研究的开拓者，学生张汉勤2000年获国家杰青。",
+   "sources": [
+    "中国运筹学会"
+   ]
+  },
+  {
+   "id": "powell",
+   "name": "M.J.D. Powell",
+   "name_en": "Michael J. D. Powell",
+   "affiliation": "剑桥大学",
+   "region": "海外",
+   "titles": [
+    "英国皇家学会会士(FRS)"
+   ],
+   "tier": "pioneer",
+   "research": "数值优化、拟牛顿法、信赖域方法、无导数优化",
+   "phd": "剑桥大学",
+   "bio": "20世纪数值优化最有影响力的学者之一，袁亚湘的博士导师，中国优化界与剑桥谱系的关键连接点。",
+   "sources": [
+    "MGP id=65706"
+   ]
+  },
+  {
+   "id": "fengkang",
+   "name": "冯康",
+   "name_en": "Kang Feng",
+   "affiliation": "中国科学院计算中心",
+   "region": "内地",
+   "titles": [
+    "中国科学院院士"
+   ],
+   "tier": "pioneer",
+   "research": "有限元方法、辛几何算法",
+   "phd": "",
+   "bio": "中国计算数学奠基人，袁亚湘硕士/早期阶段的导师。",
+   "sources": [
+    "中科院"
+   ]
+  },
+  {
+   "id": "stoer",
+   "name": "Josef Stoer",
+   "name_en": "Josef Stoer",
+   "affiliation": "维尔茨堡大学",
+   "region": "海外",
+   "titles": [
+    "德国数值分析学家"
+   ],
+   "tier": "pioneer",
+   "research": "数值分析、优化",
+   "phd": "",
+   "bio": "著名数值分析学家，《数值分析引论》作者，何炳生的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "dantzig",
+   "name": "George Dantzig",
+   "name_en": "George B. Dantzig",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [
+    "美国国家科学奖章"
+   ],
+   "tier": "pioneer",
+   "research": "线性规划、单纯形法",
+   "phd": "UC Berkeley 1946",
+   "bio": "线性规划之父，叶荫宇博士委员会共同导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "tse",
+   "name": "谢德荪",
+   "name_en": "Edison Tse",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [
+    "斯坦福大学教授"
+   ],
+   "tier": "pioneer",
+   "research": "工程经济系统、决策分析",
+   "phd": "MIT 1970（导师 Michael Athans）",
+   "bio": "叶荫宇在斯坦福的博士导师。",
+   "sources": [
+    "MGP id=12397"
+   ]
+  },
+  {
+   "id": "athans",
+   "name": "Michael Athans",
+   "name_en": "Michael Athans",
+   "affiliation": "MIT",
+   "region": "海外",
+   "titles": [
+    "控制理论家"
+   ],
+   "tier": "pioneer",
+   "research": "最优控制",
+   "phd": "UC Berkeley",
+   "bio": "John Tsitsiklis的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "tsitsiklis",
+   "name": "John Tsitsiklis",
+   "name_en": "John N. Tsitsiklis",
+   "affiliation": "MIT",
+   "region": "海外",
+   "titles": [
+    "美国国家工程院院士",
+    "IEEE Fellow"
+   ],
+   "tier": "pioneer",
+   "research": "分布式决策、随机系统、强化学习",
+   "phd": "MIT 1985",
+   "bio": "罗智泉在MIT的正式博士导师。",
+   "sources": [
+    "MGP id=64491"
+   ]
+  },
+  {
+   "id": "bertsekas",
+   "name": "Dimitri Bertsekas",
+   "name_en": "Dimitri P. Bertsekas",
+   "affiliation": "MIT / ASU",
+   "region": "海外",
+   "titles": [
+    "美国国家工程院院士",
+    "INFORMS John von Neumann理论奖"
+   ],
+   "tier": "pioneer",
+   "research": "动态规划、凸优化、网络优化",
+   "phd": "MIT 1971",
+   "bio": "Paul Tseng的博士导师，优化领域泰斗。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "tseng",
+   "name": "Paul Tseng",
+   "name_en": "Paul Tseng",
+   "affiliation": "华盛顿大学",
+   "region": "海外",
+   "titles": [
+    "ISMP Tseng Lectureship以其命名"
+   ],
+   "tier": "pioneer",
+   "research": "坐标下降法、邻近点算法",
+   "phd": "MIT 1986",
+   "bio": "加拿大华裔优化学家(1959–2009)。罗智泉的正式博士导师是 John Tsitsiklis；Tseng 与罗在 MIT 因开放问题开始长期研究合作，不是博士师承。",
+   "sources": [
+    {"label":"MGP id=22925","url":"https://www.mathgenealogy.org/id.php?id=22925"},
+    {"label":"罗智泉回忆文章（合作关系）","url":"https://higherlogicdownload.s3.amazonaws.com/INFORMS/9a2da56a-3917-4600-a0e3-84cfb0d2b004/UploadedImages/OStoday0311.pdf"}
+   ]
+  },
+  {
+   "id": "mangasarian",
+   "name": "Olvi Mangasarian",
+   "name_en": "Olvi L. Mangasarian",
+   "affiliation": "威斯康星大学麦迪逊分校",
+   "region": "海外",
+   "titles": [
+    "机器学习与优化先驱"
+   ],
+   "tier": "pioneer",
+   "research": "优化、支持向量机",
+   "phd": "Harvard 1959",
+   "bio": "威斯康星优化学派核心，Stephen Robinson的导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "robinson",
+   "name": "Stephen Robinson",
+   "name_en": "Stephen M. Robinson",
+   "affiliation": "威斯康星大学麦迪逊分校",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow"
+   ],
+   "tier": "pioneer",
+   "research": "变分分析、参数优化",
+   "phd": "Wisconsin 1971",
+   "bio": "祁力群的博士导师。",
+   "sources": [
+    "MGP id=68303"
+   ]
+  },
+  {
+   "id": "rinnooykan",
+   "name": "A.H.G. Rinnooy Kan",
+   "name_en": "Alexander Rinnooy Kan",
+   "affiliation": "伊拉斯姆斯大学",
+   "region": "海外",
+   "titles": [
+    "荷兰运筹学家"
+   ],
+   "tier": "pioneer",
+   "research": "运筹学、算法复杂度",
+   "phd": "Amsterdam",
+   "bio": "张树中的博士导师之一。",
+   "sources": [
+    "MGP id=75803"
+   ]
+  },
+  {
+   "id": "frenk",
+   "name": "Hans Frenk",
+   "name_en": "J.B.G. Frenk",
+   "affiliation": "伊拉斯姆斯大学",
+   "region": "海外",
+   "titles": [
+    "运筹学教授"
+   ],
+   "tier": "pioneer",
+   "research": "随机优化、凸分析",
+   "phd": "",
+   "bio": "张树中的博士导师之一。",
+   "sources": [
+    "MGP id=75803"
+   ]
+  },
+  {
+   "id": "goldfarb",
+   "name": "Donald Goldfarb",
+   "name_en": "Donald Goldfarb",
+   "affiliation": "哥伦比亚大学",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow",
+    "INFORMS Fellow",
+    "BFGS方法共同发明人"
+   ],
+   "tier": "pioneer",
+   "research": "优化算法（BFGS之G）",
+   "phd": "Princeton 1966",
+   "bio": "拟牛顿BFGS方法发明人之一，文再文的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "youzhaoyong",
+   "name": "游兆永",
+   "name_en": "Zhaoyong You",
+   "affiliation": "西安交通大学",
+   "region": "内地",
+   "titles": [
+    "西安交大教授"
+   ],
+   "tier": "pioneer",
+   "research": "计算数学、最优化",
+   "phd": "",
+   "bio": "陈小君的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "xiazunquan",
+   "name": "夏尊铨",
+   "name_en": "Zunquan Xia",
+   "affiliation": "大连理工大学",
+   "region": "内地",
+   "titles": [
+    "大连理工教授"
+   ],
+   "tier": "pioneer",
+   "research": "拟微分分析、非光滑优化",
+   "phd": "",
+   "bio": "ABS算法与拟微分分析谱系，张立卫的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "hebingsheng",
+   "name": "何炳生",
+   "name_en": "Bingsheng He",
+   "affiliation": "南京大学 / 南方科技大学",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会运筹研究奖(2014)",
+    "江苏省科技进步一等奖(2001)"
+   ],
+   "tier": "pillar",
+   "research": "变分不等式、投影收缩算法、ADMM统一框架",
+   "phd": "德国维尔茨堡大学 1986（导师 Josef Stoer）",
+   "postdoc": "",
+   "students": [
+    "韩德仁",
+    "杨俊锋",
+    "陈彩华"
+   ],
+   "bio": "南京大学77级本科，公派留德。其变分不等式投影收缩算法与ADMM统一框架被国际广泛引用，是南大优化谱系核心。",
+   "sources": [
+    "maths.nju.edu.cn/~hebma"
+   ]
+  },
+  {
+   "id": "yeyinyu",
+   "name": "叶荫宇",
+   "name_en": "Yinyu Ye",
+   "affiliation": "斯坦福大学 (K.T. Li讲席教授，荣休)",
+   "region": "海外",
+   "titles": [
+    "INFORMS von Neumann理论奖(2009)",
+    "INFORMS Farkas奖(2006)",
+    "INFORMS Fellow"
+   ],
+   "tier": "pillar",
+   "research": "内点法、锥规划、分布鲁棒优化、在线优化",
+   "phd": "斯坦福大学 1988（导师 Edison Tse / George Dantzig）",
+   "postdoc": "",
+   "students": [
+    "苏文藻",
+    "葛冬冬",
+    "王子卓"
+   ],
+   "bio": "内点法与锥规划领军人物。虽长期在美任教，其学生苏文藻、葛冬冬、王子卓等回流内地与香港，成为重要谱系源头。",
+   "sources": [
+    "MGP id=12397"
+   ]
+  },
+  {
+   "id": "qiliqun",
+   "name": "祁力群",
+   "name_en": "Liqun Qi",
+   "affiliation": "香港理工大学（荣休教授）",
+   "region": "香港",
+   "titles": [
+    "科睿唯安高被引学者",
+    "斯坦福全球前2%顶尖科学家"
+   ],
+   "tier": "pillar",
+   "research": "张量计算、高阶张量特征值理论（开创者）、半光滑牛顿法",
+   "phd": "威斯康星大学麦迪逊分校 1984（导师 Stephen Robinson）",
+   "postdoc": "",
+   "students": [
+    "凌宸",
+    "宋宜生",
+    "周广路"
+   ],
+   "bio": "清华计算数学学士(1968)，2005年开创高阶张量特征值研究。孙德锋博士后时期的合作导师（新南威尔士大学）。",
+   "sources": [
+    "PolyU官网",
+    "MGP id=68303"
+   ]
+  },
+  {
+   "id": "zhangyin",
+   "name": "张寅",
+   "name_en": "Yin Zhang",
+   "affiliation": "莱斯大学（荣休教授）",
+   "region": "海外",
+   "titles": [
+    "莱斯大学讲席教授(曾任)"
+   ],
+   "tier": "pillar",
+   "research": "压缩感知、L1优化（YALL1求解器）",
+   "phd": "石溪大学 1987（导师 Reginald Tewarson）",
+   "postdoc": "John Dennis（莱斯大学，待考证）",
+   "students": [
+    "杨俊锋(联合指导)"
+   ],
+   "bio": "压缩感知优化国际知名学者，联合指导的杨俊锋成为南京大学优化中坚。",
+   "sources": [
+    "MGP id=37991"
+   ]
+  },
+  {
+   "id": "yuanyaxiang",
+   "name": "袁亚湘",
+   "name_en": "Ya-Xiang Yuan",
+   "affiliation": "中科院数学与系统科学研究院",
+   "region": "内地",
+   "titles": [
+    "中国科学院院士(2011)",
+    "国家杰青(1996)",
+    "SIAM Fellow(2011)",
+    "AMS Fellow",
+    "TWAS院士(2015)",
+    "国际工业与应用数学联合会主席(2017)"
+   ],
+   "tier": "core",
+   "research": "非线性优化、信赖域方法、拟牛顿法、共轭梯度法（戴袁方法）",
+   "phd": "剑桥大学 1986（导师 M.J.D. Powell）",
+   "postdoc": "冯康（中科院计算中心）",
+   "students": [
+    "戴彧虹",
+    "刘歆",
+    "王彦飞",
+    "夏勇",
+    "范金燕"
+   ],
+   "bio": "中国最优化领域的代表性人物。MGP记录54名学生、85名后代，是当前内地连续优化人才最重要的谱系源头。",
+   "sources": [
+    "AMSS官网",
+    "MGP id=98372"
+   ]
+  },
+  {
+   "id": "sundefeng",
+   "name": "孙德锋",
+   "name_en": "Defeng Sun",
+   "affiliation": "香港理工大学应用数学系讲座教授、系主任",
+   "region": "香港",
+   "titles": [
+    "SIAM Fellow(2020)",
+    "AMS Fellow(2022)",
+    "CSIAM首届会士",
+    "Beale-Orchard-Hays奖(2018)",
+    "香港RGC高级研究学者(2022)"
+   ],
+   "tier": "core",
+   "research": "锥规划/半定规划（SDPNAL+软件）、半光滑牛顿法、AI中的优化",
+   "phd": "中科院应用数学所 1995（导师 韩继业）",
+   "postdoc": "新南威尔士大学（合作 祁力群）",
+   "students": [
+    "陈彩华(联合)",
+    "包承龙(联合)",
+    "崔颖",
+    "丁超",
+    "李旭东"
+   ],
+   "bio": "南大本硕、中科院博士，长期任教新加坡国立大学后转任港理工。韩继业谱系下最具国际影响力的传人。",
+   "sources": [
+    "PolyU官网",
+    "MGP id=155576"
+   ]
+  },
+  {
+   "id": "chenxiaojun",
+   "name": "陈小君",
+   "name_en": "Xiaojun Chen",
+   "affiliation": "香港理工大学应用数学系讲座教授",
+   "region": "香港",
+   "titles": [
+    "SIAM Fellow(2021)",
+    "AMS Fellow(2022)",
+    "ICM 2026邀请报告人(45分钟)",
+    "ISMP 2024大会报告人"
+   ],
+   "tier": "core",
+   "research": "非光滑非凸优化、随机变分不等式、随机均衡",
+   "phd": "西安交通大学 1987（导师 游兆永）",
+   "postdoc": "特拉华大学/UNSW（待考证）",
+   "students": [
+    "孙海琳",
+    "Congpei An"
+   ],
+   "bio": "非光滑分析与随机变分不等式领域国际领军学者，中科院-港理工应用数学联合实验室共同主任。",
+   "sources": [
+    "PolyU官网",
+    "MGP id=161388"
+   ]
+  },
+  {
+   "id": "zhangshuzhong",
+   "name": "张树中",
+   "name_en": "Shuzhong Zhang",
+   "affiliation": "明尼苏达大学（曾任港中文教授1999-2010）",
+   "region": "香港",
+   "titles": [
+    "SIAM Fellow",
+    "SIAM Outstanding Paper Prize(2003)",
+    "中国运筹学会副理事长(2008-2012)"
+   ],
+   "tier": "core",
+   "research": "半定规划、张量优化、鲁棒优化、信号处理优化",
+   "phd": "伊拉斯姆斯大学 1991（导师 Rinnooy Kan / Frenk）",
+   "postdoc": "",
+   "students": [
+    "何斯迈",
+    "黄永伟",
+    "蒋波",
+    "李震宁"
+   ],
+   "bio": "复旦应用数学学士，曾任港中大系统工程系教授、明尼苏达大学工业与系统工程系创系主任。锥优化与多项式优化国际知名华人学者。",
+   "sources": [
+    "MGP id=75803"
+   ]
+  },
+  {
+   "id": "luozhiquan",
+   "name": "罗智泉",
+   "name_en": "Zhi-Quan (Tom) Luo",
+   "affiliation": "香港中文大学（深圳）学术副校长、深圳市大数据研究院创院院长",
+   "region": "香港",
+   "titles": [
+    "中国工程院外籍院士(2021)",
+    "加拿大皇家科学院院士(2014)",
+    "IEEE Fellow",
+    "SIAM Fellow",
+    "INFORMS Farkas奖(2010)",
+    "华罗庚数学奖(2025)"
+   ],
+   "tier": "core",
+   "research": "大规模优化算法与复杂性、信号处理与通信优化、大数据优化",
+   "phd": "MIT 1989（导师 John Tsitsiklis）",
+   "postdoc": "",
+   "students": [
+    "洪明义(博士后)",
+    "Tsung-Hui Chang"
+   ],
+   "bio": "北大应用数学学士，MIT运筹学博士。其数据驱动的无线网络优化成果已应用于全球180万+基站。",
+   "sources": [
+    "tomluo123.github.io",
+    "MGP id=51072"
+   ]
+  },
+  {
+   "id": "daiyuhong",
+   "name": "戴彧虹",
+   "name_en": "Yu-Hong Dai",
+   "affiliation": "中科院数学与系统科学研究院副院长",
+   "region": "内地",
+   "titles": [
+    "中国科学院院士(2025)",
+    "国家杰青(2011)",
+    "中国运筹学会理事长",
+    "IFORS副主席(2025-)"
+   ],
+   "tier": "core",
+   "research": "非线性规划、共轭梯度法（Dai-Yuan方法）、整数规划求解器",
+   "phd": "中科院 1997（导师 袁亚湘）",
+   "postdoc": "",
+   "students": [
+    "刘亚锋",
+    "江波"
+   ],
+   "bio": "袁亚湘首位博士生，师生共同提出Dai-Yuan共轭梯度法；独立解决BFGS非凸收敛性公开问题。",
+   "sources": [
+    "AMSS官网",
+    "MGP id=111510"
+   ]
+  },
+  {
+   "id": "liuxin",
+   "name": "刘歆",
+   "name_en": "Xin Liu",
+   "affiliation": "中科院数学与系统科学研究院（冯康首席研究员）",
+   "region": "内地",
+   "titles": [
+    "国家优青(2016)",
+    "国家杰青(2021)"
+   ],
+   "tier": "core",
+   "research": "流形优化、正交约束矩阵优化、分布式优化",
+   "phd": "中科院 2009（导师 袁亚湘）",
+   "postdoc": "德国ZIB（合作 Grötschel/Koch）",
+   "students": [],
+   "bio": "袁亚湘2009届博士，正交约束优化算法方向重要青年学者。",
+   "sources": [
+    "lsec.cc.ac.cn/~liuxin",
+    "MGP id=142228"
+   ]
+  },
+  {
+   "id": "wangyanfei",
+   "name": "王彦飞",
+   "name_en": "Yanfei Wang",
+   "affiliation": "中科院地质与地球物理研究所",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2013)",
+    "中国青年科技奖"
+   ],
+   "tier": "core",
+   "research": "反问题、优化与正则化、地球物理成像",
+   "phd": "中科院 2002（导师 袁亚湘）",
+   "postdoc": "",
+   "students": [],
+   "bio": "将优化与正则化理论系统用于地球物理反问题。",
+   "sources": [
+    "UCAS主页",
+    "MGP"
+   ]
+  },
+  {
+   "id": "xiayong",
+   "name": "夏勇",
+   "name_en": "Yong Xia",
+   "affiliation": "北京航空航天大学数学科学学院",
+   "region": "内地",
+   "titles": [
+    "国家优青",
+    "中国运筹学会青年科技奖"
+   ],
+   "tier": "core",
+   "research": "信赖域子问题、二次指派问题、全局优化",
+   "phd": "中科院 2007（导师 袁亚湘）",
+   "postdoc": "",
+   "students": [],
+   "bio": "在信赖域子问题等经典优化难题上取得系统成果。",
+   "sources": [
+    "北航官网",
+    "MGP id=128034"
+   ]
+  },
+  {
+   "id": "fanjinyan",
+   "name": "范金燕",
+   "name_en": "Jinyan Fan",
+   "affiliation": "上海交通大学数学科学学院",
+   "region": "内地",
+   "titles": [
+    "国家高层次领军人才",
+    "国家百千万人才工程"
+   ],
+   "tier": "core",
+   "research": "非线性优化、无导数优化、信赖域方法",
+   "phd": "中科院 2002（导师 袁亚湘）",
+   "postdoc": "",
+   "students": [],
+   "bio": "袁亚湘谱系，现任上海交大教授。",
+   "sources": [
+    "SJTU官网"
+   ]
+  },
+  {
+   "id": "liuyafeng",
+   "name": "刘亚锋",
+   "name_en": "Ya-Feng Liu",
+   "affiliation": "中科院数学与系统科学研究院（调动情况待核实）",
+   "region": "内地",
+   "titles": [
+    "国家优青(2020)",
+    "IEEE通信学会亚太杰出青年学者奖(2020)",
+    "中国运筹学会青年科技奖(2018)"
+   ],
+   "tier": "core",
+   "research": "无线通信优化、半定规划松弛、大规模MIMO",
+   "phd": "中科院 2012（导师 戴彧虹）",
+   "postdoc": "",
+   "students": [],
+   "bio": "戴彧虹谱系代表性青年学者，博士期间与罗智泉合作。",
+   "sources": [
+    "北邮官网",
+    "MGP id=176210"
+   ]
+  },
+  {
+   "id": "handeRen",
+   "name": "韩德仁",
+   "name_en": "Deren Han",
+   "affiliation": "北京航空航天大学数学科学学院院长",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2016)",
+    "中国运筹学会副理事长"
+   ],
+   "tier": "core",
+   "research": "大规模数值优化、变分不等式、ADMM",
+   "phd": "南京大学 2002（导师 何炳生）",
+   "postdoc": "新加坡国立大学-MIT联盟",
+   "students": [
+    "何洪津"
+   ],
+   "bio": "何炳生谱系重要成员，ADMM及变分不等式算法成果突出。",
+   "sources": [
+    "北航官网",
+    "MGP id=185039"
+   ]
+  },
+  {
+   "id": "yangjunfeng",
+   "name": "杨俊锋",
+   "name_en": "Junfeng Yang",
+   "affiliation": "南京大学数学学院",
+   "region": "内地",
+   "titles": [
+    "国家优青(约2019)"
+   ],
+   "tier": "core",
+   "research": "大规模凸优化、稀疏优化、分裂算法",
+   "phd": "南京大学 2009（博士导师 何炳生；袁亚湘、张寅为不同阶段学术指导）",
+   "postdoc": "新加坡国立大学（合作 孙德锋，2010-2011）",
+   "students": [],
+   "bio": "连接南大变分不等式谱系、袁亚湘谱系与新加坡孙德锋谱系的交叉节点。",
+   "sources": [
+    {"label":"南京大学官方简介（先后师从三位学者）","url":"https://math.nju.edu.cn/szdw/apypl1/20190916/i22378.html"},
+    {"label":"MGP id=138888","url":"https://www.mathgenealogy.org/id.php?id=138888"}
+   ]
+  },
+  {
+   "id": "chencaihua",
+   "name": "陈彩华",
+   "name_en": "Caihua Chen",
+   "affiliation": "南京大学工程管理学院副院长",
+   "region": "内地",
+   "titles": [
+    "国家优青(2021)",
+    "中国运筹学会青年科技奖(2018)"
+   ],
+   "tier": "core",
+   "research": "数据驱动决策、随机优化、分布鲁棒优化、AI优化",
+   "phd": "南京大学 2012（共同导师 何炳生 / 孙德锋 / 卓金权；MGP记录）",
+   "postdoc": "",
+   "students": [],
+   "bio": "南大与新加坡国立大学联合培养的典型，连接何炳生与孙德锋两大谱系。",
+   "sources": [
+    "NJU官网",
+    {"label":"Mathematics Genealogy Project id=170185","url":"https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170185"}
+   ]
+  },
+  {
+   "id": "huyaohua",
+   "name": "胡耀华",
+   "name_en": "Yaohua Hu",
+   "affiliation": "深圳大学数学科学学院副院长",
+   "region": "内地",
+   "titles": [
+    "国家优青(2022)",
+    "港理工杰出校友奖(2023)"
+   ],
+   "tier": "core",
+   "research": "非凸稀疏优化、广义凸优化、机器学习优化",
+   "phd": "香港理工大学 2013（导师 杨晓琪）",
+   "postdoc": "李冲（浙大）/杨晓琪（港理工）",
+   "students": [],
+   "bio": "港理工培养的内地优青，香港谱系回流深圳的代表。",
+   "sources": [
+    "深大官网",
+    "个人主页"
+   ]
+  },
+  {
+   "id": "chenxujin",
+   "name": "陈旭瑾",
+   "name_en": "Xujin Chen",
+   "affiliation": "中科院数学与系统科学研究院 / 国科大",
+   "region": "内地",
+   "titles": [
+    "国家优青(2012，首届)",
+    "中国青年科技奖(2020)"
+   ],
+   "tier": "core",
+   "research": "组合优化、网络优化、近似算法、算法博弈论",
+   "phd": "香港大学 2004（导师 臧文安）",
+   "postdoc": "中科院（合作 胡旭东，2004-2006）",
+   "students": [],
+   "bio": "组合优化与算法博弈论重要学者，香港大学博士回流中科院。",
+   "sources": [
+    "AMSS主页",
+    "MGP id=156278"
+   ]
+  },
+  {
+   "id": "hesimai",
+   "name": "何斯迈",
+   "name_en": "Simai He",
+   "affiliation": "上海财经大学交叉科学研究院",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2018)"
+   ],
+   "tier": "core",
+   "research": "多项式优化、张量优化、算法复杂度",
+   "phd": "香港中文大学 2009（导师 张树中）",
+   "postdoc": "张树中（港中文，2009-2010）",
+   "students": [],
+   "bio": "张树中谱系回流内地的代表，SIAG优化大会报告人。",
+   "sources": [
+    "上财官网",
+    "CUHK论文库"
+   ]
+  },
+  {
+   "id": "gedongdong",
+   "name": "葛冬冬",
+   "name_en": "Dongdong Ge",
+   "affiliation": "上海交通大学安泰经管学院 / 杉数科技联合创始人",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2022)"
+   ],
+   "tier": "core",
+   "research": "大规模优化、优化求解器(COPT)、供应链与能源优化",
+   "phd": "斯坦福大学 2009（导师 叶荫宇）",
+   "postdoc": "",
+   "students": [],
+   "bio": "叶荫宇谱系回内地产业化的代表，主导国产求解器COPT研发。",
+   "sources": [
+    "SJTU官网",
+    "MGP"
+   ]
+  },
+  {
+   "id": "wangzizhuo",
+   "name": "王子卓",
+   "name_en": "Zizhuo Wang",
+   "affiliation": "香港中文大学（深圳）数据科学学院副院长",
+   "region": "香港",
+   "titles": [
+    "国家杰青(约2024)",
+    "国家高层次人才计划"
+   ],
+   "tier": "core",
+   "research": "运筹优化、收益管理、网络博弈、数据驱动决策",
+   "phd": "斯坦福大学 2012（导师 叶荫宇）",
+   "postdoc": "",
+   "students": [],
+   "bio": "叶荫宇斯坦福博士，曾任明尼苏达大学教授，现回流港中大（深圳）。",
+   "sources": [
+    "CUHK-SZ官网",
+    "MGP"
+   ]
+  },
+  {
+   "id": "suwenzao",
+   "name": "苏文藻",
+   "name_en": "Anthony Man-Cho So",
+   "affiliation": "香港中文大学系统工程与工程管理学系",
+   "region": "香港",
+   "titles": [
+    "IEEE Fellow(待考证)"
+   ],
+   "tier": "core",
+   "research": "半定规划、优化理论、数据科学",
+   "phd": "斯坦福大学 2007（导师 叶荫宇）",
+   "postdoc": "",
+   "students": [],
+   "bio": "叶荫宇培养的、回到香港任教的代表性学生。",
+   "sources": [
+    "MGP id=12397"
+   ]
+  },
+  {
+   "id": "baoChenglong",
+   "name": "包承龙",
+   "name_en": "Chenglong Bao",
+   "affiliation": "清华大学丘成桐数学科学中心",
+   "region": "内地",
+   "titles": [
+    "国家高层次青年人才",
+    "中国运筹学会青年科技奖(2024)",
+    "CSIAM青年科技奖(2024)"
+   ],
+   "tier": "core",
+   "research": "非凸优化、随机邻近点算法、冷冻电镜",
+   "phd": "新加坡国立大学 2014（导师 季辉/孙德锋）",
+   "postdoc": "沈佐伟（NUS，2015-2017）",
+   "students": [],
+   "bio": "孙德锋-季辉联合指导，韩继业-孙德锋谱系的新生代。",
+   "sources": [
+    {"label":"BIMSA 官方履历（学位与共同导师）","url":"https://www.bimsa.cn/zh-CN/detail/chenglongbao.html"}
+   ]
+  },
+  {
+   "id": "bianwei",
+   "name": "边伟",
+   "name_en": "Wei Bian",
+   "affiliation": "哈尔滨工业大学数学学院",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2024)",
+    "CSIAM青年科技奖"
+   ],
+   "tier": "core",
+   "research": "非光滑优化、变分分析、机器学习优化",
+   "phd": "哈尔滨工业大学 2009（导师 薛小平）",
+   "postdoc": "香港理工/浸会（待考证）",
+   "students": [],
+   "bio": "与陈小君、祁力群等非光滑优化学者合作密切。",
+   "sources": [
+    "哈工大官网"
+   ]
+  },
+  {
+   "id": "zhanghanqin",
+   "name": "张汉勤",
+   "name_en": "Hanqin Zhang",
+   "affiliation": "中科院数学与系统科学研究院",
+   "region": "内地",
+   "titles": [
+    "国家杰青(2000)",
+    "中科院百人计划"
+   ],
+   "tier": "core",
+   "research": "随机排队网络、随机制造系统、随机优化",
+   "phd": "中科院应用数学所 1991（导师 徐光煇）",
+   "postdoc": "",
+   "students": [
+    "郭永江"
+   ],
+   "bio": "徐光煇谱系，排队论与运营管理结合的杰青学者。",
+   "sources": [
+    "AMSS官网",
+    "中国运筹学会"
+   ]
+  },
+  {
+   "id": "zhangliwei",
+   "name": "张立卫",
+   "name_en": "Liwei Zhang",
+   "affiliation": "东北大学 工业智能与系统优化国家级前沿科学中心（原大连理工大学）",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会运筹研究奖(2020)",
+    "数学规划分会副理事长"
+   ],
+   "tier": "pillar",
+   "research": "随机优化、矩阵优化、变分分析、均衡优化",
+   "phd": "大连理工大学 1998（导师 夏尊铨）",
+   "postdoc": "中科院（合作 袁亚湘，1999-2001）",
+   "students": [],
+   "bio": "东北（大连）优化谱系代表，处于夏尊铨谱系与袁亚湘博士后谱系交汇处。",
+   "sources": [
+    "大工官网",
+    "中国运筹学会"
+   ]
+  },
+  {
+   "id": "guotiande",
+   "name": "郭田德",
+   "name_en": "Tiande Guo",
+   "affiliation": "中国科学院大学（讲席教授）/ 前沿交叉科学学院院长",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会首届会士、副理事长"
+   ],
+   "tier": "pillar",
+   "research": "最优化理论与算法、组合优化的机器学习求解",
+   "phd": "中科院应用数学所 1998（导师 吴士泉，推断待考证）",
+   "postdoc": "北方交大（合作 高自友，待考证）",
+   "students": [],
+   "bio": "国科大运筹学方向资深教授。",
+   "sources": [
+    "UCAS主页",
+    "中国运筹学会"
+   ]
+  },
+  {
+   "id": "huxudong",
+   "name": "胡旭东",
+   "name_en": "Xudong Hu",
+   "affiliation": "中科院数学与系统科学研究院",
+   "region": "内地",
+   "titles": [
+    "中国运筹学会会士"
+   ],
+   "tier": "pillar",
+   "research": "组合优化、近似算法",
+   "phd": "中科院",
+   "postdoc": "",
+   "students": [
+    "陈旭瑾(博士后指导)"
+   ],
+   "bio": "韩继业谱系，陈旭瑾的博士后合作导师。",
+   "sources": [
+    "AMSS"
+   ]
+  },
+  {
+   "id": "yangxiaoqi",
+   "name": "杨晓琪",
+   "name_en": "Xiaoqi Yang",
+   "affiliation": "香港理工大学",
+   "region": "香港",
+   "titles": [
+    "港理工教授"
+   ],
+   "tier": "pillar",
+   "research": "非线性优化、向量优化",
+   "phd": "",
+   "postdoc": "",
+   "students": [
+    "胡耀华"
+   ],
+   "bio": "胡耀华的博士导师。",
+   "sources": [
+    "PolyU"
+   ]
+  },
+  {
+   "id": "zangwenan",
+   "name": "臧文安",
+   "name_en": "Wenan Zang",
+   "affiliation": "香港大学数学系",
+   "region": "香港",
+   "titles": [
+    "港大教授"
+   ],
+   "tier": "pillar",
+   "research": "组合优化、图论与多面体",
+   "phd": "Rutgers",
+   "postdoc": "",
+   "students": [
+    "陈旭瑾"
+   ],
+   "bio": "陈旭瑾的博士导师。",
+   "sources": [
+    "HKU",
+    "MGP"
+   ]
+  },
+  {
+   "id": "huangyongwei",
+   "name": "黄永伟",
+   "name_en": "Yongwei Huang",
+   "affiliation": "广东工业大学（原香港浸会大学）",
+   "region": "香港",
+   "titles": [
+    "教授"
+   ],
+   "tier": "core",
+   "research": "鲁棒优化、信号处理优化",
+   "phd": "香港中文大学 2005（导师 张树中）",
+   "postdoc": "",
+   "students": [],
+   "bio": "张树中港中大时期的学生。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "wenzaiwen",
+   "name": "文再文",
+   "name_en": "Zaiwen Wen",
+   "affiliation": "北京大学数学科学学院 / 北京国际数学研究中心",
+   "region": "内地",
+   "titles": [
+    "国家优青",
+    "长江学者特聘教授(2023)",
+    "SIAM Fellow"
+   ],
+   "tier": "core",
+   "research": "大规模优化、流形优化、机器学习中的优化",
+   "phd": "哥伦比亚大学 2009（导师 Donald Goldfarb）",
+   "postdoc": "UCLA IPAM / Rice（2009-2011）",
+   "students": [],
+   "bio": "哥大Goldfarb谱系回流北大的代表，与袁亚湘合著《最优化方法与理论》教材。",
+   "sources": [
+    "BICMR主页",
+    "MGP"
+   ]
+  },
+  {
+   "id": "hongmingyi",
+   "name": "洪明义",
+   "name_en": "Mingyi Hong",
+   "affiliation": "明尼苏达大学",
+   "region": "海外",
+   "titles": [
+    "IEEE SPS早期职业成就奖(2022)"
+   ],
+   "tier": "core",
+   "research": "非凸优化、分布式优化",
+   "phd": "弗吉尼亚大学 2011（导师 Alfredo Garcia）",
+   "postdoc": "罗智泉（明尼苏达，2011-2014）",
+   "students": [],
+   "bio": "罗智泉博士后谱系的代表。",
+   "sources": [
+    "公开简历"
+   ]
+  },
+  {
+   "id": "polyak",
+   "name": "Boris Polyak",
+   "name_en": "Boris T. Polyak",
+   "affiliation": "俄罗斯科学院控制科学研究所",
+   "region": "海外",
+   "titles": [
+    "苏联优化学派代表"
+   ],
+   "tier": "pioneer",
+   "research": "随机优化、鲁棒控制、重球法(Polyak momentum)",
+   "phd": "莫斯科国立大学 1963（导师 Yuli Shreider）",
+   "bio": "苏联/俄罗斯优化学派核心，Nesterov 的博士导师。",
+   "sources": [
+    "MGP id=102191"
+   ]
+  },
+  {
+   "id": "shilov",
+   "name": "Georgiy Shilov",
+   "name_en": "Georgiy E. Shilov",
+   "affiliation": "莫斯科国立大学",
+   "region": "海外",
+   "titles": [
+    "泛函分析学家"
+   ],
+   "tier": "pioneer",
+   "research": "泛函分析、广义函数",
+   "phd": "",
+   "bio": "Nemirovski 的博士导师（MGP 记录）。",
+   "sources": [
+    "MGP id=58609"
+   ]
+  },
+  {
+   "id": "nesterov",
+   "name": "Nesterov",
+   "name_en": "Yurii Nesterov",
+   "affiliation": "UC Louvain（比利时）",
+   "region": "海外",
+   "titles": [
+    "von Neumann理论奖(2000)",
+    "Dantzig奖(2016)",
+    "SIAM Fellow",
+    "WLA奖(2023)",
+    "ICM高斯奖(2026)"
+   ],
+   "tier": "core",
+   "research": "凸优化复杂度理论：加速梯度法、内点法多项式时间理论",
+   "phd": "苏联科学院控制科学研究所 1984（导师 Boris Polyak）",
+   "bio": "1983年提出 O(1/k²) 加速梯度法，现代凸优化复杂度理论奠基人。",
+   "sources": [
+    "MGP id=102203"
+   ]
+  },
+  {
+   "id": "nemirovski",
+   "name": "Nemirovski",
+   "name_en": "Arkadi Nemirovski",
+   "affiliation": "Georgia Tech",
+   "region": "海外",
+   "titles": [
+    "美国国家科学院院士(2020)",
+    "Fulkerson奖(1982)",
+    "von Neumann理论奖(2003)",
+    "WLA奖(2023)"
+   ],
+   "tier": "core",
+   "research": "椭球法与信息基复杂度、锥规划、鲁棒优化",
+   "phd": "莫斯科国立大学 1974（导师 Georgiy Shilov）",
+   "bio": "与 Nesterov 合著内点法经典专著；镜像下降与鞍点理论开创者。",
+   "sources": [
+    "MGP id=58609"
+   ]
+  },
+  {
+   "id": "languanghui",
+   "name": "Guanghui Lan",
+   "name_en": "Guanghui Lan",
+   "affiliation": "Georgia Tech ISyE",
+   "region": "海外",
+   "titles": [
+    "INFORMS Fellow"
+   ],
+   "tier": "core",
+   "research": "随机一阶方法、随机优化复杂度",
+   "phd": "Georgia Tech 2009（导师 Nemirovski 等）",
+   "bio": "Nemirovski 谱系，随机梯度法复杂度理论重要学者。",
+   "sources": [
+    "GaTech官网"
+   ]
+  },
+  {
+   "id": "niaohe",
+   "name": "Niao He",
+   "name_en": "Niao He",
+   "affiliation": "ETH Zürich",
+   "region": "海外",
+   "titles": [
+    "ETH教授"
+   ],
+   "tier": "core",
+   "research": "大规模优化、博弈论、机器学习优化",
+   "phd": "Georgia Tech 2015（导师 Nemirovski）",
+   "bio": "Nemirovski 谱系年轻一代代表。",
+   "sources": [
+    "ETH官网"
+   ]
+  },
+  {
+   "id": "toint",
+   "name": "Philippe Toint",
+   "name_en": "Philippe L. Toint",
+   "affiliation": "那慕尔大学（比利时）",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow",
+    "Lagrange奖(2006)",
+    "MPS主席(2010-13)"
+   ],
+   "tier": "core",
+   "research": "信赖域方法、非凸优化评估复杂度",
+   "phd": "那慕尔大学 1978（导师 Powell / Callier）",
+   "bio": "Powell 学派核心传人，《Trust Region Methods》作者，CUTEst 共建者。",
+   "sources": [
+    {"label":"Mathematics Genealogy Project id=87096","url":"https://www.mathgenealogy.org/id.php?id=87096"}
+   ]
+  },
+  {
+   "id": "cartis",
+   "name": "Coralia Cartis",
+   "name_en": "Coralia Cartis",
+   "affiliation": "牛津大学数学研究所",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow(2023)",
+    "ICM 2022特邀报告人"
+   ],
+   "tier": "core",
+   "research": "非凸优化复杂度、自适应三次正则化(ARC)、无导数优化",
+   "phd": "剑桥大学 2005（导师 Powell）",
+   "bio": "Powell 最后的优化方向学生之一，牛津数值优化教授。",
+   "sources": [
+    "MGP id=113138"
+   ]
+  },
+  {
+   "id": "gould",
+   "name": "Nick Gould",
+   "name_en": "Nicholas I. M. Gould",
+   "affiliation": "STFC Rutherford实验室",
+   "region": "海外",
+   "titles": [
+    "Beale-Orchard-Hays奖(1994)",
+    "SIAM Fellow"
+   ],
+   "tier": "pillar",
+   "research": "大规模非线性优化软件：GALAHAD、LANCELOT、CUTEst",
+   "phd": "牛津大学 D.Phil. 1982（MGP列于 Walter Murray 名下）",
+   "bio": "与 Conn、Toint 共建 LANCELOT/CUTE 测试环境。",
+   "sources": [
+    "RAL"
+   ]
+  },
+  {
+   "id": "orban",
+   "name": "Dominique Orban",
+   "name_en": "Dominique Orban",
+   "affiliation": "蒙特利尔理工学院",
+   "region": "海外",
+   "titles": [
+    "GERAD成员"
+   ],
+   "tier": "pillar",
+   "research": "大规模优化正则化方法、Krylov求解器、Julia优化生态",
+   "phd": "那慕尔大学 2001（导师 Toint）",
+   "bio": "Powell 学派第三代，CUTEst/GALAHAD/JSO 软件生态关键节点。",
+   "sources": [
+    "个人主页"
+   ]
+  },
+  {
+   "id": "hestenes",
+   "name": "Magnus Hestenes",
+   "name_en": "Magnus R. Hestenes",
+   "affiliation": "UCLA",
+   "region": "海外",
+   "titles": [
+    "共轭梯度法/增广拉格朗日开创者"
+   ],
+   "tier": "pioneer",
+   "research": "共轭梯度法、乘子法、变分法",
+   "phd": "芝加哥大学（导师 Gilbert Bliss）",
+   "bio": "增广拉格朗日方法开创者之一，Tapia 的导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "tapia",
+   "name": "Richard Tapia",
+   "name_en": "Richard A. Tapia",
+   "affiliation": "莱斯大学（1939–2026）",
+   "region": "海外",
+   "titles": [
+    "美国国家科学奖章",
+    "NAE成员"
+   ],
+   "tier": "pioneer",
+   "research": "数值优化、内点法",
+   "phd": "UCLA 1967（论文导师 Charles Tompkins；Magnus Hestenes 对其优化研究有长期影响）",
+   "bio": "Nocedal 的博士导师，曾任莱斯大学 University Professor；2026年5月逝世。",
+   "sources": [
+    {"label":"SIAM 学术回顾（导师关系与生平）","url":"https://www.siam.org/publications/siam-news/articles/obituary-richard-a-tapia/"},
+    {"label":"MGP id=14920","url":"https://www.mathgenealogy.org/id.php?id=14920"}
+   ]
+  },
+  {
+   "id": "nocedal",
+   "name": "Jorge Nocedal",
+   "name_en": "Jorge Nocedal",
+   "affiliation": "西北大学",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow(2010)",
+    "NAE成员(2020)",
+    "Dantzig奖(2012)"
+   ],
+   "tier": "core",
+   "research": "L-BFGS、SQP、大规模与随机优化；《Numerical Optimization》作者",
+   "phd": "莱斯大学 1978（导师 Richard Tapia）",
+   "bio": "非线性规划算法领域最有影响力的学者之一。",
+   "sources": [
+    "MGP id=43740"
+   ]
+  },
+  {
+   "id": "curtis",
+   "name": "Frank Curtis",
+   "name_en": "Frank E. Curtis",
+   "affiliation": "Lehigh大学",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow"
+   ],
+   "tier": "core",
+   "research": "非凸优化、随机优化、机器学习优化",
+   "phd": "西北大学 2007（导师 Nocedal）",
+   "bio": "Nocedal 学生，随机优化与ML优化活跃学者。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "golub",
+   "name": "Gene Golub",
+   "name_en": "Gene H. Golub",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [
+    "美国国家科学院院士",
+    "数值线性代数奠基人"
+   ],
+   "tier": "pioneer",
+   "research": "数值线性代数（SVD、Lanczos）",
+   "phd": "UIUC 1959（导师 Abraham Taub）",
+   "bio": "斯坦福数值分析学派源头，Saunders 与 M. Wright 的导师。",
+   "sources": [
+    "MGP id=39145"
+   ]
+  },
+  {
+   "id": "murray",
+   "name": "Walter Murray",
+   "name_en": "Walter Murray",
+   "affiliation": "斯坦福大学 SOL",
+   "region": "海外",
+   "titles": [
+    "优化软件先驱"
+   ],
+   "tier": "pioneer",
+   "research": "大规模非线性优化软件 NPSOL/SNOPT",
+   "phd": "",
+   "bio": "与 Gill、Saunders、M. Wright 组成斯坦福 SOL 'Gang of Four'。",
+   "sources": [
+    "Stanford"
+   ]
+  },
+  {
+   "id": "mwright",
+   "name": "Margaret Wright",
+   "name_en": "Margaret H. Wright",
+   "affiliation": "NYU Courant",
+   "region": "海外",
+   "titles": [
+    "美国国家科学院院士",
+    "SIAM前主席"
+   ],
+   "tier": "core",
+   "research": "非线性约束优化、无导数优化",
+   "phd": "斯坦福 1976（导师 Golub / Murray）",
+   "bio": "内点法革命核心参与者，Courant Silver 讲席教授。",
+   "sources": [
+    "MGP id=46411"
+   ]
+  },
+  {
+   "id": "saunders",
+   "name": "Michael Saunders",
+   "name_en": "Michael A. Saunders",
+   "affiliation": "斯坦福大学 SOL（荣休）",
+   "region": "海外",
+   "titles": [
+    "Orchard-Hays奖首届(1985)",
+    "SIAM线性代数奖(2012)"
+   ],
+   "tier": "pillar",
+   "research": "MINOS、SNOPT、LSQR、MINRES",
+   "phd": "斯坦福 1972（导师 Golub）",
+   "bio": "优化与稀疏线性代数软件奠基人之一。",
+   "sources": [
+    "MGP id=46406"
+   ]
+  },
+  {
+   "id": "boyd",
+   "name": "Stephen Boyd",
+   "name_en": "Stephen P. Boyd",
+   "affiliation": "斯坦福大学EE",
+   "region": "海外",
+   "titles": [
+    "NAE成员(2014)",
+    "IEEE/SIAM/INFORMS Fellow"
+   ],
+   "tier": "core",
+   "research": "凸优化及应用；CVX/CVXPY、ADMM、LMI；《Convex Optimization》作者",
+   "phd": "UC Berkeley 1985（导师 Desoer / Sastry / Chua）",
+   "bio": "凸优化工程应用的全球旗手，学生遍布学界与工业界。",
+   "sources": [
+    "MGP id=68473"
+   ]
+  },
+  {
+   "id": "vandewalle",
+   "name": "Joos Vandewalle",
+   "name_en": "Joos Vandewalle",
+   "affiliation": "KU Leuven",
+   "region": "海外",
+   "titles": [
+    "IEEE Fellow"
+   ],
+   "tier": "pioneer",
+   "research": "电路系统、神经网络",
+   "phd": "",
+   "bio": "Vandenberghe 的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "vandenberghe",
+   "name": "Lieven Vandenberghe",
+   "name_en": "Lieven Vandenberghe",
+   "affiliation": "UCLA ECE",
+   "region": "海外",
+   "titles": [
+    "IEEE Fellow",
+    "SIAM Fellow"
+   ],
+   "tier": "core",
+   "research": "半定规划、锥规划内点法；《Convex Optimization》合著者",
+   "phd": "KU Leuven 1992（导师 Joos Vandewalle）",
+   "bio": "注意：与 Boyd 是合作者而非师生关系。",
+   "sources": [
+    {
+     "label": "Mathematics Genealogy Project（id=97317）",
+     "url": "https://www.mathgenealogy.org/id.php?id=97317"
+    }
+   ]
+  },
+  {
+   "id": "bradley",
+   "name": "Gordon Bradley",
+   "name_en": "Gordon H. Bradley",
+   "affiliation": "耶鲁大学",
+   "region": "海外",
+   "titles": [
+    "管理科学教授"
+   ],
+   "tier": "pioneer",
+   "research": "数学规划",
+   "phd": "",
+   "bio": "Michael Todd 的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "todd",
+   "name": "Michael Todd",
+   "name_en": "Michael J. Todd",
+   "affiliation": "康奈尔大学 ORIE",
+   "region": "海外",
+   "titles": [
+    "NAE成员(2015)",
+    "von Neumann理论奖(2003)",
+    "Dantzig奖(1988)"
+   ],
+   "tier": "core",
+   "research": "内点法（Nesterov-Todd方向）、半定规划、互补转轴",
+   "phd": "耶鲁 1972（导师 Gordon Bradley）",
+   "bio": "SDPT3 合作开发者（与 Toh、Tütüncü），2025年6月逝世。",
+   "sources": [
+    "MGP id=44109"
+   ]
+  },
+  {
+   "id": "trefethen",
+   "name": "Nick Trefethen",
+   "name_en": "Lloyd N. Trefethen",
+   "affiliation": "牛津大学",
+   "region": "海外",
+   "titles": [
+    "英国皇家学会院士",
+    "SIAM前主席"
+   ],
+   "tier": "pioneer",
+   "research": "数值分析、谱方法",
+   "phd": "斯坦福 1982",
+   "bio": "卓金权在康奈尔的博士导师（MGP 纠正：非 Michael Todd）。",
+   "sources": [
+    "MGP id=25178"
+   ]
+  },
+  {
+   "id": "toh",
+   "name": "Kim-Chuan Toh",
+   "name_en": "Kim-Chuan Toh",
+   "affiliation": "新加坡国立大学",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow"
+   ],
+   "tier": "core",
+   "research": "半定规划求解器 SDPT3/SDPNAL、矩阵优化",
+   "phd": "康奈尔 1996（导师 Nick Trefethen）",
+   "bio": "SDPT3 主要开发者，与孙德锋长期合作 SDPNAL 系列（Beale-Orchard-Hays奖2018）。",
+   "sources": [
+    "MGP id=39531"
+   ]
+  },
+  {
+   "id": "rockafellar",
+   "name": "Terry Rockafellar",
+   "name_en": "R. Tyrrell Rockafellar",
+   "affiliation": "华盛顿大学",
+   "region": "海外",
+   "titles": [
+    "凸分析之父",
+    "von Neumann理论奖(1999)"
+   ],
+   "tier": "pioneer",
+   "research": "凸分析、变分分析（《Convex Analysis》作者）",
+   "phd": "哈佛 1963（导师 Garrett Birkhoff）",
+   "bio": "现代凸分析与变分分析的奠基人之一；与 Roger Wets 合著《Variational Analysis》。此前把同名学者误连为 Stephen J. Wright 的博士导师，现已纠正。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "swright",
+   "name": "Stephen Wright",
+   "name_en": "Stephen J. Wright",
+   "affiliation": "威斯康星大学麦迪逊分校",
+   "region": "海外",
+   "titles": [
+    "SIAM Fellow",
+    "MOS主席(2007-10)",
+    "Dantzig讲席教授"
+   ],
+   "tier": "core",
+   "research": "内点法、坐标下降、大规模优化、ML优化；《Numerical Optimization》合著者",
+   "phd": "昆士兰大学 1984（公开一手材料未确认博士导师）",
+   "bio": "连续优化理论与算法领军人物，前数学优化学会主席。注意：他并非 Rockafellar 的博士生；旧版关系源于同名混淆。",
+   "sources": [
+    {"label":"Wisconsin Institute for Discovery 官方主页","url":"https://wid.wisc.edu/people/stephen-wright/"}
+   ]
+  },
+  {
+   "id": "fletcher",
+   "name": "Roger Fletcher",
+   "name_en": "Roger Fletcher",
+   "affiliation": "邓迪大学",
+   "region": "海外",
+   "titles": [
+    "英国皇家学会院士",
+    "BFGS之F"
+   ],
+   "tier": "pioneer",
+   "research": "拟牛顿法（DFP/BFGS）、SQP、filter方法",
+   "phd": "利兹大学 1963（导师 Colin Reeves）",
+   "bio": "BFGS 公式发明人之一，Leyffer 的导师。",
+   "sources": [
+    "MGP id=52148"
+   ]
+  },
+  {
+   "id": "leyffer",
+   "name": "Sven Leyffer",
+   "name_en": "Sven Leyffer",
+   "affiliation": "阿贡国家实验室",
+   "region": "海外",
+   "titles": [
+    "SIAM前主席(2022-24)",
+    "Lagrange奖(2006)"
+   ],
+   "tier": "core",
+   "research": "混合整数非线性规划(MINLP)、filter方法",
+   "phd": "邓迪大学 1994（导师 Fletcher）",
+   "bio": "NEOS 与 MINOTAUR 主要推动者。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "ritter",
+   "name": "Klaus Ritter",
+   "name_en": "Klaus Ritter",
+   "affiliation": "慕尼黑工业大学",
+   "region": "海外",
+   "titles": [
+    "德国优化学派"
+   ],
+   "tier": "pioneer",
+   "research": "全局优化、随机优化",
+   "phd": "",
+   "bio": "Michael Ulbrich 的博士导师。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "ulbrich",
+   "name": "Michael Ulbrich",
+   "name_en": "Michael Ulbrich",
+   "affiliation": "慕尼黑工业大学",
+   "region": "海外",
+   "titles": [
+    "TUM优化教授",
+    "德国研究联合会要职"
+   ],
+   "tier": "core",
+   "research": "半光滑牛顿法、PDE约束优化、非光滑优化",
+   "phd": "TUM 1996（导师 Klaus Ritter）",
+   "bio": "德国连续优化活跃领军学者。",
+   "sources": [
+    "MGP id=29102"
+   ]
+  },
+  {
+   "id": "nedic",
+   "name": "Angelia Nedić",
+   "name_en": "Angelia Nedić",
+   "affiliation": "亚利桑那州立大学",
+   "region": "海外",
+   "titles": [
+    "IEEE Fellow"
+   ],
+   "tier": "core",
+   "research": "分布式优化、增量次梯度方法",
+   "phd": "MIT 2002（导师 Bertsekas）",
+   "bio": "分布式优化开创性学者之一。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "ozdaglar",
+   "name": "Asu Ozdaglar",
+   "name_en": "Asuman Ozdaglar",
+   "affiliation": "MIT EECS",
+   "region": "海外",
+   "titles": [
+    "IEEE Fellow"
+   ],
+   "tier": "core",
+   "research": "凸优化对偶、博弈与网络优化、分布式算法",
+   "phd": "MIT 2003（导师 Bertsekas）",
+   "bio": "Bertsekas 谱系，MIT MathWorks 教授。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "tütüncü",
+   "name": "Reha Tütüncü",
+   "name_en": "Reha Tütüncü",
+   "affiliation": "Quantitative Brokers / 原CMU",
+   "region": "海外",
+   "titles": [
+    "SDPT3合作开发者"
+   ],
+   "tier": "pillar",
+   "research": "鲁棒优化、金融优化",
+   "phd": "康奈尔 1996（导师 Michael Todd）",
+   "bio": "Todd 学生，SDPT3 三位开发者之一。",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "jerômebolte",
+   "name": "Jérôme Bolte",
+   "name_en": "Jérôme Bolte",
+   "affiliation": "图卢兹第一大学 / 图卢兹经济学院 (Toulouse School of Economics), 法国",
+   "region": "海外",
+   "titles": [
+    "Professor (TSE)",
+    "2023年国际数学规划大会邀讲者等"
+   ],
+   "tier": "core",
+   "research": "非光滑与非凸优化、Kurdyka–Łojasiewicz 不等式、半代数优化及动力系统方法（Attouch–Bolte–Svaiter 等）。",
+   "phd": "蒙彼利埃第二大学 (Université Montpellier II) 2003（导师 Hédy Attouch）",
+   "postdoc": "",
+   "students": [
+    "Edouard Pauwels（图卢兹，联合指导，非MGP记录）",
+    "Guillaume Garrigos（unverified）"
+   ],
+   "bio": "Jérôme Bolte 现任图卢兹经济学院教授，是非光滑/非凸优化领域的领军人物。他2003年在蒙彼利埃第二大学获博士学位，导师为 Hédy Attouch，论文题为《Sur des systèmes dynamiques dissipatifs de type gradient. Applications en optimisation》。以 Bolte–Daniilidis–Lewis 的 KL 不等式优化框架（半代数优化）闻名。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=72171"
+   ]
+  },
+  {
+   "id": "adrianslewis",
+   "name": "Adrian S. Lewis",
+   "name_en": "Adrian S. Lewis",
+   "affiliation": "康奈尔大学 运筹学与信息工程学院 (Cornell ORIE)",
+   "region": "海外",
+   "titles": [
+    "Professor, ORIE",
+    "SIAM Fellow (2009)",
+    "Mathematical Programming 联合主编",
+    "2003 Lagrange Prize",
+    "2014 ICM 45分钟报告人"
+   ],
+   "tier": "core",
+   "research": "变分分析与非光滑优化，尤其特征值优化与半代数结构。",
+   "phd": "剑桥大学 (University of Cambridge, 工程系) 1987（康奈尔官网）；MGP记录为1985（论文《Extreme Point Methods for Infinite Linear Programming》），两者存在差异（导师 Edward James Anderson（MGP记录）；用户猜测的 Michael J.D. Powell 无任何来源支持）",
+   "postdoc": "",
+   "students": [
+    "Dmitriy Drusvyatskiy (Cornell 2013)",
+    "Hristo Sendov (Waterloo 2001)",
+    "Warren Hare (SFU 2004)",
+    "C.H. Jeffrey Pang (Cornell 2009)"
+   ],
+   "bio": "Adrian Lewis 1962年生于英国，剑桥大学学士(1983)、博士（工程，1987；MGP记1985）。曾任教于滑铁卢大学与西蒙菲莎大学，2004年起任康奈尔 ORIE 教授。MGP 记录其博士导师为 Edward J. Anderson 而非 Powell。获 Aisenstadt 奖(1995)、Lagrange 奖(2003)，2014年 ICM 报告人。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=88694",
+    "https://www.duffield.cornell.edu/people/adrian-s-lewis/"
+   ]
+  },
+  {
+   "id": "jongshipang",
+   "name": "彭仲实",
+   "name_en": "Jong-Shi Pang",
+   "affiliation": "南加州大学 Viterbi 工程学院工业与系统工程系 (USC)",
+   "region": "海外",
+   "titles": [
+    "Epstein Family Chair Professor",
+    "USC Distinguished Professor (2023)",
+    "NAE 院士 (2021)",
+    "SIAM Fellow (2009 首届)",
+    "2019 John von Neumann Theory Prize",
+    "2003 Dantzig Prize",
+    "1994 Lanchester Prize",
+    "SIAM J. Optimization 主编 (2019–)"
+   ],
+   "tier": "core",
+   "research": "互补问题、变分不等式、均衡规划与非光滑方程，代表作《Finite-Dimensional Variational Inequalities》(with Facchinei)。",
+   "phd": "斯坦福大学 (Stanford, Operations Research) 1976（本人简历/多处简介）或 1977（MGP 记录，论文《Least Element Complementary Theory》），存在一年差异（导师 Richard W. Cottle）",
+   "postdoc": "",
+   "students": [
+    "Steven A. Gabriel (JHU 1992)",
+    "Narayan Rangaraj (JHU 1991)",
+    "Yu-Ching Lee (UIUC 2012)",
+    "Ying Cui（USC, 合作博后/学生, unverified at MGP）"
+   ],
+   "bio": "Jong-Shi Pang 是互补问题与变分不等式领域的奠基性学者之一，斯坦福运筹学博士，导师 Richard Cottle。历任 CMU、UT Dallas、JHU、RPI、UIUC（Caterpillar 教授兼系主任），2013年起任 USC Epstein 家族讲席教授。获 Dantzig 奖(2003)与 von Neumann 理论奖(2019)，2021年当选美国国家工程院院士。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=6746",
+    "https://viterbi.usc.edu/directory/cv/pang_jong-shi_cv.pdf",
+    "https://micde.umich.edu/event/jong-shi-pang/"
+   ]
+  },
+  {
+   "id": "richardwcottle",
+   "name": "Richard W. Cottle",
+   "name_en": "Richard W. Cottle",
+   "affiliation": "斯坦福大学 管理科学与工程系 (Stanford MS&E，荣休)",
+   "region": "海外",
+   "titles": [
+    "Professor Emeritus, Stanford",
+    "Mathematical Programming 主编 (1980–1986)",
+    "1995 Lanchester Prize"
+   ],
+   "tier": "core",
+   "research": "线性与非线性互补问题、数学规划；合著《The Linear Complementarity Problem》。",
+   "phd": "加州大学伯克利分校 (UC Berkeley) 1964（导师 George B. Dantzig / Russell S. Lehman（MGP 第二导师））",
+   "postdoc": "",
+   "students": [
+    "Jong-Shi Pang (Stanford 1977)",
+    "Richard E. Stone (1981)",
+    "Jacques Ferland (1971)",
+    "Jen-Chih Yao (1990)",
+    "Che-Lin Su (2005)"
+   ],
+   "bio": "Richard Cottle 1935年生，伯克利1964年博士，MGP 记录导师为 George Dantzig（与 Russell Lehman 联合），论文《Nonlinear Programs with Positively Bounded Jacobians》。1966年起在斯坦福运筹系任教，是线性互补问题领域的开创者之一，1995年与 Pang、Stone 共获 Lanchester 奖。",
+   "sources": [
+    "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=32081",
+    "https://web.stanford.edu/~rwc/person.htm"
+   ]
+  },
+  {
+   "id": "marcteboulle",
+   "name": "Marc Teboulle",
+   "name_en": "Marc Teboulle",
+   "affiliation": "特拉维夫大学 数学科学学院 (Tel Aviv University，荣休)",
+   "region": "海外",
+   "titles": [
+    "Professor Emeritus, TAU"
+   ],
+   "tier": "core",
+   "research": "凸优化中的近端/镜像法（mirror descent、proximal methods）、熵型距离与一阶算法；FISTA 合作者。",
+   "phd": "以色列理工学院 (Technion) 1985（导师 Aharon Ben-Tal）",
+   "postdoc": "",
+   "students": [
+    "Amir Beck (Tel Aviv 2003)",
+    "Gong Chen (UMBC 1993)",
+    "Yoel Drori (TAU 2014, 官网学生名单)"
+   ],
+   "bio": "Marc Teboulle 1985年在 Technion 获博士学位，MGP 记录导师为 Aharon Ben-Tal，论文《Penalty Function Approaches and Duality in Stochastic Programming》。长期任特拉维夫大学数学学院教授，是近端点算法、镜像下降法的重要奠基人，与 Amir Beck 合作提出 FISTA（2009）。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=44106",
+    "https://www.math.tau.ac.il/~teboulle/gradstudents.html"
+   ]
+  },
+  {
+   "id": "amirbeck",
+   "name": "Amir Beck",
+   "name_en": "Amir Beck",
+   "affiliation": "特拉维夫大学 数学科学学院（曾任教于 Technion 至2017）",
+   "region": "海外",
+   "titles": [
+    "Professor, TAU",
+    "2013 IEEE Signal Processing Society Best Paper Award",
+    "Henry Taub Research Prize (2013)"
+   ],
+   "tier": "core",
+   "research": "连续优化理论与算法，一阶方法收敛速率分析；FISTA 提出者之一（Beck–Teboulle 2009）。",
+   "phd": "特拉维夫大学 (Tel Aviv University) 2003（导师 Marc Teboulle）",
+   "postdoc": "Technion Minerva Optimization Center 博士后 (2003–2005)，无明确导师记录",
+   "students": [
+    "Nadav Hallak (Technion 2018)",
+    "Lubov Tetruashvili (Technion 2011)",
+    "Dror Pan (2018)",
+    "Alex Shtof (2019)"
+   ],
+   "bio": "Amir Beck 在特拉维夫大学完成学士(1993)、硕士(1997)与博士(2003)学位，博士论文《Convergence Rate Analysis of Gradient Based Methods》，导师 Marc Teboulle。曾任 Technion 教授，2017年起任特拉维夫大学教授。其与 Teboulle 提出的 FISTA 是压缩感知与信号处理中引用最高的一阶算法之一。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=102442",
+    "https://en-exact-sciences.tau.ac.il/profile/becka"
+   ]
+  },
+  {
+   "id": "robertmfreund",
+   "name": "Robert M. Freund",
+   "name_en": "Robert M. Freund",
+   "affiliation": "MIT 斯隆管理学院 (MIT Sloan)",
+   "region": "海外",
+   "titles": [
+    "Theresa Seley Professor in Management Science, MIT Sloan"
+   ],
+   "tier": "core",
+   "research": "连续优化（内点法、一阶方法、条件数）与运筹学，大规模优化在机器学习中的应用。",
+   "phd": "斯坦福大学 (Stanford) 1980（导师 B. Curtis Eaves（MGP记录；用户未猜测，注意并非 Dantzig 直传））",
+   "postdoc": "",
+   "students": [
+    "Marina Epelman (MIT 1999)",
+    "Fernando Ordóñez (MIT 2002)",
+    "Alexandre Belloni (MIT 2006)",
+    "Haihao Lu (MIT 2019)",
+    "Renbo Zhao (MIT 2023)"
+   ],
+   "bio": "Robert Freund 1980年获斯坦福大学运筹学博士，MGP 记录导师为 B. Curtis Eaves，论文《Variable-Dimension Complexes with Applications》。长期任教于 MIT Sloan，研究内点法、一阶方法与条件数理论，与 Paul Grigas、Haihao Lu 等合作推动大规模优化。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=68472"
+   ]
+  },
+  {
+   "id": "dimitrisbertsimas",
+   "name": "Dimitris Bertsimas",
+   "name_en": "Dimitris Bertsimas",
+   "affiliation": "MIT 斯隆管理学院 (MIT Sloan) / MIT 运筹学中心",
+   "region": "海外",
+   "titles": [
+    "Boeing Professor of Operations Research, MIT",
+    "MIT Vice Provost for Open Learning (2024–)",
+    "INFORMS Fellow",
+    "NAE 院士"
+   ],
+   "tier": "core",
+   "research": "优化（鲁棒优化、离散与连续优化）、机器学习与医疗分析；代表作《Introduction to Linear Optimization》(with Tsitsiklis)。",
+   "phd": "麻省理工学院 (MIT, Operations Research and Applied Mathematics) 1988（导师 Amedeo R. Odoni / Daniel J. Kleitman（MGP 记录两位导师）；用户猜测的 Tsitsiklis 是合作者/教材合著者，MGP 未列为导师）",
+   "postdoc": "",
+   "students": [
+    "Michele Aghassi (2005)",
+    "David B. Brown (2006)",
+    "Margret Bjarnadottir (2008)",
+    "Chaitanya Bandi (2013)",
+    "Leonard Boussioux (2023)"
+   ],
+   "bio": "Dimitris Bertsimas 雅典国立技术大学毕业后赴 MIT，1987年获运筹学硕士、1988年获博士，论文《Probabilistic Combinatorial Optimization Problems》，MGP 记录导师为 Daniel Kleitman 与 Amedeo Odoni（而非 Tsitsiklis）。此后一直任教 MIT Sloan，是鲁棒优化的奠基人之一，著有《Introduction to Linear Optimization》等经典教材。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=37057",
+    "https://mitsloan.mit.edu/shared/ods/documents?PersonID=41218&DocID=14221"
+   ]
+  },
+  {
+   "id": "renatodcmonteiro",
+   "name": "Renato D. C. Monteiro",
+   "name_en": "Renato D. C. Monteiro",
+   "affiliation": "佐治亚理工学院 工业与系统工程系 (Georgia Tech ISyE)",
+   "region": "海外",
+   "titles": [
+    "Professor, ISyE Georgia Tech"
+   ],
+   "tier": "core",
+   "research": "内点法（Monteiro–Adler 原始对偶算法）、半定规划、一阶方法与加速梯度法复杂度分析。",
+   "phd": "加州大学伯克利分校 (UC Berkeley) 1988（导师 Ilan Adler）",
+   "postdoc": "",
+   "students": [
+    "Samuel Burer (2001)",
+    "Zhaosong Lu (2005)",
+    "Guanghui (George) Lan (2009)",
+    "Weiwei Kong (2021)"
+   ],
+   "bio": "Renato Monteiro 巴西人，1988年获伯克利博士学位，导师 Ilan Adler；二人合作的 Monteiro–Adler 原始对偶内点算法（1989）是内点法革命的核心成果之一。此后在 Georgia Tech 任教，在半定规划与一阶方法复杂度领域持续有重要影响，学生包括 Samuel Burer、Guanghui Lan 等。",
+   "sources": [
+    "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=132760"
+   ]
+  },
+  {
+   "id": "javierpeña",
+   "name": "Javier Peña",
+   "name_en": "Javier Peña",
+   "affiliation": "卡内基梅隆大学 Tepper 商学院 (CMU Tepper)",
+   "region": "海外",
+   "titles": [
+    "Bajaj Family Chair in Operations Research, Tepper",
+    "Professor of Operations Research"
+   ],
+   "tier": "core",
+   "research": "凸优化算法理论：条件数、内点法、一阶方法（Frank–Wolfe、加速方法）与锥规划。",
+   "phd": "康奈尔大学 (Cornell, Applied Mathematics) 1998（导师 James Renegar（论文委员会主席；委员会含 Michael Todd、Stephen Vavasis））",
+   "postdoc": "MSRI Berkeley 博士后 (1998)，无明确导师",
+   "students": [
+    "Luis Zuluaga (CMU 2004)",
+    "Juan Vera (CMU 2006)",
+    "Qihang Lin (CMU 2013)",
+    "Negar Soheili (CMU 2014)",
+    "David Gutman (CMU 2019)"
+   ],
+   "bio": "Javier Peña 哥伦比亚洛斯安第斯大学本科，康奈尔应用数学博士(1998)，论文《Condition Numbers for Linear Programming》，导师 James Renegar（Renegar 本人师从 Steve Smale）。1999年起任教 CMU Tepper，现为 Bajaj 家族讲席教授，研究锥优化条件数与一阶算法。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=39560",
+    "https://www.cmu.edu/sites/default/files/cmu-tepper-site-files/documents/pena-javier-cv.pdf"
+   ]
+  },
+  {
+   "id": "michaelcferris",
+   "name": "Michael C. Ferris",
+   "name_en": "Michael C. Ferris",
+   "affiliation": "威斯康星大学麦迪逊分校 计算机科学系（荣休）",
+   "region": "海外",
+   "titles": [
+    "Professor Emeritus / John P. Morgridge Professor, UW–Madison",
+    "SIAM Fellow",
+    "INFORMS Fellow"
+   ],
+   "tier": "core",
+   "research": "互补问题（MPCC）、GAMS 建模系统、凸优化在数据科学/机器学习中的应用。",
+   "phd": "剑桥大学 (University of Cambridge) 1989（导师 Edward James Anderson / Olvi L. Mangasarian（MGP 记录两位导师））",
+   "postdoc": "",
+   "students": [
+    "Stephen Billups (1995)",
+    "Steven Dirkse (1994)",
+    "Todd Munson (2000)",
+    "Geng Deng (2007)"
+   ],
+   "bio": "Michael Ferris 1989年获剑桥大学博士，论文《Weak Sharp Minima in Mathematical Programming》，MGP 记录导师为 Edward Anderson 与 Olvi Mangasarian。长期任教威斯康星大学麦迪逊分校，是互补问题数值方法与 GAMS 建模语言生态的关键人物。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=6473"
+   ]
+  },
+  {
+   "id": "hedyattouch",
+   "name": "Hédy Attouch",
+   "name_en": "Hédy Attouch",
+   "affiliation": "蒙彼利埃大学 (Université de Montpellier，荣休)",
+   "region": "海外",
+   "titles": [
+    "Professor Emeritus, Université de Montpellier"
+   ],
+   "tier": "core",
+   "research": "变分收敛（epi-convergence）、极大单调算子、梯度类动力系统与近端算法收敛理论。",
+   "phd": "巴黎第六大学 (Université Pierre-et-Marie-Curie, Paris VI) 1976（导师 Haïm Brézis（MGP记录））",
+   "postdoc": "",
+   "students": [
+    "Jérôme Bolte (Montpellier II 2003)",
+    "Felipe Alvarez (Chile 1998)",
+    "Guy Bouchitté (1987)",
+    "Alexandre Cabot (2002)",
+    "Abdellatif Moudafi (1991)",
+    "Guillaume Garrigos (2015)"
+   ],
+   "bio": "Hédy Attouch 1976年获巴黎第六大学博士学位，MGP 记录导师为 Haïm Brézis。长期任教蒙彼利埃大学，是法国变分分析与动力系统优化学派的核心人物，著有《Variational Convergence for Functions and Operators》(1984)，培养了 Bolte、Alvarez、Cabot 等知名学生。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=31240"
+   ]
+  },
+  {
+   "id": "haïmbrezis",
+   "name": "Haïm Brézis",
+   "name_en": "Haïm Brézis",
+   "affiliation": "巴黎六大（原巴黎第六大学）",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "garrettbirkhoff",
+   "name": "Garrett Birkhoff",
+   "name_en": "Garrett Birkhoff",
+   "affiliation": "哈佛大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "russellslehman",
+   "name": "Russell Lehman",
+   "name_en": "Russell S. Lehman",
+   "affiliation": "UC Berkeley",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "bcurtiseaves",
+   "name": "B. Curtis Eaves",
+   "name_en": "B. Curtis Eaves",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "danieljkleitman",
+   "name": "Daniel Kleitman",
+   "name_en": "Daniel J. Kleitman",
+   "affiliation": "MIT",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "amedeorodoni",
+   "name": "Amedeo Odoni",
+   "name_en": "Amedeo R. Odoni",
+   "affiliation": "MIT",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "edwardjanderson",
+   "name": "Edward Anderson",
+   "name_en": "Edward J. Anderson",
+   "affiliation": "剑桥大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "ilanadler",
+   "name": "Ilan Adler",
+   "name_en": "Ilan Adler",
+   "affiliation": "UC Berkeley",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "jamesrenegar",
+   "name": "James Renegar",
+   "name_en": "James Renegar",
+   "affiliation": "康奈尔大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "aharonbental",
+   "name": "Aharon Ben-Tal",
+   "name_en": "Aharon Ben-Tal",
+   "affiliation": "Technion",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "karlkunisch",
+   "name": "Karl Kunisch",
+   "name_en": "Karl Kunisch",
+   "affiliation": "格拉茨大学（University of Graz）；奥地利科学院 RICAM（Johann Radon Institute）",
+   "region": "海外",
+   "titles": [
+    "荣休教授",
+    "RICAM 优化与最优控制组组长",
+    "SIAM Fellow (2017)",
+    "2021年 W.T. and Idalia Reid Prize"
+   ],
+   "tier": "core",
+   "research": "PDE约束优化与最优控制、函数空间中的非光滑优化、半光滑牛顿法与Primal-Dual Active Set策略",
+   "phd": "格拉茨工业大学（TU Graz） 1978（导师 Franz Kappel）",
+   "postdoc": "unverified（1979-80年访问布朗大学 Lefschetz 动力系统中心，导师不明）",
+   "students": [
+    "Juan Carlos De los Reyes (Graz 2003)",
+    "Georg Stadler (Graz 2004)",
+    "Stefan Volkwein (TU Berlin 1997)",
+    "Thomas Slawig (TU Berlin 1998)",
+    "Wolfgang Ring (TU Graz 1993)"
+   ],
+   "bio": "奥地利数学家，PDE约束优化与最优控制领域的领军人物之一，2010年ICM邀请报告人。与Kazufumi Ito合作奠定半光滑牛顿法在函数空间的理论基础。MGP记录21名学生；注：Michael Hintermüller虽长期与其合作，但MGP未将其列为Kunisch的学生。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=20355",
+    "https://homepage.uni-graz.at/en/karl.kunisch/",
+    "https://www.oeaw.ac.at/ricam/staff/karl-kunisch"
+   ]
+  },
+  {
+   "id": "michaelhintermuller",
+   "name": "Michael Hintermüller",
+   "name_en": "Michael Hintermüller",
+   "affiliation": "柏林洪堡大学 + 魏尔斯特拉斯研究所（WIAS Berlin）",
+   "region": "海外",
+   "titles": [
+    "教授",
+    "WIAS主任"
+   ],
+   "tier": "core",
+   "research": "非光滑优化、变分图像处理、PDE约束优化与Primal-Dual Active Set方法",
+   "phd": "林茨约翰内斯·开普勒大学（JKU Linz） 1997（公开一手材料未确认博士导师）",
+   "postdoc": "unverified",
+   "students": [
+    "Kevin Sturm (TU Berlin 2014, 与Dietmar Hömberg、Michel Delfour共同指导)"
+   ],
+   "bio": "德国连续优化与图像处理知名学者，现任WIAS主任兼洪堡大学教授。博士论文题为'带噪声数据的非线性规划算法'，MGP未记录其博士导师。",
+   "sources": [
+    "https://mathgenealogy.org/id.php?id=184557"
+   ]
+  },
+  {
+   "id": "christiankanzow",
+   "name": "Christian Kanzow",
+   "name_en": "Christian Kanzow",
+   "affiliation": "维尔茨堡大学（Universität Würzburg）",
+   "region": "海外",
+   "titles": [
+    "教授"
+   ],
+   "tier": "core",
+   "research": "非光滑方程、互补问题与变分不等式、半光滑牛顿法",
+   "phd": "汉堡大学 1995（导师 Carl-Rolf Geiger）",
+   "postdoc": "unverified",
+   "students": [
+    "Christian Nagel 等（MGP记录16名学生）"
+   ],
+   "bio": "德国非光滑优化与互补问题专家，MGP确认其博士导师为Carl-Rolf Geiger。与Ulbrich兄弟等合作推动了半光滑方法在有限维互补问题中的应用。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=28967"
+   ]
+  },
+  {
+   "id": "stefanulbrich",
+   "name": "Stefan Ulbrich",
+   "name_en": "Stefan Ulbrich",
+   "affiliation": "达姆施塔特工业大学（TU Darmstadt）",
+   "region": "海外",
+   "titles": [
+    "教授（优化教席）"
+   ],
+   "tier": "core",
+   "research": "PDE约束优化、SQP方法、多水平优化、形状与拓扑优化",
+   "phd": "慕尼黑工业大学（TU München） 1996（导师 Johann (Hans) Edenhofer）",
+   "postdoc": "unverified（曾在美国Rice大学从事博士后研究，导师未核实）",
+   "students": [
+    "MGP记录35名学生，包括 J. C. Ziems 等"
+   ],
+   "bio": "德国PDE约束优化核心人物，DFG优先计划SPP 1253的重要参与者，与Michael Ulbrich（其兄弟，TUM教授，非师生关系）长期合作研究内点法与SQP方法。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=29103",
+    "https://www.mathematik.tu-darmstadt.de/optimierung/arbeitsgruppe_optimierung/personen_1/personendetails/stefan_ulbrich.en.jsp"
+   ]
+  },
+  {
+   "id": "pierreantoineabsil",
+   "name": "Pierre-Antoine Absil",
+   "name_en": "Pierre-Antoine Absil",
+   "affiliation": "鲁汶天主教大学（UC Louvain）",
+   "region": "海外",
+   "titles": [
+    "教授（数学工程系 INMA）"
+   ],
+   "tier": "core",
+   "research": "矩阵流形上的黎曼优化，《Optimization Algorithms on Matrix Manifolds》作者",
+   "phd": "列日大学（Université de Liège） 2003（导师 Rodolphe J. Sepulchre）",
+   "postdoc": "unverified（曾在佛罗里达州立大学与Kyle Gallivan合作）",
+   "students": [
+    "Nicolas Boumal (UCL 2014)",
+    "Wen Huang (Florida State 2013)",
+    "Christopher Baker (Florida State 2008)"
+   ],
+   "bio": "流形优化领域奠基人之一，与Mahony、Sepulchre合著的《Optimization Algorithms on Matrix Manifolds》是该领域标准教材。博士由控制论专家Sepulchre指导。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=111116",
+    "https://research.com/u/pierre-antoine-absil"
+   ]
+  },
+  {
+   "id": "rodolphesepulchre",
+   "name": "Rodolphe Sepulchre",
+   "name_en": "Rodolphe Sepulchre",
+   "affiliation": "剑桥大学（University of Cambridge，工程系）",
+   "region": "海外",
+   "titles": [
+    "教授",
+    "IEEE Fellow"
+   ],
+   "tier": "core",
+   "research": "非线性控制、耗散性理论与黎曼优化算法",
+   "phd": "鲁汶天主教大学（UC Louvain） 1994（导师 Dirk Aeyels）",
+   "postdoc": "unverified",
+   "students": [
+    "Pierre-Antoine Absil (Liège 2003)",
+    "Wim Michiels (KU Leuven 2002)"
+   ],
+   "bio": "比利时裔控制与优化理论家，博士论文研究李雅普诺夫直接法分析非线性控制系统。是流形优化谱系中Absil—Boumal一支的上游源头。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=103842"
+   ]
+  },
+  {
+   "id": "nicolasboumal",
+   "name": "Nicolas Boumal",
+   "name_en": "Nicolas Boumal",
+   "affiliation": "洛桑联邦理工学院（EPFL）",
+   "region": "海外",
+   "titles": [
+    "副教授（数学研究所）"
+   ],
+   "tier": "core",
+   "research": "流形优化、Manopt工具箱作者、半定规划的黎曼方法与Burer-Monteiro方法",
+   "phd": "鲁汶天主教大学（UC Louvain） 2014（导师 Pierre-Antoine Absil / Vincent Daniel Blondel）",
+   "postdoc": "unverified（曾在普林斯顿大学做博士后）",
+   "students": [
+    "MGP暂无记录"
+   ],
+   "bio": "Manopt工具箱主要作者，将黎曼优化推广至机器学习与数据科学应用。博士论文'Optimization and estimation on manifolds'由Absil与Blondel共同指导。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=204325"
+   ]
+  },
+  {
+   "id": "danielkuhn",
+   "name": "Daniel Kuhn",
+   "name_en": "Daniel Kuhn",
+   "affiliation": "洛桑联邦理工学院（EPFL，管理学院风险分析与优化教席）",
+   "region": "海外",
+   "titles": [
+    "教授",
+    "Mathematical Programming 主编"
+   ],
+   "tier": "core",
+   "research": "数据驱动的随机规划与分布鲁棒优化（Wasserstein DRO）",
+   "phd": "圣加仑大学（Universität St. Gallen） 2004（导师 Karl Frauendorfer / Georg Ch. Pflug）",
+   "postdoc": "unverified（2005-2006年在斯坦福大学管理科学与工程系做博士后）",
+   "students": [
+    "Wolfram Wiesemann (Imperial 2010)",
+    "Soroosh Shafieezadeh-Abadeh (EPFL 2020)",
+    "Viet Anh Nguyen (EPFL 2019)",
+    "Grani Hanasusanto (Imperial 2015)",
+    "Wouter Jongeneel (EPFL 2024)"
+   ],
+   "bio": "分布鲁棒优化的领军学者，与Mohajerin Esfahani合作的Wasserstein DRO论文被引近两千次。现任《Mathematical Programming》主编。博士在圣加仑大学经济学系完成。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=168464",
+    "https://people.epfl.ch/daniel.kuhn"
+   ]
+  },
+  {
+   "id": "wolframwiesemann",
+   "name": "Wolfram Wiesemann",
+   "name_en": "Wolfram Wiesemann",
+   "affiliation": "帝国理工学院商学院（Imperial College Business School）",
+   "region": "海外",
+   "titles": [
+    "教授（Analytics and Operations）"
+   ],
+   "tier": "core",
+   "research": "鲁棒与分布鲁棒优化、不确定环境下的决策模型",
+   "phd": "帝国理工学院（Imperial College London） 2010（导师 Berç Rustem / Daniel Kuhn）",
+   "postdoc": "",
+   "students": [
+    "Napat Rujeerapaiboon (EPFL 2016, 第一导师Kuhn)",
+    "Grani Hanasusanto (Imperial 2015)",
+    "Aras Selvi (2025)",
+    "Zhengchao Wang (2025)"
+   ],
+   "bio": "帝国理工计算系博士，师从Rustem与Kuhn，后转入帝国理工商学院任教，是鲁棒优化与DRO领域高产学者，与Kuhn等合著Acta Numerica DRO综述。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=168473",
+    "https://www.imperial.ac.uk/computing/prospective-students/phd/phd-stories/wolfram-wiesemann/"
+   ]
+  },
+  {
+   "id": "sebastianpokutta",
+   "name": "Sebastian Pokutta",
+   "name_en": "Sebastian Pokutta",
+   "affiliation": "柏林Zuse研究所（ZIB）+ 柏林工业大学（TU Berlin）",
+   "region": "海外",
+   "titles": [
+    "教授",
+    "ZIB研究部副主任",
+    "2023年哥德尔奖得主"
+   ],
+   "tier": "core",
+   "research": "条件梯度/Frank-Wolfe方法、扩展表述理论、组合优化与机器学习交叉",
+   "phd": "杜伊斯堡-埃森大学（Universität Duisburg-Essen） 2005（导师 Rüdiger Göbel / Brendan Goldsmith）",
+   "postdoc": "unverified（博士后在ZIB与Martin Grötschel团队合作，转向优化；Grötschel为其学术导师/雇主，但非博士导师）",
+   "students": [
+    "Alejandro Carderera (Georgia Tech 2021)",
+    "Cyrille Combettes (Georgia Tech 2021)",
+    "Cristóbal Guzmán (Georgia Tech 2015)"
+   ],
+   "bio": "2023年哥德尔奖得主（扩展表述下界工作）。注意：其博士论文是群论方向（可数域上的积），导师为Göbel与Goldsmith；转入优化领域是在ZIB跟随Grötschel团队完成的，并非正式博士师承。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=29407",
+    "https://mathplus.de/news/goedel-prize-2023-sebastian-pokutta/"
+   ]
+  },
+  {
+   "id": "gunterleugering",
+   "name": "Günter Leugering",
+   "name_en": "Günter Leugering",
+   "affiliation": "埃尔朗根-纽伦堡大学（FAU Erlangen-Nürnberg）",
+   "region": "海外",
+   "titles": [
+    "荣休教授"
+   ],
+   "tier": "pillar",
+   "research": "弹性系统与网络的控制、PDE约束优化与形状优化",
+   "phd": "达姆施塔特工业大学（TU Darmstadt） 1984（导师 Werner Krabs）",
+   "postdoc": "unverified",
+   "students": [
+    "Michael Stingl (FAU 2006)",
+    "Falk Hante (FAU 2010)",
+    "Michael Stiglmayr (Wuppertal 2011)"
+   ],
+   "bio": "德国PDE约束优化老一辈代表，曾任DFG优先计划SPP 1253协调人，TRR 154（天然气管网优化数学方法）发言人。师从控制论学者Werner Krabs。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=23566"
+   ]
+  },
+  {
+   "id": "freditroltzsch",
+   "name": "Fredi Tröltzsch",
+   "name_en": "Fredi Tröltzsch",
+   "affiliation": "柏林工业大学（TU Berlin，荣休）",
+   "region": "海外",
+   "titles": [
+    "荣休教授"
+   ],
+   "tier": "pillar",
+   "research": "PDE约束最优控制的二阶理论与数值方法",
+   "phd": "弗莱贝格矿业学院（TU Bergakademie Freiberg） 1977（导师 Lothar von Wolfersdorf）",
+   "postdoc": "",
+   "students": [
+    "Arnd Rösch (Chemnitz 1995)",
+    "Daniel Wachsmuth (TU Berlin 2006)",
+    "Roland Herzog (Bayreuth 2003)",
+    "Ira Neitzel (TU Berlin 2011)",
+    "Christian Meyer (TU Berlin 2006)",
+    "Peter Gangl (JKU Linz 2017)"
+   ],
+   "bio": "东德学派出身的PDE最优控制权威，MGP记录20名学生、64名后裔，是德国PDE约束优化领域最多产的导师之一。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=39127"
+   ]
+  },
+  {
+   "id": "andreawalther",
+   "name": "Andrea Walther",
+   "name_en": "Andrea Walther",
+   "affiliation": "柏林洪堡大学（Humboldt-Universität zu Berlin）",
+   "region": "海外",
+   "titles": [
+    "教授"
+   ],
+   "tier": "core",
+   "research": "算法微分（AD）理论与软件、非光滑与分段光滑优化",
+   "phd": "德累斯顿工业大学（TU Dresden） 1999（导师 Andreas Griewank）",
+   "postdoc": "",
+   "students": [
+    "Lisa Kusch (TU Kaiserslautern 2020)",
+    "Lisa Hegerhorst-Schultchen (Hannover 2020)",
+    "MGP共13名学生"
+   ],
+   "bio": "算法微分领域权威，与Griewank合著经典教材《Evaluating Derivatives》（SIAM, 2008）。博士论文研究多处理器程序反转调度，师从Griewank。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=59123"
+   ]
+  },
+  {
+   "id": "andreasgriewank",
+   "name": "Andreas Griewank",
+   "name_en": "Andreas Griewank",
+   "affiliation": "柏林洪堡大学（HU Berlin，荣休，2021年去世）",
+   "region": "海外",
+   "titles": [
+    "教授",
+    "SIAM Fellow (2017)",
+    "2001年Max Planck研究奖"
+   ],
+   "tier": "pillar",
+   "research": "自动/算法微分之父、非线性优化算法、ADOL-C软件",
+   "phd": "澳大利亚国立大学（ANU, Canberra） 1980（导师 Richard Peirce Brent / M. R. Osborne）",
+   "postdoc": "unverified（1980-81年在剑桥大学做博士后）",
+   "students": [
+    "Andrea Walther (TU Dresden 1999)",
+    "Nicolas Gauger (TU Braunschweig 2003)",
+    "Uwe Naumann (TU Dresden 1999)",
+    "Jean Utke (TU Dresden 1996)"
+   ],
+   "bio": "被公认为算法微分领域的教父，与Toint提出部分可分离性概念，'Griewank函数'是全局优化标准测试函数。2021年9月16日猝逝。其师承可上溯至数值分析名家Brent，进而到Forsythe/Stanford谱系。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=28342",
+    "https://www.siam.org/publications/siam-news/articles/obituary-andreas-griewank/",
+    "https://euromathsoc.org/magazine/articles/69"
+   ]
+  },
+  {
+   "id": "jirivoutrata",
+   "name": "Jiří V. Outrata",
+   "name_en": "Jiří V. Outrata",
+   "affiliation": "捷克科学院信息与自动化理论研究所（ÚTIA, Czech Academy of Sciences）",
+   "region": "海外",
+   "titles": [
+    "高级研究员"
+   ],
+   "tier": "core",
+   "research": "变分分析、MPEC（数学规划与均衡约束）、非光滑分析",
+   "phd": "捷克斯洛伐克科学院（Czechoslovak Academy of Sciences） 1976（公开资料未列导师）",
+   "postdoc": "",
+   "students": [
+    "Michal Kočvara (Czech Academy of Sciences 1993)",
+    "Thomas Surowiec (HU Berlin 2010)",
+    "Birgit Trukenbrod (FAU 2001)"
+   ],
+   "bio": "捷克变分分析与MPEC领域核心人物，与Mordukhovich合著多部著作。其学位为CSc.（候选人学位），MGP未记录导师姓名。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=110051"
+   ]
+  },
+  {
+   "id": "borissmordukhovich",
+   "name": "Boris S. Mordukhovich",
+   "name_en": "Boris S. Mordukhovich",
+   "affiliation": "韦恩州立大学（Wayne State University，美国）",
+   "region": "海外",
+   "titles": [
+    "杰出大学教授",
+    "SIAM Fellow",
+    "Set-Valued and Variational Analysis 创刊主编"
+   ],
+   "tier": "core",
+   "research": "变分分析与广义微分理论（Mordukhovich法锥/次微分）",
+   "phd": "白俄罗斯国立大学（Belorussian State University, Minsk） 1973（导师 Rafail Fyodorovich Gabasov）",
+   "postdoc": "",
+   "students": [
+    "MGP记录36名学生"
+   ],
+   "bio": "现代变分分析奠基人之一，明斯克苏联最优控制学派（Gabasov）出身。注意：题目推测的Pshenichnyi师承未被MGP确认——MGP明确其博士导师为Gabasov；Pshenichnyi的影响应视为学派渊源而非正式导师（unverified）。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=39405"
+   ]
+  },
+  {
+   "id": "claudiaasagastizabal",
+   "name": "Claudia A. Sagastizábal",
+   "name_en": "Claudia A. Sagastizábal",
+   "affiliation": "坎皮纳斯州立大学（UNICAMP，巴西）；曾任INRIA与IMPA研究员",
+   "region": "海外",
+   "titles": [
+    "教授/研究员"
+   ],
+   "tier": "core",
+   "research": "束方法（bundle methods）、非光滑凸优化、能源系统优化",
+   "phd": "巴黎第一大学（Université Paris I Panthéon-Sorbonne） 1993（导师 Claude Lemaréchal）",
+   "postdoc": "",
+   "students": [
+    "Welington de Oliveira 等（MGP记录1名学生）"
+   ],
+   "bio": "阿根廷裔巴西优化学者，束方法与U-Lagrangian理论主要发展者（与Lemaréchal合作），与Bonnans、Gilbert、Lemaréchal合著《Numerical Optimization》。MGP确认其为Lemaréchal的学生。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=259002",
+    "http://www.ime.unicamp.br/~sagastiz/publications/"
+   ]
+  },
+  {
+   "id": "claudelemarechal",
+   "name": "Claude Lemaréchal",
+   "name_en": "Claude Lemaréchal",
+   "affiliation": "法国国家信息与自动化研究所（INRIA，荣休高级研究员）",
+   "region": "海外",
+   "titles": [
+    "INRIA研究主任（荣休）",
+    "1994年Dantzig奖"
+   ],
+   "tier": "pillar",
+   "research": "束方法开创者（与Philip Wolfe并列）、非光滑凸优化",
+   "phd": "图卢兹大学 Docteur-ingénieur 1969；巴黎第九大学 Doctorat d'État 1980（公开资料未列导师）",
+   "postdoc": "",
+   "students": [
+    "Claudia Sagastizábal (Paris I 1993)",
+    "Florent Cadoux (Grenoble 2009)"
+   ],
+   "bio": "法国应用数学家，束方法的开创者之一，1994年与Wets同获Dantzig奖。长期任职INRIA，推动非光滑优化在能源与工业中的应用。其博士导师在MGP中无记录。",
+   "sources": [
+    "https://www.mathgenealogy.org/id.php?id=259002",
+    "https://www.convexoptimization.com/wikimization/index.php/Lemar%C3%A9chal"
+   ]
+  },
+  {
+   "id": "franzkappel",
+   "name": "Franz Kappel",
+   "name_en": "Franz Kappel",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "carlrolfgeiger",
+   "name": "Carl-Rolf Geiger",
+   "name_en": "Carl-Rolf Geiger",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "johannedenhofer",
+   "name": "Johann Edenhofer",
+   "name_en": "Johann Edenhofer",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "dirkaeyels",
+   "name": "Dirk Aeyels",
+   "name_en": "Dirk Aeyels",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "vincentblondel",
+   "name": "Vincent Blondel",
+   "name_en": "Vincent Blondel",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "karlfrauendorfer",
+   "name": "Karl Frauendorfer",
+   "name_en": "Karl Frauendorfer",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "georgchpflug",
+   "name": "Georg Ch. Pflug",
+   "name_en": "Georg Ch. Pflug",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "bercrustem",
+   "name": "Berç Rustem",
+   "name_en": "Berç Rustem",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "rudigergobel",
+   "name": "Rüdiger Göbel",
+   "name_en": "Rüdiger Göbel",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "brendangoldsmith",
+   "name": "Brendan Goldsmith",
+   "name_en": "Brendan Goldsmith",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "wernerkrabs",
+   "name": "Werner Krabs",
+   "name_en": "Werner Krabs",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "lotharvonwolfersdorf",
+   "name": "Lothar von Wolfersdorf",
+   "name_en": "Lothar von Wolfersdorf",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "richardbrent",
+   "name": "Richard Brent",
+   "name_en": "Richard Brent",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "mrosborne",
+   "name": "M. R. Osborne",
+   "name_en": "M. R. Osborne",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "rafailgabasov",
+   "name": "Rafail Gabasov",
+   "name_en": "Rafail Gabasov",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "martingrotschel",
+   "name": "Martin Grötschel",
+   "name_en": "Martin Grötschel",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "francisbach",
+   "name": "Francis Bach",
+   "name_en": "Francis Bach",
+   "affiliation": "INRIA Paris / ENS",
+   "region": "海外",
+   "titles": [
+    "法兰西科学院院士(2020)",
+    "Lagrange奖(2018)"
+   ],
+   "tier": "core",
+   "research": "机器学习中的稀疏方法与大规模优化",
+   "phd": "UC Berkeley 2005（导师 Michael I. Jordan）",
+   "postdoc": "École des Mines de Paris",
+   "students": [
+    "Nicolas Flammarion"
+   ],
+   "bio": "2005年Berkeley师从Michael Jordan获博士，INRIA机器学习优化领军人物。",
+   "sources": [
+    "prairie-psai.fr"
+   ]
+  },
+  {
+   "id": "alexandredaspremont",
+   "name": "Alexandre d'Aspremont",
+   "name_en": "Alexandre d'Aspremont",
+   "affiliation": "CNRS / ENS Paris",
+   "region": "海外",
+   "titles": [
+    "CNRS研究主任"
+   ],
+   "tier": "core",
+   "research": "凸优化、稀疏恢复、加速算法",
+   "phd": "双博士：École Polytechnique 2003（导师 Nicole El Karoui）；Stanford 2004（导师 Stephen Boyd）",
+   "postdoc": "UC Berkeley 2003–2004（未据合作关系推断导师）",
+   "students": [
+    "Damien Scieur"
+   ],
+   "bio": "稀疏PCA半定松弛等经典工作，《Acceleration methods》合著者。",
+   "sources": [
+    {
+     "label": "个人研究主页：两篇博士论文与导师",
+     "url": "https://www.di.ens.fr/~aspremon/research.html"
+    },
+    {
+     "label": "个人简介：双博士与 Berkeley 博后",
+     "url": "https://www.di.ens.fr/~aspremon/bio.html"
+    }
+   ]
+  },
+  {
+   "id": "ernestkryu",
+   "name": "Ernest K. Ryu",
+   "name_en": "Ernest K. Ryu",
+   "affiliation": "UCLA 数学系（原首尔国立大学）",
+   "region": "海外",
+   "titles": [
+    "UCLA助理教授"
+   ],
+   "tier": "core",
+   "research": "单调算子理论、算子分裂与加速一阶方法",
+   "phd": "斯坦福大学 ICME 2016（导师 Stephen Boyd）",
+   "postdoc": "与Wotao Yin合作(待考证)",
+   "students": [],
+   "bio": "Boyd学生(2016)，算子分裂教材合著者，2024年回UCLA。",
+   "sources": [
+    "stanford.edu/~boyd/people.html"
+   ]
+  },
+  {
+   "id": "adrienbtaylor",
+   "name": "Adrien B. Taylor",
+   "name_en": "Adrien B. Taylor",
+   "affiliation": "INRIA / ENS Paris",
+   "region": "海外",
+   "titles": [
+    "INRIA研究员"
+   ],
+   "tier": "emerging",
+   "research": "性能估计问题(PEP)与计算机辅助收敛分析",
+   "phd": "UC Louvain 2017（导师 François Glineur / Julien Hendrickx）",
+   "postdoc": "",
+   "students": [],
+   "bio": "PEP框架奠基人之一。",
+   "sources": [
+    "arXiv:1703.03714"
+   ]
+  },
+  {
+   "id": "pontusgiselsson",
+   "name": "Pontus Giselsson",
+   "name_en": "Pontus Giselsson",
+   "affiliation": "隆德大学",
+   "region": "海外",
+   "titles": [
+    "隆德大学教授"
+   ],
+   "tier": "core",
+   "research": "算子分裂统一分析框架",
+   "phd": "隆德大学 2012（导师 Anders Rantzer(待考证)）",
+   "postdoc": "斯坦福 Boyd组",
+   "students": [],
+   "bio": "曾在Boyd组博士后研究。",
+   "sources": [
+    "portal.research.lu.se"
+   ]
+  },
+  {
+   "id": "panagiotispatrinos",
+   "name": "Panagiotis Patrinos",
+   "name_en": "Panagiotis Patrinos",
+   "affiliation": "KU Leuven ESAT-STADIUS",
+   "region": "海外",
+   "titles": [
+    "KU Leuven教授"
+   ],
+   "tier": "core",
+   "research": "非凸优化算法、算子分裂、嵌入式优化",
+   "phd": "雅典国立技术大学 2010（导师 Haralambos Sarimveis(待考证)）",
+   "postdoc": "Alberto Bemporad(IMT Lucca)",
+   "students": [
+    "Andreas Themelis",
+    "Lorenzo Stella"
+   ],
+   "bio": "嵌入式优化OpEn作者。",
+   "sources": [
+    "esat.kuleuven.be"
+   ]
+  },
+  {
+   "id": "andreasthemelis",
+   "name": "Andreas Themelis",
+   "name_en": "Andreas Themelis",
+   "affiliation": "九州大学",
+   "region": "海外",
+   "titles": [
+    "副教授"
+   ],
+   "tier": "emerging",
+   "research": "非凸近端算法、前向-后向包络",
+   "phd": "KU Leuven/IMT Lucca 2018（导师 Panagiotis Patrinos）",
+   "postdoc": "",
+   "students": [],
+   "bio": "SuperMann与非凸DR分裂结果著称。",
+   "sources": [
+    "arXiv:1906.10053"
+   ]
+  },
+  {
+   "id": "lorenzostella",
+   "name": "Lorenzo Stella",
+   "name_en": "Lorenzo Stella",
+   "affiliation": "AWS Berlin",
+   "region": "海外",
+   "titles": [
+    "Applied Scientist"
+   ],
+   "tier": "pillar",
+   "research": "大规模非光滑优化算法Julia实现",
+   "phd": "IMT Lucca/KU Leuven 2017（导师 Panagiotis Patrinos / Alberto Bemporad）",
+   "postdoc": "",
+   "students": [],
+   "bio": "ProximalOperators.jl作者。",
+   "sources": [
+    "alphaxiv"
+   ]
+  },
+  {
+   "id": "martinjaggi",
+   "name": "Martin Jaggi",
+   "name_en": "Martin Jaggi",
+   "affiliation": "EPFL MLO",
+   "region": "海外",
+   "titles": [
+    "EPFL副教授",
+    "ELLIS Fellow"
+   ],
+   "tier": "core",
+   "research": "Frank-Wolfe方法、联邦优化",
+   "phd": "ETH Zürich 2011（导师 Bernd Gärtner / Emo Welzl）",
+   "postdoc": "",
+   "students": [
+    "Sebastian Stich(研究员)",
+    "Nikita Doikov(博后)"
+   ],
+   "bio": "重建Frank-Wolfe现代理论，EPFL MLO实验室负责人。",
+   "sources": [
+    "MGP id=29128"
+   ]
+  },
+  {
+   "id": "robertmgower",
+   "name": "Robert M. Gower",
+   "name_en": "Robert M. Gower",
+   "affiliation": "Flatiron Institute",
+   "region": "海外",
+   "titles": [
+    "Flatiron研究员"
+   ],
+   "tier": "emerging",
+   "research": "SGD/方差缩减收敛理论",
+   "phd": "爱丁堡大学 2016（导师 Peter Richtárik）",
+   "postdoc": "",
+   "students": [],
+   "bio": "Sketch-and-Project框架提出者。",
+   "sources": [
+    "MGP id=111470"
+   ]
+  },
+  {
+   "id": "peterrichtarik",
+   "name": "Peter Richtárik",
+   "name_en": "Peter Richtárik",
+   "affiliation": "KAUST",
+   "region": "海外",
+   "titles": [
+    "KAUST教授",
+    "Broyden奖(2019)"
+   ],
+   "tier": "core",
+   "research": "随机优化、联邦学习",
+   "phd": "康奈尔大学 2007（导师 Michael J. Todd）",
+   "postdoc": "UC Louvain(与Nesterov合作,待考证)",
+   "students": [
+    "Robert Gower",
+    "Jakub Konečný",
+    "Martin Takáč"
+   ],
+   "bio": "随机坐标下降与联邦学习优化代表学者。导师是Todd而非Kočvara。",
+   "sources": [
+    "MGP id=111470"
+   ]
+  },
+  {
+   "id": "sebastianustich",
+   "name": "Sebastian U. Stich",
+   "name_en": "Sebastian U. Stich",
+   "affiliation": "CISPA",
+   "region": "海外",
+   "titles": [
+    "CISPA faculty",
+    "ELLIS成员"
+   ],
+   "tier": "core",
+   "research": "去中心化/联邦优化、SGD收敛理论",
+   "phd": "ETH Zürich 2014（导师 Bernd Gärtner）",
+   "postdoc": "Nesterov/Glineur(UCLouvain)；Martin Jaggi(EPFL)",
+   "students": [],
+   "bio": "博后先后师从Nesterov与Jaggi。",
+   "sources": [
+    "cispa.de"
+   ]
+  },
+  {
+   "id": "alpyurtsever",
+   "name": "Alp Yurtsever",
+   "name_en": "Alp Yurtsever",
+   "affiliation": "于默奥大学",
+   "region": "海外",
+   "titles": [
+    "助理教授"
+   ],
+   "tier": "emerging",
+   "research": "大规模半定规划、Frank-Wolfe、随机草图",
+   "phd": "EPFL 2019（导师 Volkan Cevher）",
+   "postdoc": "MIT LIDS(Suvrit Sra,待考证)",
+   "students": [],
+   "bio": "EPFL博士(2019,导师Cevher)。",
+   "sources": [
+    "MGP id=106268"
+   ]
+  },
+  {
+   "id": "volkancevher",
+   "name": "Volkan Cevher",
+   "name_en": "Volkan Cevher",
+   "affiliation": "EPFL LIONS",
+   "region": "海外",
+   "titles": [
+    "EPFL副教授",
+    "ERC StG/CoG"
+   ],
+   "tier": "core",
+   "research": "凸优化与极小极大优化理论及ML应用",
+   "phd": "Georgia Tech 2005（导师 James McClellan）",
+   "postdoc": "Rama Chellappa(Maryland)；Richard Baraniuk(Rice)",
+   "students": [
+    "Alp Yurtsever",
+    "Ilija Bogunovic"
+   ],
+   "bio": "EPFL LIONS实验室创始人。",
+   "sources": [
+    "MGP id=106268"
+   ]
+  },
+  {
+   "id": "xudongli",
+   "name": "李旭东",
+   "name_en": "Xudong Li",
+   "affiliation": "复旦大学大数据学院",
+   "region": "内地",
+   "titles": [
+    "长江学者特聘教授(2024)",
+    "MOS青年最佳论文奖(2019)"
+   ],
+   "tier": "core",
+   "research": "大规模凸复合优化、半光滑牛顿增广拉格朗日法(QSDPNAL)",
+   "phd": "新加坡国立大学 2015（导师 孙德锋 / 卓金权 Kim-Chuan Toh）",
+   "postdoc": "Mengdi Wang(Princeton)",
+   "students": [],
+   "bio": "中科大本科，NUS博士(孙德锋与卓金权联合指导)，现复旦教授。",
+   "sources": [
+    "lixudong.info CV"
+   ]
+  },
+  {
+   "id": "zaikunzhang",
+   "name": "张在坤",
+   "name_en": "Zaikun Zhang",
+   "affiliation": "中山大学数学学院（原香港理工大学）",
+   "region": "内地",
+   "titles": [
+    "国家级青年人才(2023)",
+    "中国运筹学会运筹应用奖(2024)"
+   ],
+   "tier": "core",
+   "research": "无导数优化、优化软件(PRIMA/COBYQA，已并入SciPy)",
+   "phd": "中科院计算数学所 2012（导师 袁亚湘）",
+   "postdoc": "港理工(与孙德锋合作,待考证)",
+   "students": [],
+   "bio": "袁亚湘2012届博士，无导数优化青年代表，曾任港理工助理教授。",
+   "sources": [
+    "zhangzk.net"
+   ]
+  },
+  {
+   "id": "michaeljordan",
+   "name": "Michael Jordan",
+   "name_en": "Michael Jordan",
+   "affiliation": "加州大学伯克利分校 EECS/统计学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "francoisglineur",
+   "name": "François Glineur",
+   "name_en": "François Glineur",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "julienhendrickx",
+   "name": "Julien Hendrickx",
+   "name_en": "Julien Hendrickx",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "albertobemporad",
+   "name": "Alberto Bemporad",
+   "name_en": "Alberto Bemporad",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "berndgartner",
+   "name": "Bernd Gärtner",
+   "name_en": "Bernd Gärtner",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "emowelzl",
+   "name": "Emo Welzl",
+   "name_en": "Emo Welzl",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "jamesmcclellan",
+   "name": "James McClellan",
+   "name_en": "James McClellan",
+   "affiliation": "",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP"
+   ]
+  },
+  {
+   "id": "doikov",
+   "name": "Nikita Doikov",
+   "name_en": "Nikita Doikov",
+   "affiliation": "康奈尔大学 ORIE 助理教授（2026年入职）",
+   "region": "海外",
+   "titles": [
+    "康奈尔助理教授"
+   ],
+   "tier": "emerging",
+   "research": "二阶/张量优化方法全局复杂度、随机与分布式优化",
+   "phd": "UC Louvain 2021（导师 Nesterov）",
+   "postdoc": "Martin Jaggi（EPFL MLO）",
+   "students": [],
+   "bio": "Nesterov 2021届博士，EPFL博后，2026年起任康奈尔ORIE助理教授。",
+   "sources": [
+    "duffield.cornell.edu",
+    "doikov.com"
+   ]
+  },
+  {
+   "id": "koloskova",
+   "name": "Anastasia Koloskova",
+   "name_en": "Anastasia Koloskova",
+   "affiliation": "苏黎世大学 助理教授",
+   "region": "海外",
+   "titles": [
+    "UZH助理教授"
+   ],
+   "tier": "emerging",
+   "research": "去中心化/联邦优化",
+   "phd": "EPFL 约2023（导师 Jaggi）",
+   "postdoc": "Sanmi Koyejo（斯坦福）",
+   "students": [],
+   "bio": "Jaggi 门下博士，斯坦福博后，现任苏黎世大学AI与优化助理教授。",
+   "sources": [
+    "elliit.se"
+   ]
+  },
+  {
+   "id": "karimireddy",
+   "name": "Sai Praneeth Karimireddy",
+   "name_en": "Sai Praneeth Karimireddy",
+   "affiliation": "南加州大学 CS 助理教授（2024年入职）",
+   "region": "海外",
+   "titles": [
+    "EPFL最佳CS博士论文奖",
+    "Chorafas奖"
+   ],
+   "tier": "emerging",
+   "research": "联邦/协作学习优化、可信AI",
+   "phd": "EPFL 2021（导师 Jaggi）",
+   "postdoc": "Michael Jordan（UC Berkeley）",
+   "students": [],
+   "bio": "Jaggi 博士（最佳论文奖），Jordan组博后，2024年起任USC助理教授。",
+   "sources": [
+    "spkreddy.org"
+   ]
+  },
+  {
+   "id": "chavdarova",
+   "name": "Tatjana Chavdarova",
+   "name_en": "Tatjana Chavdarova",
+   "affiliation": "维也纳工业大学 助理教授（2026，WWTF研究组）",
+   "region": "海外",
+   "titles": [
+    "WWTF Vienna Research Group"
+   ],
+   "tier": "emerging",
+   "research": "多智能体/博弈学习优化动力学",
+   "phd": "EPFL/Idiap 约2021（导师 François Fleuret）",
+   "postdoc": "Martin Jaggi（EPFL）；Michael Jordan（Berkeley）",
+   "students": [],
+   "bio": "EPFL博士，Jaggi与Jordan组博后，2026年任TU Wien助理教授。",
+   "sources": [
+    "chavdarova.github.io"
+   ]
+  },
+  {
+   "id": "horvath",
+   "name": "Samuel Horváth",
+   "name_en": "Samuel Horváth",
+   "affiliation": "MBZUAI 助理教授（2022年入职）",
+   "region": "海外",
+   "titles": [
+    "Charles Broyden奖(2023)"
+   ],
+   "tier": "emerging",
+   "research": "联邦学习与分布式随机优化",
+   "phd": "KAUST 2022（导师 Richtárik）",
+   "postdoc": "",
+   "students": [],
+   "bio": "Richtárik 2022届博士，毕业后即任MBZUAI助理教授。",
+   "sources": [
+    "mbzuai.ac.ae"
+   ]
+  },
+  {
+   "id": "gorbunov",
+   "name": "Eduard Gorbunov",
+   "name_en": "Eduard Gorbunov",
+   "affiliation": "MBZUAI 助理教授（2025年入职）",
+   "region": "海外",
+   "titles": [
+    "MBZUAI助理教授"
+   ],
+   "tier": "emerging",
+   "research": "随机一阶方法、重尾噪声高概率收敛",
+   "phd": "莫斯科物理技术学院 2021（共同导师 Alexander Gasnikov / Peter Richtárik）",
+   "postdoc": "KAUST 博士后；后在 MBZUAI 任研究员",
+   "students": [],
+   "bio": "随机与分布式优化新生代学者，DIANA 等方法合作者；本人简历确认 Gasnikov 与 Richtárik 为共同博士导师。",
+   "sources": [
+    {"label":"MBZUAI 官方主页","url":"https://mbzuai.ac.ae/study/faculty/eduard-gorbunov/"},
+    {"label":"个人 CV（学位与导师）","url":"https://eduardgorbunov.github.io/assets/files/CV.pdf"}
+   ]
+  },
+  {
+   "id": "alacaoglu",
+   "name": "Ahmet Alacaoglu",
+   "name_en": "Ahmet Alacaoglu",
+   "affiliation": "英属哥伦比亚大学数学系 助理教授（2024年入职）",
+   "region": "海外",
+   "titles": [
+    "UBC助理教授"
+   ],
+   "tier": "emerging",
+   "research": "min-max优化、单调算子、随机算法复杂度",
+   "phd": "EPFL 2021（导师 Cevher）",
+   "postdoc": "Stephen Wright（UW-Madison，2021-2024）",
+   "students": [],
+   "bio": "Cevher博士、S.Wright博后，2024年起任UBC数学系助理教授。",
+   "sources": [
+    "caida.ubc.ca"
+   ]
+  },
+  {
+   "id": "yenhuanli",
+   "name": "李彦桓",
+   "name_en": "Yen-Huan Li",
+   "affiliation": "台湾大学资工系 副教授",
+   "region": "台湾",
+   "titles": [
+    "台大副教授"
+   ],
+   "tier": "emerging",
+   "research": "机器学习、优化、高维统计、量子信息",
+   "phd": "EPFL 约2018（导师 Cevher）",
+   "postdoc": "",
+   "students": [],
+   "bio": "Cevher LIONS实验室博士，现任台大副教授。",
+   "sources": [
+    "csie.ntu.edu.tw"
+   ]
+  },
+  {
+   "id": "carmon",
+   "name": "Yair Carmon",
+   "name_en": "Yair Carmon",
+   "affiliation": "特拉维夫大学 CS 助理教授",
+   "region": "海外",
+   "titles": [
+    "TAU助理教授"
+   ],
+   "tier": "emerging",
+   "research": "一阶方法下界、非凸优化复杂度、免调参SGD",
+   "phd": "斯坦福 2020（导师 John Duchi / Aaron Sidford）",
+   "postdoc": "",
+   "students": [],
+   "bio": "优化复杂度理论新生代代表。",
+   "sources": [
+    "cs.tau.ac.il/~ycarmon"
+   ]
+  },
+  {
+   "id": "diakonikolas",
+   "name": "Jelena Diakonikolas",
+   "name_en": "Jelena Diakonikolas",
+   "affiliation": "威斯康星大学麦迪逊分校 CS 副教授",
+   "region": "海外",
+   "titles": [
+    "NSF CAREER(2024)"
+   ],
+   "tier": "emerging",
+   "research": "大规模优化、min-max与变分不等式",
+   "phd": "哥伦比亚大学 2016（导师 Zussman / Stein）",
+   "postdoc": "Lorenzo Orecchia（BU）；Michael Jordan（Berkeley）",
+   "students": [],
+   "bio": "哥大博士，Berkeley博后，UW-Madison副教授。",
+   "sources": [
+    "jelena-diakonikolas.com"
+   ]
+  },
+  {
+   "id": "wibisono",
+   "name": "Andre Wibisono",
+   "name_en": "Andre Wibisono",
+   "affiliation": "耶鲁大学 CS 助理教授（2021年入职）",
+   "region": "海外",
+   "titles": [
+    "耶鲁助理教授"
+   ],
+   "tier": "core",
+   "research": "优化与采样的动力系统视角、Langevin算法",
+   "phd": "UC Berkeley 2016（导师 Michael Jordan）",
+   "postdoc": "UW-Madison；Georgia Tech",
+   "students": [],
+   "bio": "Jordan 2016届博士，2021年起任耶鲁助理教授。",
+   "sources": [
+    "cs.yale.edu"
+   ]
+  },
+  {
+   "id": "yuankun",
+   "name": "袁坤",
+   "name_en": "Kun Yuan",
+   "affiliation": "北京大学国际机器学习研究中心 助理教授（2022年入职）",
+   "region": "内地",
+   "titles": [
+    "国家级青年人才",
+    "北大博雅青年学者",
+    "IEEE SPS青年作者最佳论文奖(2018)"
+   ],
+   "tier": "emerging",
+   "research": "大规模/去中心化优化、联邦学习",
+   "phd": "UCLA 2019（导师 Ali H. Sayed）",
+   "postdoc": "",
+   "students": [],
+   "bio": "UCLA博士，曾任阿里达摩院高级算法专家，2022年回北大任教。",
+   "sources": [
+    {"label":"个人主页（履历与导师）","url":"https://kunyuan827.github.io/"},
+    {"label":"北京大学 CMLR 主页","url":"https://cmlr.pku.edu.cn/"}
+   ]
+  },
+  {
+   "id": "xiaonachuan",
+   "name": "肖纳川",
+   "name_en": "Nachuan Xiao",
+   "affiliation": "香港中文大学（深圳）数据科学学院 助理教授（2025年入职）",
+   "region": "内地",
+   "titles": [
+    "港中大(深圳)助理教授"
+   ],
+   "tier": "emerging",
+   "research": "非光滑优化、流形优化（约束溶解函数CDF）",
+   "phd": "中科院数学院 2021（导师 袁亚湘）",
+   "postdoc": "卓金权（NUS IORA，2021-2025）",
+   "students": [],
+   "bio": "袁亚湘2021届博士，NUS博后，2025年起任港中大（深圳）助理教授。",
+   "sources": [
+    "xnchxy.github.io"
+   ]
+  },
+  {
+   "id": "yuanyancheng",
+   "name": "袁远成",
+   "name_en": "Yancheng Yuan",
+   "affiliation": "香港理工大学应用数学系 助理教授（2023年入职）",
+   "region": "香港",
+   "titles": [
+    "港理工助理教授"
+   ],
+   "tier": "emerging",
+   "research": "大规模凸复合优化、SDP求解器(SDPNAL+)、HPR-LP",
+   "phd": "NUS 2019（导师 孙德锋 / 卓金权）",
+   "postdoc": "蔡达成（NUS NExT）",
+   "students": [],
+   "bio": "孙德锋-卓金权门下博士，现任港理工助理教授，参与SDPNAL+与HPR-LP求解器开发。",
+   "sources": [
+    "polyu.edu.hk"
+   ]
+  },
+  {
+   "id": "linmeixia",
+   "name": "林媚霞",
+   "name_en": "Meixia Lin",
+   "affiliation": "中国人民大学统计与大数据研究院 副教授（2026年入职；原SUTD助理教授）",
+   "region": "内地",
+   "titles": [
+    "人大副教授"
+   ],
+   "tier": "emerging",
+   "research": "大规模稀疏优化、半光滑牛顿法",
+   "phd": "NUS 2020（导师 卓金权 / Chao Zhou / 孙德锋）",
+   "postdoc": "卓金权（NUS）",
+   "students": [],
+   "bio": "NUS 2020届博士，曾任新加坡科技设计大学助理教授，2026年回人大任教。",
+   "sources": [
+    {
+     "label": "Meixia Lin 个人主页",
+     "url": "https://linmeixia.github.io/"
+    },
+    {
+     "label": "NUS 履历（2021版）",
+     "url": "https://iora.nus.edu.sg/wp-content/uploads/2021/10/CV_MeixiaLIN.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tangtianyun",
+   "name": "唐天云",
+   "name_en": "Tianyun Tang",
+   "affiliation": "芝加哥大学 CCAM Kruskal讲师（2025年起）",
+   "region": "海外",
+   "titles": [
+    "Babuška博士论文奖(2026)"
+   ],
+   "tier": "emerging",
+   "research": "大规模半定规划、低秩/黎曼优化",
+   "phd": "NUS 2024（导师 卓金权）",
+   "postdoc": "Yuehaw Khoo / Lek-Heng Lim（UChicago）",
+   "students": [],
+   "bio": "卓金权2024届博士，获Babuška论文奖，现任芝加哥大学讲师。",
+   "sources": [
+    "ttymath.github.io"
+   ]
+  },
+  {
+   "id": "johnduchi",
+   "name": "John Duchi",
+   "name_en": "John Duchi",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "aaronsidford",
+   "name": "Aaron Sidford",
+   "name_en": "Aaron Sidford",
+   "affiliation": "斯坦福大学 副教授",
+   "region": "海外",
+   "titles": [],
+   "tier": "pillar",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "gilzussman",
+   "name": "Gil Zussman",
+   "name_en": "Gil Zussman",
+   "affiliation": "哥伦比亚大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "cliffstein",
+   "name": "Cliff Stein",
+   "name_en": "Cliff Stein",
+   "affiliation": "哥伦比亚大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "lorenzoorecchia",
+   "name": "Lorenzo Orecchia",
+   "name_en": "Lorenzo Orecchia",
+   "affiliation": "芝加哥大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "alisayed",
+   "name": "Ali H. Sayed",
+   "name_en": "Ali H. Sayed",
+   "affiliation": "EPFL",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "francoisfleuret",
+   "name": "François Fleuret",
+   "name_en": "François Fleuret",
+   "affiliation": "EPFL/日内瓦大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "alexandergasnikov",
+   "name": "Alexander Gasnikov",
+   "name_en": "Alexander Gasnikov",
+   "affiliation": "MIPT",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "sanmikoyejo",
+   "name": "Sanmi Koyejo",
+   "name_en": "Sanmi Koyejo",
+   "affiliation": "斯坦福大学",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "",
+   "phd": "",
+   "postdoc": "",
+   "students": [],
+   "bio": "",
+   "sources": [
+    "MGP/官网"
+   ]
+  },
+  {
+   "id": "davidblackwell",
+   "name": "David Blackwell",
+   "name_en": "David Blackwell",
+   "affiliation": "加州大学伯克利分校（1919–2010）",
+   "region": "海外",
+   "titles": [
+    "美国国家科学院院士",
+    "John von Neumann Theory Prize(1979)"
+   ],
+   "tier": "pioneer",
+   "research": "博弈论、统计决策、动态规划与逼近方法",
+   "phd": "伊利诺伊大学厄巴纳—香槟分校 1941",
+   "bio": "Roger Wets 的共同博士导师；作为概率、博弈与随机优化交叉谱系的支点纳入。",
+   "sources": [
+    {"label":"Wets 官方 CV（共同导师）","url":"https://www.math.ucdavis.edu/~rjbw/mypage/Home_files/CV.pdf"}
+   ]
+  },
+  {
+   "id": "rogerwets",
+   "name": "Roger J-B Wets",
+   "name_en": "Roger J-B Wets",
+   "affiliation": "加州大学戴维斯分校（荣休；1937–2025）",
+   "region": "海外",
+   "titles": [
+    "变分分析与随机规划奠基性学者",
+    "与 Rockafellar 合著《Variational Analysis》"
+   ],
+   "tier": "pillar",
+   "research": "变分分析、随机规划、集值分析、epi-收敛",
+   "phd": "加州大学伯克利分校 1965（共同导师 George Dantzig / David Blackwell）",
+   "bio": "把变分分析、随机规划与集合收敛系统连接起来，是现代随机优化和稳定性分析的重要奠基者。",
+   "sources": [
+    {"label":"UC Davis 个人学术主页","url":"https://math.ucdavis.edu/~rjbw/mypage/Home.html"},
+    {"label":"Wets 官方 CV（学位与导师）","url":"https://www.math.ucdavis.edu/~rjbw/mypage/Home_files/CV.pdf"}
+   ]
+  },
+  {
+   "id": "alexandershapiro",
+   "name": "Alexander Shapiro",
+   "name_en": "Alexander Shapiro",
+   "affiliation": "佐治亚理工学院 ISyE",
+   "region": "海外",
+   "titles": [
+    "INFORMS John von Neumann 理论奖(2021)",
+    "Dantzig Prize(2018)",
+    "美国国家工程院院士(2020)"
+   ],
+   "tier": "core",
+   "research": "随机规划、风险分析、仿真优化、非光滑分析",
+   "phd": "本-古里安大学",
+   "bio": "随机规划与风险优化的国际领军学者，也是 Guanghui Lan 博士论文的共同导师。",
+   "sources": [
+    {"label":"Georgia Tech 官方主页","url":"https://sites.gatech.edu/alexander-shapiro/"},
+    {"label":"研究方向","url":"https://sites.gatech.edu/alexander-shapiro/research/"}
+   ]
+  },
+  {
+   "id": "andrzejruszczynski",
+   "name": "Andrzej Ruszczyński",
+   "name_en": "Andrzej Ruszczyński",
+   "affiliation": "罗格斯大学商学院",
+   "region": "海外",
+   "titles": [
+    "Dantzig Prize(2018)",
+    "INFORMS Fellow(2017)"
+   ],
+   "tier": "core",
+   "research": "风险厌恶优化、随机规划、随机控制、分解方法",
+   "phd": "华沙理工大学（控制工程）",
+   "bio": "风险厌恶优化和随机控制的重要开拓者，《Lectures on Stochastic Programming》作者之一。",
+   "sources": [
+    {"label":"Rutgers 官方主页","url":"https://www.business.rutgers.edu/faculty/andrzej-ruszczynski"},
+    {"label":"Rutgers Dantzig Prize 介绍","url":"https://www.business.rutgers.edu/news/prize-highlights-professors-influence-field-risk-optimization"}
+   ]
+  },
+  {
+   "id": "masakazukojima",
+   "name": "Masakazu Kojima",
+   "name_en": "Masakazu Kojima",
+   "affiliation": "东京工业大学（荣休）",
+   "region": "海外",
+   "titles": [
+    "INFORMS Khachiyan Prize(2019)",
+    "INFORMS Lanchester Prize(1992)"
+   ],
+   "tier": "pillar",
+   "research": "内点法、线性互补问题、半定规划、多项式优化",
+   "phd": "东京工业大学",
+   "bio": "原始—对偶内点法、线性互补和半定规划理论发展的关键人物。",
+   "sources": [
+    {"label":"INFORMS 获奖者页面","url":"https://www.informs.org/Recognizing-Excellence/Award-Recipients/Masakazu-Kojima"}
+   ]
+  },
+  {
+   "id": "faridalizadeh",
+   "name": "Farid Alizadeh",
+   "name_en": "Farid Alizadeh",
+   "affiliation": "罗格斯大学商学院",
+   "region": "海外",
+   "titles": [
+    "INFORMS Farkas Prize(2014)",
+    "半定规划早期开拓者"
+   ],
+   "tier": "pillar",
+   "research": "半定规划、二阶锥规划、矩阵优化",
+   "phd": "明尼苏达大学 1991（计算机与信息科学）",
+   "bio": "半定规划早期理论与算法的开拓者之一，推动其进入组合优化、统计学习和工程应用。",
+   "sources": [
+    {"label":"Rutgers 官方主页","url":"https://www.business.rutgers.edu/faculty/farid-alizadeh"},
+    {"label":"Rutgers 研究方向","url":"https://www.cs.rutgers.edu/research/theory-of-computing-list/people/affiliated-faculty/farid-alizadeh"}
+   ]
+  },
+  {
+   "id": "johndoyle",
+   "name": "John Doyle",
+   "name_en": "John C. Doyle",
+   "affiliation": "加州理工学院",
+   "region": "海外",
+   "titles": [
+    "控制理论与鲁棒控制代表学者"
+   ],
+   "tier": "pioneer",
+   "research": "控制、鲁棒性、复杂系统",
+   "phd": "加州大学伯克利分校",
+   "bio": "Pablo Parrilo 的博士导师；作为谱系支点纳入，不将其归为纯连续优化学者。",
+   "sources": [
+    {"label":"Parrilo 博士论文（Caltech）","url":"https://www.cds.caltech.edu/~doyle/hot/thesis.pdf"}
+   ]
+  },
+  {
+   "id": "pabloparrilo",
+   "name": "Pablo Parrilo",
+   "name_en": "Pablo A. Parrilo",
+   "affiliation": "麻省理工学院 EECS / LIDS",
+   "region": "海外",
+   "titles": [
+    "MIT Keithley Professor",
+    "IEEE Fellow"
+   ],
+   "tier": "core",
+   "research": "半定规划、平方和(SOS)、多项式优化、控制",
+   "phd": "加州理工学院 2000（导师 John Doyle）",
+   "bio": "把平方和证书与半定规划系统用于鲁棒控制和多项式优化，形成凸代数几何的重要算法支柱。",
+   "sources": [
+    {"label":"MIT 官方主页","url":"https://web.mit.edu/~parrilo/www/"},
+    {"label":"MIT 论文与博士论文页面","url":"https://www.mit.edu/~parrilo/pubs/"}
+   ]
+  },
+  {
+   "id": "jeanbernardlasserre",
+   "name": "Jean-Bernard Lasserre",
+   "name_en": "Jean-Bernard Lasserre",
+   "affiliation": "LAAS-CNRS / 图卢兹数学研究所（荣休）",
+   "region": "海外",
+   "titles": [
+    "Lagrange Prize(2009)",
+    "INFORMS John von Neumann 理论奖(2015)",
+    "INFORMS Khachiyan Prize(2015)"
+   ],
+   "tier": "core",
+   "research": "全局多项式优化、矩方法、Moment-SOS 层级",
+   "phd": "图卢兹 1978（自动控制）",
+   "bio": "以矩与平方和层级把非凸多项式全局优化转化为一系列半定规划，是该方向的奠基者。",
+   "sources": [
+    {"label":"Inria–法国科学院生涯介绍","url":"https://www.inria.fr/en/jean-bernard-lasserre-grand-prix-inria-2021-mathematics-optimization"},
+    {"label":"LAAS-CNRS 主页","url":"https://www.laas.fr/homepages/lasserre"}
+   ]
+  },
+  {
+   "id": "johndennis",
+   "name": "John Dennis",
+   "name_en": "John E. Dennis, Jr.",
+   "affiliation": "莱斯大学（荣休）",
+   "region": "海外",
+   "titles": [
+    "SIAM Journal on Optimization 创刊主编",
+    "SIAM Fellow"
+   ],
+   "tier": "pillar",
+   "research": "数值非线性优化、拟牛顿法、信赖域与无导数优化",
+   "phd": "犹他大学 1966",
+   "bio": "现代数值非线性优化的重要学者；与无导数优化和信赖域方法的发展密切相关。",
+   "sources": [
+    {"label":"Rice 官方个人主页","url":"https://www.cmor-faculty.rice.edu/~dennis/"},
+    {"label":"University of Waterloo 学术贡献介绍","url":"https://uwaterloo.ca/combinatorics-and-optimization/sites/default/files/uploads/documents/john-dennis.pdf"}
+   ]
+  },
+  {
+   "id": "katyascheinberg",
+   "name": "Katya Scheinberg",
+   "name_en": "Katya Scheinberg",
+   "affiliation": "佐治亚理工学院 ISyE",
+   "region": "海外",
+   "titles": [
+    "Lagrange Prize(2015)",
+    "SIAM Fellow / INFORMS Fellow",
+    "Mathematical Optimization Society 主席(2025–)"
+   ],
+   "tier": "core",
+   "research": "无导数优化、随机优化、大规模优化与机器学习",
+   "phd": "哥伦比亚大学 1997（导师 Donald Goldfarb）",
+   "bio": "无导数优化与随机模型方法的领军学者，《Introduction to Derivative-Free Optimization》合著者。",
+   "sources": [
+    {"label":"Georgia Tech 官方主页","url":"https://sites.gatech.edu/katya-scheinberg/"}
+   ]
+  },
+  {
+   "id": "luisvicente",
+   "name": "Luís Nunes Vicente",
+   "name_en": "Luís Nunes Vicente",
+   "affiliation": "里海大学 ISE",
+   "region": "海外",
+   "titles": [
+    "Lagrange Prize(2015)",
+    "SIAM Fellow(2024)"
+   ],
+   "tier": "core",
+   "research": "无导数优化、非线性优化、优化与机器学习",
+   "phd": "莱斯大学 1996（博士导师尚待论文原文二次核验）",
+   "bio": "无导数优化、信赖域与计算优化的重要学者，DFO 经典专著合著者。",
+   "sources": [
+    {"label":"Lehigh 官方主页","url":"https://engineering.lehigh.edu/faculty/luis-nunes-vicente"}
+   ]
+  },
+  {
+   "id": "andrewconn",
+   "name": "Andrew Conn",
+   "name_en": "Andrew R. Conn",
+   "affiliation": "IBM Research（长期任职）",
+   "region": "海外",
+   "titles": [
+    "Lagrange Prize(2015)"
+   ],
+   "tier": "pillar",
+   "research": "无导数优化、信赖域方法、计算优化",
+   "phd": "滑铁卢大学",
+   "bio": "无导数优化模型方法的重要奠基者，与 Scheinberg、Vicente 合著该方向经典专著。",
+   "sources": [
+    {"label":"IBM Research 学术页面","url":"https://ibm.academia.edu/AndrewConn"},
+    {"label":"Lagrange Prize 合著信息（Georgia Tech）","url":"https://sites.gatech.edu/katya-scheinberg/"}
+   ]
+  },
+  {
+   "id": "wotaoyin",
+   "name": "尹沃涛",
+   "name_en": "Wotao Yin",
+   "affiliation": "阿里巴巴达摩院 Decision Intelligence Lab",
+   "region": "海外",
+   "titles": [
+    "晨兴数学金奖(2016)",
+    "INFORMS Egon Balas Prize(2021)"
+   ],
+   "tier": "core",
+   "research": "大规模凸优化、算子分裂、分布式优化、逆问题",
+   "phd": "哥伦比亚大学 2006（导师 Donald Goldfarb）",
+   "bio": "一阶与算子分裂方法、稀疏恢复和分布式优化的重要学者。",
+   "sources": [
+    {"label":"个人官方主页","url":"https://wotaoyin.mathopt.com/"},
+    {"label":"Columbia IEOR 介绍","url":"https://ieor.columbia.edu/content/wotao-yin"}
+   ]
+  },
+  {
+   "id": "maryamfazel",
+   "name": "Maryam Fazel",
+   "name_en": "Maryam Fazel",
+   "affiliation": "华盛顿大学 ECE",
+   "region": "海外",
+   "titles": [
+    "INFORMS Farkas Prize(2025)",
+    "Moorthy Family Professor"
+   ],
+   "tier": "core",
+   "research": "低秩矩阵优化、核范数松弛、在线学习与强化学习",
+   "phd": "斯坦福大学 2002（导师 Stephen Boyd）",
+   "bio": "以博士论文奠定核范数低秩恢复的核心框架，并持续推进优化在学习和控制中的理论。",
+   "sources": [
+    {"label":"University of Washington 官方主页","url":"https://people.ece.uw.edu/fazel_maryam/"},
+    {"label":"INFORMS Farkas Prize(2025)","url":"https://connect.informs.org/optimizationsociety/prizes/farkas-prize/2025"}
+   ]
+  },
+  {
+   "id": "jonathaneckstein",
+   "name": "Jonathan Eckstein",
+   "name_en": "Jonathan Eckstein",
+   "affiliation": "罗格斯大学商学院",
+   "region": "海外",
+   "titles": [
+    "INFORMS Fellow(2014)"
+   ],
+   "tier": "pillar",
+   "research": "ADMM、Douglas–Rachford 分裂、分解算法、并行优化",
+   "phd": "MIT 1989（导师 Dimitri Bertsekas）",
+   "bio": "建立 ADMM 与 Douglas–Rachford 分裂之间的关键理论联系，并推动分解算法的并行实现。",
+   "sources": [
+    {"label":"Rutgers 官方个人页","url":"https://sites.rutgers.edu/eckstein/people/jonathan-eckstein/"}
+   ]
+  },
+  {
+   "id": "lorenzbiegler",
+   "name": "Lorenz Biegler",
+   "name_en": "Lorenz T. Biegler",
+   "affiliation": "卡内基梅隆大学化学工程系",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Test of Time Award(2026，与 Wächter)",
+    "Covestro University Professor"
+   ],
+   "tier": "pillar",
+   "research": "大规模非线性规划、动态优化、过程系统工程",
+   "phd": "威斯康星大学麦迪逊分校 1981",
+   "bio": "大规模非线性优化与过程系统工程的领军学者，指导 Wächter 开发 Ipopt。",
+   "sources": [
+    {"label":"CMU 官方主页","url":"https://engineering.cmu.edu/directory/bios/biegler-lorenz.html"},
+    {"label":"SIAG/OPT Test of Time 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-test-of-time-award/prize-history/"}
+   ]
+  },
+  {
+   "id": "andreaswaechter",
+   "name": "Andreas Wächter",
+   "name_en": "Andreas Wächter",
+   "affiliation": "Gurobi Optimization / 西北大学兼职教授",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Test of Time Award(2026，与 Biegler)",
+    "Ipopt 主要开发者"
+   ],
+   "tier": "core",
+   "research": "大规模非线性规划、内点滤子线搜索、优化软件",
+   "phd": "卡内基梅隆大学 2002（导师 Lorenz Biegler）",
+   "bio": "从博士论文起开发开源非线性优化求解器 Ipopt，是算法—软件—工程应用贯通的代表。",
+   "sources": [
+    {"label":"个人研究主页","url":"https://users.iems.northwestern.edu/~andreasw/research.html"},
+    {"label":"CMU Biegler 课题组历届博士","url":"https://capd-archive.cheme.cmu.edu/formerstudents.html"},
+    {"label":"SIAG/OPT Test of Time 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-test-of-time-award/prize-history/"}
+   ]
+  },
+  {
+   "id": "markdavenport",
+   "name": "Mark Davenport",
+   "name_en": "Mark A. Davenport",
+   "affiliation": "佐治亚理工学院 ECE",
+   "region": "海外",
+   "titles": [
+    "信号处理与高维统计学者"
+   ],
+   "tier": "pioneer",
+   "research": "高维统计、压缩感知、统计估计",
+   "phd": "莱斯大学",
+   "bio": "Andrew McRae 的正式博士导师；作为交叉领域谱系支点纳入。",
+   "sources": [
+    {"label":"McRae 个人履历","url":"https://admcrae.github.io/"}
+   ]
+  },
+  {
+   "id": "stefanosoatto",
+   "name": "Stefano Soatto",
+   "name_en": "Stefano Soatto",
+   "affiliation": "UCLA / AWS AI",
+   "region": "海外",
+   "titles": [
+    "计算机视觉与学习理论学者"
+   ],
+   "tier": "pioneer",
+   "research": "计算机视觉、学习、控制",
+   "phd": "加州理工学院",
+   "bio": "Damek Davis 的共同博士导师；作为交叉领域谱系支点纳入。",
+   "sources": [
+    {"label":"Damek Davis 个人主页","url":"https://damek.github.io/"}
+   ]
+  },
+  {
+   "id": "jasonaltschuler",
+   "name": "Jason Altschuler",
+   "name_en": "Jason Altschuler",
+   "affiliation": "普林斯顿大学 ORFE 助理教授",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Early Career Prize(2026)",
+    "Sloan Research Fellow(2025)"
+   ],
+   "tier": "emerging",
+   "research": "最优传输、加速一阶法、采样、优化与概率",
+   "phd": "MIT 2022（导师 Pablo Parrilo）",
+   "bio": "以概率分布上的高效优化、最优传输和新型步长加速方法受到专业学会早期职业奖认可。",
+   "sources": [
+    {"label":"Princeton 个人主页","url":"https://jasonaltschuler.github.io/"},
+    {"label":"个人 CV（导师与履历）","url":"https://jasonaltschuler.github.io/altschuler_CV.pdf"},
+    {"label":"SIAG/OPT Early Career Prize(2026)","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-early-career-prize/"}
+   ]
+  },
+  {
+   "id": "benjamingrimmer",
+   "name": "Benjamin Grimmer",
+   "name_en": "Benjamin Grimmer",
+   "affiliation": "约翰斯·霍普金斯大学 AMS 助理教授",
+   "region": "海外",
+   "titles": [
+    "INFORMS Optimization Society Young Researchers Prize(2025)",
+    "Sloan Research Fellow(2024)"
+   ],
+   "tier": "emerging",
+   "research": "一阶方法、计算机辅助最坏情形分析、非光滑与随机优化",
+   "phd": "康奈尔大学 2021（导师 James Renegar / Damek Davis）",
+   "bio": "以扩展一阶优化理论和计算机辅助算法设计受到 INFORMS 青年研究奖认可。",
+   "sources": [
+    {"label":"JHU 官方主页","url":"https://engineering.jhu.edu/ams/faculty/benjamin-grimmer/"},
+    {"label":"个人主页（导师信息）","url":"https://www.ams.jhu.edu/~grimmer/"},
+    {"label":"INFORMS Young Researchers Prize","url":"https://connect.informs.org/optimizationsociety/prizes/young-researchers-prize"}
+   ]
+  },
+  {
+   "id": "damekdavis",
+   "name": "Damek Davis",
+   "name_en": "Damek Davis",
+   "affiliation": "宾夕法尼亚大学沃顿统计与数据科学系副教授",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Best Paper Prize(2023)",
+    "Sloan Research Fellow",
+    "NSF CAREER"
+   ],
+   "tier": "emerging",
+   "research": "算子分裂、非光滑与弱凸优化、优化与机器学习",
+   "phd": "UCLA 2015（导师 Wotao Yin / Stefano Soatto）",
+   "bio": "在算子分裂、弱凸随机优化和非光滑结构方面作出系列代表性贡献。",
+   "sources": [
+    {"label":"个人主页（导师与研究）","url":"https://damek.github.io/"},
+    {"label":"Wharton 官方主页","url":"https://statistics.wharton.upenn.edu/profile/damek/"},
+    {"label":"SIAG/OPT Best Paper 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-best-paper-prize/prize-history/"}
+   ]
+  },
+  {
+   "id": "dmitriydrusvyatskiy",
+   "name": "Dmitriy Drusvyatskiy",
+   "name_en": "Dmitriy Drusvyatskiy",
+   "affiliation": "加州大学圣迭戈分校 HDSI 教授",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Best Paper Prize(2023)",
+    "INFORMS Young Researchers Prize(2019)",
+    "NSF CAREER"
+   ],
+   "tier": "emerging",
+   "research": "变分分析、弱凸与非光滑随机优化、优化几何",
+   "phd": "康奈尔大学 2013（导师 Adrian Lewis）",
+   "bio": "把变分几何、弱凸性与现代随机优化结合，是非光滑优化新一代代表学者。",
+   "sources": [
+    {"label":"UC San Diego 官方主页","url":"https://profiles.ucsd.edu/dmitriy.drusvyatskiy"},
+    {"label":"个人 CV（博士委员会）","url":"https://sites.math.washington.edu/~ddrusv/CV.pdf"},
+    {"label":"SIAG/OPT Best Paper 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-best-paper-prize/prize-history/"}
+   ]
+  },
+  {
+   "id": "haihaolu",
+   "name": "陆海皓",
+   "name_en": "Haihao (Sean) Lu",
+   "affiliation": "MIT Sloan 助理教授",
+   "region": "海外",
+   "titles": [
+    "INFORMS Young Researchers Prize(2021)",
+    "MOS Beale–Orchard-Hays Prize(2024)",
+    "COIN-OR Cup(2024)"
+   ],
+   "tier": "emerging",
+   "research": "超大规模线性/二次规划、一阶求解器、数据驱动优化",
+   "phd": "MIT 2019（导师 Robert Freund）",
+   "bio": "PDLP/cuPDLP 等超大规模一阶求解器的代表开发者，兼具复杂度理论与工业软件影响。",
+   "sources": [
+    {"label":"MIT Sloan 官方主页","url":"https://mitsloan.mit.edu/faculty/directory/haihao-lu"},
+    {"label":"个人 CV（导师信息）","url":"https://web.mit.edu/haihao/www/haihao_sean_lu_cv.pdf"},
+    {"label":"INFORMS Young Researchers Prize(2021)","url":"https://connect.informs.org/optimizationsociety/prizes/young-researchers-prize/2021"}
+   ]
+  },
+  {
+   "id": "andrewmcrae",
+   "name": "Andrew McRae",
+   "name_en": "Andrew D. McRae",
+   "affiliation": "法国国立桥路学校 CERMICS",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Best Paper Prize(2026，与 Nicolas Boumal)"
+   ],
+   "tier": "emerging",
+   "research": "非凸优化景观、高维统计、同步问题与低秩松弛",
+   "phd": "佐治亚理工学院 2022（导师 Mark Davenport）",
+   "postdoc": "EPFL 2022–2025（导师 Nicolas Boumal）",
+   "bio": "研究数据结构如何使非凸优化景观可解，相关工作获 2026 SIAG/OPT 最佳论文奖。",
+   "sources": [
+    {"label":"个人主页（履历与导师）","url":"https://admcrae.github.io/"},
+    {"label":"SIAG/OPT Best Paper 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-best-paper-prize/prize-history/"}
+   ]
+  },
+  {
+   "id": "frankclarke",
+   "name": "Frank H. Clarke",
+   "name_en": "Frank H. Clarke",
+   "affiliation": "里昂第一大学（荣休）",
+   "region": "海外",
+   "titles": [
+    "Clarke 广义梯度与次微分创立者",
+    "ICM 邀请报告人"
+   ],
+   "tier": "pillar",
+   "research": "非光滑分析、广义梯度、最优控制、变分分析",
+   "phd": "华盛顿大学 1973（导师 R. Tyrrell Rockafellar）",
+   "bio": "建立以 Clarke 广义梯度和 Clarke 次微分为核心的非光滑分析体系，是现代非光滑优化不可缺少的支柱。",
+   "sources": [
+    {"label":"Rockafellar 官方博士生名单","url":"https://sites.math.washington.edu/~rtr/students.pdf"}
+   ]
+  },
+  {
+   "id": "jeanjacquesmoreau",
+   "name": "Jean-Jacques Moreau",
+   "name_en": "Jean-Jacques Moreau",
+   "affiliation": "蒙彼利埃学术界（生前；1923–2014）",
+   "region": "海外",
+   "titles": [
+    "Moreau 包络与近端映射奠基者"
+   ],
+   "tier": "pioneer",
+   "research": "凸分析、单调算子、近端映射、非光滑力学",
+   "phd": "1949 年在巴黎答辩（流体力学）",
+   "bio": "Moreau 包络、近端映射与极大单调算子的奠基工作构成现代近端算法和算子分裂的重要思想源头；这里不把思想影响误画为个人师承。",
+   "sources": [
+    {"label":"法国数学会生平与学术贡献","url":"https://smf.emath.fr/la-smf/qui-etait-jean-jacques-moreau"}
+   ]
+  },
+  {
+   "id": "michaeloverton",
+   "name": "Michael Overton",
+   "name_en": "Michael L. Overton",
+   "affiliation": "纽约大学 Courant Institute",
+   "region": "海外",
+   "titles": [
+    "Silver Professor",
+    "SIAM Fellow"
+   ],
+   "tier": "core",
+   "research": "非光滑非凸优化、特征值优化、稳健控制、数值线性代数",
+   "phd": "斯坦福大学 1979（导师 Gene Golub）",
+   "bio": "连接 Golub 数值线性代数谱系与现代非光滑优化，在特征值和稳定性度量优化、梯度采样及软件方面影响深远。",
+   "sources": [
+    {"label":"NYU 官方主页","url":"https://math.nyu.edu/people/profiles/OVERTON_Michael.html"},
+    {"label":"Gene Golub 博士生名录","url":"https://stanford.edu/group/SOL/classics/CompMath50Pgm25.pdf"}
+   ]
+  },
+  {
+   "id": "narendrakarmarkar",
+   "name": "Narendra Karmarkar",
+   "name_en": "Narendra Karmarkar",
+   "affiliation": "AT&T Bell Labs（代表性工作时期）",
+   "region": "海外",
+   "titles": [
+    "Karmarkar 内点算法提出者",
+    "INFORMS Lanchester Prize(1984)"
+   ],
+   "tier": "pioneer",
+   "research": "线性规划、内点法、多项式时间算法",
+   "phd": "加州大学伯克利分校 1983",
+   "bio": "1984 年的投影尺度内点算法推动线性规划内点法复兴，是算法史节点；本图不为其虚构师承连线。",
+   "sources": [
+    {"label":"INFORMS 获奖者与算法介绍","url":"https://www.informs.org/Recognizing-Excellence/Award-Recipients/Narendra-Karmarkar"}
+   ]
+  },
+  {
+   "id": "sanjaymehrotra",
+   "name": "Sanjay Mehrotra",
+   "name_en": "Sanjay Mehrotra",
+   "affiliation": "西北大学 IEMS",
+   "region": "海外",
+   "titles": [
+    "Emma Ann Reynolds Professor",
+    "INFORMS Fellow"
+   ],
+   "tier": "pillar",
+   "research": "预测—校正内点法、随机与分布鲁棒优化、风险约束",
+   "phd": "哥伦比亚大学（运筹学）",
+   "bio": "Mehrotra 预测—校正方法是现代原始—对偶内点求解器的关键算法成分，后续工作扩展至随机和分布鲁棒优化。",
+   "sources": [
+    {"label":"Northwestern 官方主页","url":"https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/mehrotra-sanjay.html"}
+   ]
+  },
+  {
+   "id": "philipgill",
+   "name": "Philip Gill",
+   "name_en": "Philip E. Gill",
+   "affiliation": "加州大学圣迭戈分校",
+   "region": "海外",
+   "titles": [
+    "Distinguished Professor",
+    "SIAM Fellow",
+    "SNOPT 共同作者"
+   ],
+   "tier": "pillar",
+   "research": "大规模线性与非线性规划、SQP、数值线性代数、优化软件",
+   "phd": "伦敦大学 1974（数学）",
+   "bio": "Stanford/UCSD 优化软件传统的关键人物，与 Walter Murray、Michael Saunders 共同推动 NPSOL、SQOPT、SNOPT 等求解器。",
+   "sources": [
+    {"label":"UC San Diego 官方主页","url":"https://www.math.ucsd.edu/people/profiles/philip-gill"},
+    {"label":"UCSD/Stanford Optimization Software","url":"https://ccom.ucsd.edu/~optimizers/contact/"}
+   ]
+  },
+  {
+   "id": "samuelburer",
+   "name": "Samuel Burer",
+   "name_en": "Samuel A. Burer",
+   "affiliation": "爱荷华大学 Tippie 商学院",
+   "region": "海外",
+   "titles": [
+    "Professor of Business Analytics"
+   ],
+   "tier": "core",
+   "research": "低秩半定规划、Burer–Monteiro 分解、二次与锥优化",
+   "phd": "佐治亚理工学院 2001（导师 Renato Monteiro）",
+   "bio": "以低秩因子化求解大规模半定规划著称，Burer–Monteiro 方法已成为现代非凸低秩优化的重要范式。",
+   "sources": [
+    {"label":"University of Iowa 官方主页","url":"https://amcs.uiowa.edu/people/samuel-burer"},
+    {"label":"Georgia Tech 博士论文记录","url":"https://repository.gatech.edu/entities/publication/f1307f53-4b18-4e56-b473-6edf7c25508f"}
+   ]
+  },
+  {
+   "id": "jossturm",
+   "name": "Jos Sturm",
+   "name_en": "Jos F. Sturm",
+   "affiliation": "蒂尔堡大学（生前；1971–2003）",
+   "region": "海外",
+   "titles": [
+    "SeDuMi 作者"
+   ],
+   "tier": "pillar",
+   "research": "半定规划、二阶锥规划、原始—对偶内点法、优化软件",
+   "phd": "鹿特丹伊拉斯姆斯大学 1997（导师 Shuzhong Zhang）",
+   "postdoc": "McMaster University 1997–1998（与 Zhi-Quan Luo 合作）",
+   "bio": "SeDuMi 与半定/二阶锥内点法的重要开拓者；博士关系与后续博士后阶段在图中严格分开。",
+   "sources": [
+    {"label":"Sturm 纪念专辑前言（履历与关系）","url":"https://www.math.uwaterloo.ca/~hwolkowi/w04workshop.d/mpbspecialissue.d/sturmprefacejul1806.pdf"}
+   ]
+  },
+  {
+   "id": "courtneypaquette",
+   "name": "Courtney Paquette",
+   "name_en": "Courtney Y. Paquette",
+   "affiliation": "麦吉尔大学数学与统计系副教授",
+   "region": "海外",
+   "titles": [
+    "CAIMS/PIMS Early Career Award(2025)",
+    "Canada CIFAR AI Chair",
+    "Sloan Research Fellow(2024)"
+   ],
+   "tier": "emerging",
+   "research": "随机与非光滑优化、高维优化、机器学习中的平均情形复杂度",
+   "phd": "华盛顿大学 2017（导师 Dmitriy Drusvyatskiy）",
+   "bio": "在随机优化的精确动力学、非凸非光滑结构及大模型缩放规律方面形成独立研究方向。",
+   "sources": [
+    {"label":"McGill 官方主页","url":"https://www.mcgill.ca/mathstat/courtney-paquette"},
+    {"label":"个人主页（博士导师）","url":"https://cypaquette.github.io/"},
+    {"label":"McGill 早期职业奖介绍","url":"https://www.mcgill.ca/mathstat/channels/news/professor-courtney-paquette-recipient-caims-scmaipims-early-career-award-2025-364958"}
+   ]
+  },
+  {
+   "id": "hamzafawzi",
+   "name": "Hamza Fawzi",
+   "name_en": "Hamza Fawzi",
+   "affiliation": "剑桥大学 DAMTP",
+   "region": "海外",
+   "titles": [
+    "SIAG/OPT Best Paper Prize(2020)"
+   ],
+   "tier": "emerging",
+   "research": "锥优化、半定表示、矩阵与量子信息优化",
+   "phd": "MIT 2015（导师 Pablo Parrilo）",
+   "bio": "研究凸锥的表示复杂度、非交换优化和量子信息中的凸方法，是 Parrilo 谱系的重要新生代分支。",
+   "sources": [
+    {"label":"Cambridge 官方个人页","url":"https://www.damtp.cam.ac.uk/user/hf323/"},
+    {"label":"SIAG/OPT Best Paper 历届获奖者","url":"https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-best-paper-prize/prize-history/"}
+   ]
+  },
+  {
+   "id": "amiraliahmadi",
+   "name": "Amir Ali Ahmadi",
+   "name_en": "Amir Ali Ahmadi",
+   "affiliation": "普林斯顿大学 ORFE",
+   "region": "海外",
+   "titles": [
+    "INFORMS Egon Balas Prize(2024)"
+   ],
+   "tier": "core",
+   "research": "多项式与代数优化、半定松弛、计算复杂度、动力系统",
+   "phd": "MIT 2011（导师 Pablo Parrilo）",
+   "bio": "在多项式非负性、SOS 层级、Lyapunov 分析与优化复杂度之间建立了有影响力的算法联系。",
+   "sources": [
+    {"label":"Princeton 个人学术主页（导师与履历）","url":"https://aaa.princeton.edu/"},
+    {"label":"INFORMS Egon Balas Prize(2024)","url":"https://connect.informs.org/optimizationsociety/prizes/egon-balas-prize/2024"}
+   ]
+  },
+  {
+   "id": "chaozhou",
+   "name": "Chao Zhou",
+   "name_en": "Chao Zhou",
+   "affiliation": "新加坡国立大学（博士指导时期）",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "概率统计；作为正式谱系支点收录",
+   "phd": "",
+   "bio": "林媚霞博士论文的共同导师之一；仅作为谱系支点，不作连续优化代表学者排名。",
+   "sources": [
+    {"label":"林媚霞个人主页（共同导师）","url":"https://linmeixia.github.io/"}
+   ]
+  },
+  {
+   "id": "huiji",
+   "name": "季辉",
+   "name_en": "Hui Ji",
+   "affiliation": "新加坡国立大学（博士指导时期）",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "图像处理、逆问题与数值方法；作为正式谱系支点收录",
+   "phd": "",
+   "bio": "包承龙博士论文的共同导师之一。",
+   "sources": [
+    {"label":"BIMSA 包承龙官方履历","url":"https://www.bimsa.cn/zh-CN/detail/chenglongbao.html"}
+   ]
+  },
+  {
+   "id": "frankcallier",
+   "name": "Frank Callier",
+   "name_en": "Frank M. Callier",
+   "affiliation": "那慕尔大学（博士指导时期）",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "系统与控制；作为正式谱系支点收录",
+   "phd": "",
+   "bio": "Philippe Toint 的共同博士导师。",
+   "sources": [
+    {"label":"Mathematics Genealogy Project","url":"https://www.mathgenealogy.org/id.php?id=87096"}
+   ]
+  },
+  {
+   "id": "charlestompkins",
+   "name": "Charles Tompkins",
+   "name_en": "Charles B. Tompkins",
+   "affiliation": "UCLA（博士指导时期）",
+   "region": "海外",
+   "titles": [],
+   "tier": "pioneer",
+   "research": "数值分析与优化；作为正式谱系支点收录",
+   "phd": "",
+   "bio": "Richard Tapia 博士论文的正式导师。",
+   "sources": [
+    {"label":"SIAM 对 Richard Tapia 的学术回顾","url":"https://www.siam.org/publications/siam-news/articles/obituary-richard-a-tapia/"}
+   ]
+  },
+  {
+   "id": "nicoleelkaroui",
+   "name": "Nicole El Karoui",
+   "name_en": "Nicole El Karoui",
+   "affiliation": "École Polytechnique（荣休）",
+   "region": "海外",
+   "titles": [
+    "法国金融数学教育先驱"
+   ],
+   "tier": "pioneer",
+   "research": "随机控制、金融数学；作为正式谱系支点收录",
+   "phd": "",
+   "bio": "Alexandre d'Aspremont 在 École Polytechnique 博士论文的导师。",
+   "sources": [
+    {"label":"d'Aspremont 个人论文与导师页","url":"https://www.di.ens.fr/~aspremon/research.html"}
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "hualuogeng",
+   "to": "hanjiye",
+   "type": "influence",
+   "label": "学科推动与机构脉络（非个人师承）",
+   "source": "https://www.orsc.org.cn/storage/uploads/files/Qk9jRRTp1F8718pLFRxDpcCN4FZRwN1pr9XNP0vj.pdf"
+  },
+  {
+   "from": "hualuogeng",
+   "to": "xuguanghui",
+   "type": "influence",
+   "label": "学科推动与机构脉络（非个人师承）",
+   "source": "https://www.orsc.org.cn/storage/uploads/files/Qk9jRRTp1F8718pLFRxDpcCN4FZRwN1pr9XNP0vj.pdf"
+  },
+  {
+   "from": "powell",
+   "to": "yuanyaxiang",
+   "type": "phd"
+  },
+  {
+   "from": "fengkang",
+   "to": "yuanyaxiang",
+   "type": "mentor",
+   "label": "硕士阶段与研究方向指导（中科院计算中心）",
+   "source": "https://www.amss.cas.cn/cmsm/201811/t20181120_5189578.html"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "daiyuhong",
+   "type": "phd"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "liuxin",
+   "type": "phd"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "wangyanfei",
+   "type": "phd"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "xiayong",
+   "type": "phd"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "fanjinyan",
+   "type": "phd"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "zhangliwei",
+   "type": "postdoc"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "yangjunfeng",
+   "type": "mentor",
+   "label": "硕士导师(2006)"
+  },
+  {
+   "from": "daiyuhong",
+   "to": "liuyafeng",
+   "type": "phd"
+  },
+  {
+   "from": "hanjiye",
+   "to": "sundefeng",
+   "type": "phd"
+  },
+  {
+   "from": "hanjiye",
+   "to": "huxudong",
+   "type": "phd"
+  },
+  {
+   "from": "xuguanghui",
+   "to": "zhanghanqin",
+   "type": "phd"
+  },
+  {
+   "from": "stoer",
+   "to": "hebingsheng",
+   "type": "phd"
+  },
+  {
+   "from": "hebingsheng",
+   "to": "handeRen",
+   "type": "phd"
+  },
+  {
+   "from": "hebingsheng",
+   "to": "yangjunfeng",
+   "type": "phd"
+  },
+  {
+   "from": "hebingsheng",
+   "to": "chencaihua",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170185"
+  },
+  {
+   "from": "zhangyin",
+   "to": "yangjunfeng",
+   "type": "mentor",
+   "label": "Rice阶段学术指导（非博士师承）",
+   "source": "https://math.nju.edu.cn/szdw/apypl1/20190916/i22378.html"
+  },
+  {
+   "from": "sundefeng",
+   "to": "yangjunfeng",
+   "type": "collab",
+   "label": "合作者(NUS时期)"
+  },
+  {
+   "from": "sundefeng",
+   "to": "chencaihua",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170185"
+  },
+  {
+   "from": "sundefeng",
+   "to": "baoChenglong",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.bimsa.cn/zh-CN/detail/chenglongbao.html"
+  },
+  {
+   "from": "huiji",
+   "to": "baoChenglong",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.bimsa.cn/zh-CN/detail/chenglongbao.html"
+  },
+  {
+   "from": "qiliqun",
+   "to": "sundefeng",
+   "type": "postdoc",
+   "label": "UNSW博士后合作导师"
+  },
+  {
+   "from": "robinson",
+   "to": "qiliqun",
+   "type": "phd"
+  },
+  {
+   "from": "mangasarian",
+   "to": "robinson",
+   "type": "phd"
+  },
+  {
+   "from": "dantzig",
+   "to": "yeyinyu",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "tse",
+   "to": "yeyinyu",
+   "type": "phd"
+  },
+  {
+   "from": "yeyinyu",
+   "to": "suwenzao",
+   "type": "phd"
+  },
+  {
+   "from": "yeyinyu",
+   "to": "gedongdong",
+   "type": "phd"
+  },
+  {
+   "from": "yeyinyu",
+   "to": "wangzizhuo",
+   "type": "phd"
+  },
+  {
+   "from": "athans",
+   "to": "tsitsiklis",
+   "type": "phd"
+  },
+  {
+   "from": "tsitsiklis",
+   "to": "luozhiquan",
+   "type": "phd"
+  },
+  {
+   "from": "bertsekas",
+   "to": "tseng",
+   "type": "phd"
+  },
+  {
+   "from": "tseng",
+   "to": "luozhiquan",
+   "type": "collab",
+   "label": "MIT时期长期研究合作（非博士师承）",
+   "source": "https://higherlogicdownload.s3.amazonaws.com/INFORMS/9a2da56a-3917-4600-a0e3-84cfb0d2b004/UploadedImages/OStoday0311.pdf"
+  },
+  {
+   "from": "luozhiquan",
+   "to": "hongmingyi",
+   "type": "postdoc"
+  },
+  {
+   "from": "rinnooykan",
+   "to": "zhangshuzhong",
+   "type": "phd"
+  },
+  {
+   "from": "frenk",
+   "to": "zhangshuzhong",
+   "type": "phd"
+  },
+  {
+   "from": "zhangshuzhong",
+   "to": "hesimai",
+   "type": "phd"
+  },
+  {
+   "from": "zhangshuzhong",
+   "to": "huangyongwei",
+   "type": "phd"
+  },
+  {
+   "from": "youzhaoyong",
+   "to": "chenxiaojun",
+   "type": "phd"
+  },
+  {
+   "from": "xiazunquan",
+   "to": "zhangliwei",
+   "type": "phd"
+  },
+  {
+   "from": "zangwenan",
+   "to": "chenxujin",
+   "type": "phd"
+  },
+  {
+   "from": "huxudong",
+   "to": "chenxujin",
+   "type": "postdoc"
+  },
+  {
+   "from": "yangxiaoqi",
+   "to": "huyaohua",
+   "type": "phd"
+  },
+  {
+   "from": "goldfarb",
+   "to": "wenzaiwen",
+   "type": "phd"
+  },
+  {
+   "from": "polyak",
+   "to": "nesterov",
+   "type": "phd"
+  },
+  {
+   "from": "shilov",
+   "to": "nemirovski",
+   "type": "phd"
+  },
+  {
+   "from": "nemirovski",
+   "to": "languanghui",
+   "type": "phd"
+  },
+  {
+   "from": "nemirovski",
+   "to": "niaohe",
+   "type": "phd"
+  },
+  {
+   "from": "powell",
+   "to": "toint",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.mathgenealogy.org/id.php?id=87096"
+  },
+  {
+   "from": "frankcallier",
+   "to": "toint",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.mathgenealogy.org/id.php?id=87096"
+  },
+  {
+   "from": "powell",
+   "to": "cartis",
+   "type": "phd"
+  },
+  {
+   "from": "toint",
+   "to": "orban",
+   "type": "phd"
+  },
+  {
+   "from": "hestenes",
+   "to": "tapia",
+   "type": "influence",
+   "label": "重要学术影响（非论文导师）",
+   "source": "https://www.siam.org/publications/siam-news/articles/obituary-richard-a-tapia/"
+  },
+  {
+   "from": "charlestompkins",
+   "to": "tapia",
+   "type": "phd",
+   "label": "博士论文导师",
+   "source": "https://www.siam.org/publications/siam-news/articles/obituary-richard-a-tapia/"
+  },
+  {
+   "from": "tapia",
+   "to": "nocedal",
+   "type": "phd"
+  },
+  {
+   "from": "nocedal",
+   "to": "curtis",
+   "type": "phd"
+  },
+  {
+   "from": "golub",
+   "to": "saunders",
+   "type": "phd"
+  },
+  {
+   "from": "golub",
+   "to": "mwright",
+   "type": "phd"
+  },
+  {
+   "from": "murray",
+   "to": "mwright",
+   "type": "phd"
+  },
+  {
+   "from": "vandewalle",
+   "to": "vandenberghe",
+   "type": "phd",
+   "source": "https://www.mathgenealogy.org/id.php?id=97317"
+  },
+  {
+   "from": "boyd",
+   "to": "vandenberghe",
+   "type": "collab",
+   "label": "长期合作(非师承)"
+  },
+  {
+   "from": "bradley",
+   "to": "todd",
+   "type": "phd"
+  },
+  {
+   "from": "todd",
+   "to": "tütüncü",
+   "type": "phd"
+  },
+  {
+   "from": "trefethen",
+   "to": "toh",
+   "type": "phd"
+  },
+  {
+   "from": "todd",
+   "to": "toh",
+   "type": "collab",
+   "label": "合作者(非师承)"
+  },
+  {
+   "from": "fletcher",
+   "to": "leyffer",
+   "type": "phd"
+  },
+  {
+   "from": "ritter",
+   "to": "ulbrich",
+   "type": "phd"
+  },
+  {
+   "from": "bertsekas",
+   "to": "nedic",
+   "type": "phd"
+  },
+  {
+   "from": "bertsekas",
+   "to": "ozdaglar",
+   "type": "phd"
+  },
+  {
+   "from": "toh",
+   "to": "sundefeng",
+   "type": "collab",
+   "label": "SDPNAL合作"
+  },
+  {
+   "from": "nesterov",
+   "to": "todd",
+   "type": "collab",
+   "label": "合作者(Nesterov-Todd方向)"
+  },
+  {
+   "from": "nemirovski",
+   "to": "nesterov",
+   "type": "collab",
+   "label": "合著内点法专著"
+  },
+  {
+   "from": "todd",
+   "to": "yeyinyu",
+   "type": "collab",
+   "label": "合作者"
+  },
+  {
+   "from": "hedyattouch",
+   "to": "jerômebolte",
+   "type": "phd"
+  },
+  {
+   "from": "garrettbirkhoff",
+   "to": "rockafellar",
+   "type": "phd"
+  },
+  {
+   "from": "dantzig",
+   "to": "richardwcottle",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "russellslehman",
+   "to": "richardwcottle",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "richardwcottle",
+   "to": "jongshipang",
+   "type": "phd"
+  },
+  {
+   "from": "bcurtiseaves",
+   "to": "robertmfreund",
+   "type": "phd"
+  },
+  {
+   "from": "danieljkleitman",
+   "to": "dimitrisbertsimas",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "amedeorodoni",
+   "to": "dimitrisbertsimas",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "edwardjanderson",
+   "to": "adrianslewis",
+   "type": "phd"
+  },
+  {
+   "from": "edwardjanderson",
+   "to": "michaelcferris",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "mangasarian",
+   "to": "michaelcferris",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "ilanadler",
+   "to": "renatodcmonteiro",
+   "type": "phd"
+  },
+  {
+   "from": "jamesrenegar",
+   "to": "javierpeña",
+   "type": "phd"
+  },
+  {
+   "from": "aharonbental",
+   "to": "marcteboulle",
+   "type": "phd"
+  },
+  {
+   "from": "marcteboulle",
+   "to": "amirbeck",
+   "type": "phd"
+  },
+  {
+   "from": "haïmbrezis",
+   "to": "hedyattouch",
+   "type": "phd"
+  },
+  {
+   "from": "franzkappel",
+   "to": "karlkunisch",
+   "type": "phd"
+  },
+  {
+   "from": "carlrolfgeiger",
+   "to": "christiankanzow",
+   "type": "phd"
+  },
+  {
+   "from": "johannedenhofer",
+   "to": "stefanulbrich",
+   "type": "phd"
+  },
+  {
+   "from": "dirkaeyels",
+   "to": "rodolphesepulchre",
+   "type": "phd"
+  },
+  {
+   "from": "rodolphesepulchre",
+   "to": "pierreantoineabsil",
+   "type": "phd"
+  },
+  {
+   "from": "pierreantoineabsil",
+   "to": "nicolasboumal",
+   "type": "phd"
+  },
+  {
+   "from": "vincentblondel",
+   "to": "nicolasboumal",
+   "type": "phd"
+  },
+  {
+   "from": "karlfrauendorfer",
+   "to": "danielkuhn",
+   "type": "phd"
+  },
+  {
+   "from": "georgchpflug",
+   "to": "danielkuhn",
+   "type": "phd"
+  },
+  {
+   "from": "bercrustem",
+   "to": "wolframwiesemann",
+   "type": "phd"
+  },
+  {
+   "from": "danielkuhn",
+   "to": "wolframwiesemann",
+   "type": "phd"
+  },
+  {
+   "from": "rudigergobel",
+   "to": "sebastianpokutta",
+   "type": "phd"
+  },
+  {
+   "from": "brendangoldsmith",
+   "to": "sebastianpokutta",
+   "type": "phd"
+  },
+  {
+   "from": "wernerkrabs",
+   "to": "gunterleugering",
+   "type": "phd"
+  },
+  {
+   "from": "lotharvonwolfersdorf",
+   "to": "freditroltzsch",
+   "type": "phd"
+  },
+  {
+   "from": "richardbrent",
+   "to": "andreasgriewank",
+   "type": "phd"
+  },
+  {
+   "from": "mrosborne",
+   "to": "andreasgriewank",
+   "type": "phd"
+  },
+  {
+   "from": "andreasgriewank",
+   "to": "andreawalther",
+   "type": "phd"
+  },
+  {
+   "from": "martingrotschel",
+   "to": "sebastianpokutta",
+   "type": "mentor",
+   "label": "ZIB学术引路人(非博士导师)"
+  },
+  {
+   "from": "claudelemarechal",
+   "to": "claudiaasagastizabal",
+   "type": "phd"
+  },
+  {
+   "from": "rafailgabasov",
+   "to": "borissmordukhovich",
+   "type": "phd"
+  },
+  {
+   "from": "boyd",
+   "to": "ernestkryu",
+   "type": "phd"
+  },
+  {
+   "from": "boyd",
+   "to": "alexandredaspremont",
+   "type": "phd",
+   "label": "Stanford 博士导师",
+   "source": "https://www.di.ens.fr/~aspremon/research.html"
+  },
+  {
+   "from": "nicoleelkaroui",
+   "to": "alexandredaspremont",
+   "type": "phd",
+   "label": "École Polytechnique 博士导师",
+   "source": "https://www.di.ens.fr/~aspremon/research.html"
+  },
+  {
+   "from": "albertobemporad",
+   "to": "panagiotispatrinos",
+   "type": "postdoc"
+  },
+  {
+   "from": "panagiotispatrinos",
+   "to": "andreasthemelis",
+   "type": "phd"
+  },
+  {
+   "from": "panagiotispatrinos",
+   "to": "lorenzostella",
+   "type": "phd"
+  },
+  {
+   "from": "albertobemporad",
+   "to": "lorenzostella",
+   "type": "phd"
+  },
+  {
+   "from": "emowelzl",
+   "to": "martinjaggi",
+   "type": "phd",
+   "label": "共同指导"
+  },
+  {
+   "from": "peterrichtarik",
+   "to": "robertmgower",
+   "type": "phd"
+  },
+  {
+   "from": "todd",
+   "to": "peterrichtarik",
+   "type": "phd"
+  },
+  {
+   "from": "nesterov",
+   "to": "sebastianustich",
+   "type": "postdoc"
+  },
+  {
+   "from": "martinjaggi",
+   "to": "sebastianustich",
+   "type": "postdoc"
+  },
+  {
+   "from": "volkancevher",
+   "to": "alpyurtsever",
+   "type": "phd"
+  },
+  {
+   "from": "jamesmcclellan",
+   "to": "volkancevher",
+   "type": "phd"
+  },
+  {
+   "from": "michaeljordan",
+   "to": "francisbach",
+   "type": "phd"
+  },
+  {
+   "from": "berndgartner",
+   "to": "martinjaggi",
+   "type": "phd"
+  },
+  {
+   "from": "berndgartner",
+   "to": "sebastianustich",
+   "type": "phd"
+  },
+  {
+   "from": "sundefeng",
+   "to": "xudongli",
+   "type": "phd",
+   "label": "联合指导"
+  },
+  {
+   "from": "toh",
+   "to": "xudongli",
+   "type": "phd",
+   "label": "联合指导"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "zaikunzhang",
+   "type": "phd"
+  },
+  {
+   "from": "francoisglineur",
+   "to": "adrienbtaylor",
+   "type": "phd"
+  },
+  {
+   "from": "julienhendrickx",
+   "to": "adrienbtaylor",
+   "type": "phd"
+  },
+  {
+   "from": "murray",
+   "to": "gould",
+   "type": "phd"
+  },
+  {
+   "from": "toh",
+   "to": "chencaihua",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.genealogy.math.ndsu.nodak.edu/id.php?id=170185"
+  },
+  {
+   "from": "athans",
+   "to": "tse",
+   "type": "phd"
+  },
+  {
+   "from": "renatodcmonteiro",
+   "to": "languanghui",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "wenzaiwen",
+   "type": "mentor",
+   "label": "硕士导师(中科院,2004)"
+  },
+  {
+   "from": "karlkunisch",
+   "to": "michaelhintermuller",
+   "type": "collab",
+   "label": "长期合作（非师承）"
+  },
+  {
+   "from": "nesterov",
+   "to": "doikov",
+   "type": "phd"
+  },
+  {
+   "from": "martinjaggi",
+   "to": "doikov",
+   "type": "postdoc"
+  },
+  {
+   "from": "martinjaggi",
+   "to": "koloskova",
+   "type": "phd"
+  },
+  {
+   "from": "martinjaggi",
+   "to": "karimireddy",
+   "type": "phd"
+  },
+  {
+   "from": "michaeljordan",
+   "to": "karimireddy",
+   "type": "postdoc"
+  },
+  {
+   "from": "francoisfleuret",
+   "to": "chavdarova",
+   "type": "phd"
+  },
+  {
+   "from": "martinjaggi",
+   "to": "chavdarova",
+   "type": "postdoc"
+  },
+  {
+   "from": "michaeljordan",
+   "to": "chavdarova",
+   "type": "postdoc"
+  },
+  {
+   "from": "peterrichtarik",
+   "to": "horvath",
+   "type": "phd"
+  },
+  {
+   "from": "peterrichtarik",
+   "to": "gorbunov",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://eduardgorbunov.github.io/assets/files/PhD_defense.pdf"
+  },
+  {
+   "from": "alexandergasnikov",
+   "to": "gorbunov",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://eduardgorbunov.github.io/assets/files/PhD_defense.pdf"
+  },
+  {
+   "from": "volkancevher",
+   "to": "alacaoglu",
+   "type": "phd"
+  },
+  {
+   "from": "swright",
+   "to": "alacaoglu",
+   "type": "postdoc"
+  },
+  {
+   "from": "volkancevher",
+   "to": "yenhuanli",
+   "type": "phd"
+  },
+  {
+   "from": "johnduchi",
+   "to": "carmon",
+   "type": "phd"
+  },
+  {
+   "from": "aaronsidford",
+   "to": "carmon",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "gilzussman",
+   "to": "diakonikolas",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "cliffstein",
+   "to": "diakonikolas",
+   "type": "phd",
+   "label": "共同导师"
+  },
+  {
+   "from": "lorenzoorecchia",
+   "to": "diakonikolas",
+   "type": "postdoc"
+  },
+  {
+   "from": "michaeljordan",
+   "to": "diakonikolas",
+   "type": "postdoc"
+  },
+  {
+   "from": "michaeljordan",
+   "to": "wibisono",
+   "type": "phd"
+  },
+  {
+   "from": "alisayed",
+   "to": "yuankun",
+   "type": "phd",
+   "source": "https://kunyuan827.github.io/"
+  },
+  {
+   "from": "yuanyaxiang",
+   "to": "xiaonachuan",
+   "type": "phd"
+  },
+  {
+   "from": "toh",
+   "to": "xiaonachuan",
+   "type": "postdoc"
+  },
+  {
+   "from": "sundefeng",
+   "to": "yuanyancheng",
+   "type": "phd",
+   "label": "联合指导"
+  },
+  {
+   "from": "toh",
+   "to": "yuanyancheng",
+   "type": "phd",
+   "label": "联合指导"
+  },
+  {
+   "from": "sundefeng",
+   "to": "linmeixia",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://linmeixia.github.io/"
+  },
+  {
+   "from": "toh",
+   "to": "linmeixia",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://linmeixia.github.io/"
+  },
+  {
+   "from": "chaozhou",
+   "to": "linmeixia",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://linmeixia.github.io/"
+  },
+  {
+   "from": "toh",
+   "to": "tangtianyun",
+   "type": "phd"
+  },
+  {
+   "from": "dantzig",
+   "to": "rogerwets",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.math.ucdavis.edu/~rjbw/mypage/Home_files/CV.pdf"
+  },
+  {
+   "from": "davidblackwell",
+   "to": "rogerwets",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.math.ucdavis.edu/~rjbw/mypage/Home_files/CV.pdf"
+  },
+  {
+   "from": "rockafellar",
+   "to": "rogerwets",
+   "type": "collab",
+   "label": "合著《Variational Analysis》（非师承）",
+   "source": "https://math.ucdavis.edu/~rjbw/mypage/Home.html"
+  },
+  {
+   "from": "rockafellar",
+   "to": "frankclarke",
+   "type": "phd",
+   "source": "https://sites.math.washington.edu/~rtr/students.pdf"
+  },
+  {
+   "from": "golub",
+   "to": "michaeloverton",
+   "type": "phd",
+   "source": "https://stanford.edu/group/SOL/classics/CompMath50Pgm25.pdf"
+  },
+  {
+   "from": "renatodcmonteiro",
+   "to": "samuelburer",
+   "type": "phd",
+   "source": "https://repository.gatech.edu/entities/publication/f1307f53-4b18-4e56-b473-6edf7c25508f"
+  },
+  {
+   "from": "zhangshuzhong",
+   "to": "jossturm",
+   "type": "phd",
+   "source": "https://www.math.uwaterloo.ca/~hwolkowi/w04workshop.d/mpbspecialissue.d/sturmprefacejul1806.pdf"
+  },
+  {
+   "from": "luozhiquan",
+   "to": "jossturm",
+   "type": "postdoc",
+   "source": "https://www.math.uwaterloo.ca/~hwolkowi/w04workshop.d/mpbspecialissue.d/sturmprefacejul1806.pdf"
+  },
+  {
+   "from": "alexandershapiro",
+   "to": "languanghui",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://sites.gatech.edu/guanghui-lan/publications/"
+  },
+  {
+   "from": "johndoyle",
+   "to": "pabloparrilo",
+   "type": "phd",
+   "source": "https://thesis.caltech.edu/1647/1/Parrilo-Thesis.pdf"
+  },
+  {
+   "from": "goldfarb",
+   "to": "katyascheinberg",
+   "type": "phd",
+   "source": "https://coral.ise.lehigh.edu/katyas/files/2017/07/cv_katya_2017.pdf"
+  },
+  {
+   "from": "goldfarb",
+   "to": "wotaoyin",
+   "type": "phd",
+   "source": "https://wotaoyin.mathopt.com/"
+  },
+  {
+   "from": "boyd",
+   "to": "maryamfazel",
+   "type": "phd",
+   "source": "https://people.ece.uw.edu/fazel_maryam/"
+  },
+  {
+   "from": "bertsekas",
+   "to": "jonathaneckstein",
+   "type": "phd",
+   "source": "https://sites.rutgers.edu/eckstein/people/jonathan-eckstein/"
+  },
+  {
+   "from": "lorenzbiegler",
+   "to": "andreaswaechter",
+   "type": "phd",
+   "source": "https://users.iems.northwestern.edu/~andreasw/research.html"
+  },
+  {
+   "from": "andrewconn",
+   "to": "katyascheinberg",
+   "type": "collab",
+   "label": "无导数优化专著合作（非师承）",
+   "source": "https://sites.gatech.edu/katya-scheinberg/"
+  },
+  {
+   "from": "andrewconn",
+   "to": "luisvicente",
+   "type": "collab",
+   "label": "无导数优化专著合作（非师承）",
+   "source": "https://engineering.lehigh.edu/faculty/luis-nunes-vicente"
+  },
+  {
+   "from": "philipgill",
+   "to": "murray",
+   "type": "collab",
+   "label": "Stanford 数值优化与软件合作（非师承）",
+   "source": "https://ccom.ucsd.edu/~optimizers/contact/"
+  },
+  {
+   "from": "philipgill",
+   "to": "saunders",
+   "type": "collab",
+   "label": "SNOPT 长期合作（非师承）",
+   "source": "https://ccom.ucsd.edu/~optimizers/contact/"
+  },
+  {
+   "from": "pabloparrilo",
+   "to": "jasonaltschuler",
+   "type": "phd",
+   "source": "https://jasonaltschuler.github.io/altschuler_CV.pdf"
+  },
+  {
+   "from": "jamesrenegar",
+   "to": "benjamingrimmer",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.ams.jhu.edu/~grimmer/"
+  },
+  {
+   "from": "damekdavis",
+   "to": "benjamingrimmer",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://www.ams.jhu.edu/~grimmer/"
+  },
+  {
+   "from": "wotaoyin",
+   "to": "damekdavis",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://damek.github.io/"
+  },
+  {
+   "from": "stefanosoatto",
+   "to": "damekdavis",
+   "type": "phd",
+   "label": "共同博士导师",
+   "source": "https://damek.github.io/"
+  },
+  {
+   "from": "adrianslewis",
+   "to": "dmitriydrusvyatskiy",
+   "type": "phd",
+   "source": "https://sites.math.washington.edu/~ddrusv/CV.pdf"
+  },
+  {
+   "from": "robertmfreund",
+   "to": "haihaolu",
+   "type": "phd",
+   "source": "https://web.mit.edu/haihao/www/haihao_sean_lu_cv.pdf"
+  },
+  {
+   "from": "markdavenport",
+   "to": "andrewmcrae",
+   "type": "phd",
+   "source": "https://admcrae.github.io/"
+  },
+  {
+   "from": "nicolasboumal",
+   "to": "andrewmcrae",
+   "type": "postdoc",
+   "source": "https://admcrae.github.io/"
+  },
+  {
+   "from": "dmitriydrusvyatskiy",
+   "to": "courtneypaquette",
+   "type": "phd",
+   "source": "https://cypaquette.github.io/"
+  },
+  {
+   "from": "pabloparrilo",
+   "to": "hamzafawzi",
+   "type": "phd",
+   "source": "https://www.damtp.cam.ac.uk/user/hf323/"
+  },
+  {
+   "from": "pabloparrilo",
+   "to": "amiraliahmadi",
+   "type": "phd",
+   "source": "https://aaa.princeton.edu/"
+  }
+ ]
+};
+
+const NODE_R = {core:16, pillar:12, pioneer:8, emerging:15};
+const COLOR_MAP = {core:'#2563eb', pillar:'#f59e0b', pioneer:'#94a3b8', emerging:'#059669'};
+const TIER_LABEL = {core:'核心学者', pillar:'重要节点', pioneer:'谱系支点', emerging:'新兴力量'};
+const EDGE_LABEL = {phd:'博士师承', postdoc:'博士后指导', mentor:'阶段指导', collab:'合作（非师承）', influence:'学术影响（非师承）'};
+const EDGE_STYLE = {
+  phd:{color:'#94a3b8',width:1.8,type:'solid',opacity:.78},
+  postdoc:{color:'#f59e0b',width:1.25,type:'dashed',opacity:.85},
+  mentor:{color:'#8b5cf6',width:1.2,type:'dashed',opacity:.78},
+  collab:{color:'#cbd5e1',width:1,type:'dotted',opacity:.7},
+  influence:{color:'#cbd5e1',width:1,type:'dotted',opacity:.58}
+};
+const chart = echarts.init(document.getElementById('chart'));
+
+const nodeIdx = {};
+DATA.nodes.forEach((n,i)=>nodeIdx[n.id]=i);
+const nodeById = id => DATA.nodes.find(n=>n.id===id);
+const escapeHtml = value => String(value==null?'':value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+const isHttp = value => /^https?:\/\//i.test(String(value||''));
+
+const nodes = DATA.nodes.map(n => ({
+  ...n,
+  symbolSize: NODE_R[n.tier]||6,
+  itemStyle: {color: COLOR_MAP[n.tier]||'#cbd5e1', borderColor:'#fff', borderWidth:1.5, shadowBlur: ['core','emerging'].includes(n.tier)?8:3, shadowColor:'rgba(0,0,0,0.12)'},
+  label: {show:true, fontSize: n.tier==='core'?13:n.tier==='emerging'?12:n.tier==='pillar'?11:10, color:'#4b5563', position:'top', distance:6},
+  labelLayout: {hideOverlap:true, moveOverlap:'shiftY'},
+  category: n.tier
+}));
+
+const edges = DATA.edges.map(e => {
+  const style = EDGE_STYLE[e.type]||EDGE_STYLE.influence;
+  return {
+    source: e.from, target: e.to,
+    relationType:e.type, relationLabel:e.label||'', relationSource:e.source||'',
+    lineStyle: {...style},
+    label: {show:false}
+  };
+});
+
+const option = {
+  animation: true,
+  animationDuration: 1000,
+  animationEasingUpdate: 'quinticInOut',
+  tooltip: {trigger:'item', formatter: p => {
+    if(p.dataType==='node') return `<b>${escapeHtml(p.data.name)}</b><br/>${escapeHtml(p.data.name_en||'')}<br/><span style="color:#64748b">${escapeHtml(TIER_LABEL[p.data.tier]||'')}</span>`;
+    const a=nodeById(p.data.source), b=nodeById(p.data.target);
+    return `<b>${escapeHtml((a&&a.name)||p.data.source)} → ${escapeHtml((b&&b.name)||p.data.target)}</b><br/>${escapeHtml(p.data.relationLabel||EDGE_LABEL[p.data.relationType]||'')}`;
+  }},
+  series: [{
+    type:'graph', layout:'force', data:nodes, links:edges, roam:true,
+    emphasis:{focus:'adjacency', lineStyle:{width:3}, label:{fontSize:14}},
+    force:{repulsion:1800, edgeLength:[125,270], gravity:0.03, friction:0.12},
+    zoom:0.28
+  }]
+};
+chart.setOption(option);
+
+const emergingCount = DATA.nodes.filter(n=>n.tier==='emerging').length;
+document.getElementById('stats').textContent = `${DATA.nodes.length} 位学者 · ${DATA.edges.length} 条关系 · ${emergingCount} 位新兴力量`;
+document.getElementById('headerStats').textContent = `更新于 ${DATA.meta.updated} · ${DATA.nodes.length} 位 / ${DATA.edges.length} 条`;
+
+// Search
+const input = document.getElementById('searchInput');
+const sug = document.getElementById('suggestions');
+input.addEventListener('input', () => {
+  const q = input.value.trim().toLowerCase();
+  sug.innerHTML = '';
+  if(!q){sug.style.display='none';return;}
+  const ms = DATA.nodes.filter(n => [n.name,n.name_en,n.affiliation,n.research].some(v=>(v||'').toLowerCase().includes(q))).slice(0,12);
+  if(!ms.length){sug.style.display='none';return;}
+  ms.forEach(n => {
+    const d = document.createElement('div');
+    d.className='item';
+    d.innerHTML = `${escapeHtml(n.name)}<span class="en">${escapeHtml(n.name_en||'')}</span>`;
+    d.onclick = () => { locate(n); sug.style.display='none'; input.value=n.name; };
+    sug.appendChild(d);
+  });
+  sug.style.display='block';
+});
+input.addEventListener('keydown', e => {
+  if(e.key==='Enter'){
+    const q = input.value.trim().toLowerCase();
+    const m = DATA.nodes.find(n => n.name.toLowerCase()===q || (n.name_en||'').toLowerCase()===q);
+    if(m) locate(m);
+  }
+});
+document.addEventListener('click', e => { if(!e.target.closest('#searchBox')) sug.style.display='none'; });
+
+function locate(node){
+  const i = nodeIdx[node.id];
+  chart.dispatchAction({type:'focusNodeAdjacency', seriesIndex:0, dataIndex:i});
+  showDetail(node);
+}
+
+// Filter
+document.querySelectorAll('.filter-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    const active = Array.from(document.querySelectorAll('.filter-chip.active')).map(b=>b.dataset.kind);
+    const mapped = nodes.map(n => ({...n, itemStyle: {...n.itemStyle, opacity: active.includes(n.tier) ? 1 : 0.08}}));
+    const visible = new Set(mapped.filter(n=>active.includes(n.tier)).map(n=>n.id));
+    const mappedEdges = edges.map(e => ({...e, lineStyle:{...e.lineStyle, opacity:visible.has(e.source)&&visible.has(e.target)?((EDGE_STYLE[e.relationType]&&EDGE_STYLE[e.relationType].opacity)||.6):.035}}));
+    chart.setOption({series: [{data: mapped, links:mappedEdges}]});
+  });
+});
+
+function relationList(items){
+  return `<ul class="person-list">${items.map(({person,edge})=>{
+    const note=edge.label?`<span class="relation-note">${escapeHtml(edge.label)}</span>`:'';
+    const source=isHttp(edge.source)?`<a class="relation-source" href="${escapeHtml(edge.source)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">来源↗</a>`:'';
+    return `<li onclick="showDetailById('${escapeHtml(person.id)}')">${escapeHtml(person.name)}${note}${source}</li>`;
+  }).join('')}</ul>`;
+}
+
+function sourceList(sources){
+  const items=(sources||[]).map((source,i)=>{
+    const obj=typeof source==='string'?{label:source,url:isHttp(source)?source:''}:source;
+    const label=escapeHtml((obj&&obj.label)||`来源 ${i+1}`);
+    return obj&&obj.url&&isHttp(obj.url)?`<li><a href="${escapeHtml(obj.url)}" target="_blank" rel="noopener">${label} ↗</a></li>`:`<li>${label}</li>`;
+  }).join('');
+  return items?`<ul class="source-list">${items}</ul>`:'';
+}
+
+// Detail panel
+function showDetail(node){
+  const panel = document.getElementById('detailPanel');
+  const c = document.getElementById('detailContent');
+  panel.classList.add('show');
+
+  const incoming = types => DATA.edges.filter(e=>e.to===node.id&&types.includes(e.type)).map(edge=>({person:nodeById(edge.from),edge})).filter(x=>x.person);
+  const outgoing = types => DATA.edges.filter(e=>e.from===node.id&&types.includes(e.type)).map(edge=>({person:nodeById(edge.to),edge})).filter(x=>x.person);
+  const context = DATA.edges.filter(e=>(e.from===node.id||e.to===node.id)&&['collab','influence'].includes(e.type)).map(edge=>({person:nodeById(edge.from===node.id?edge.to:edge.from),edge})).filter(x=>x.person);
+  const adv=incoming(['phd']), post=incoming(['postdoc']), mentor=incoming(['mentor']);
+  const stu=outgoing(['phd']), pd=outgoing(['postdoc']), mentored=outgoing(['mentor']);
+
+  const badgeClass=node.tier==='emerging'?'status-badge':'status-badge context';
+  let h = `<h2>${escapeHtml(node.name)} <span class="${badgeClass}">${escapeHtml(TIER_LABEL[node.tier]||'')}</span></h2><div class="en-sub">${escapeHtml(node.name_en||'')}</div>`;
+  if(node.affiliation) h += `<div class="info-section"><div class="info-label">机构 / 历史定位</div><div class="info-value">${escapeHtml(node.affiliation)}</div></div>`;
+  if(node.titles&&node.titles.length) h += `<div class="info-section"><div class="info-label">代表性身份与荣誉</div><div class="info-value">${node.titles.map(escapeHtml).join(' · ')}</div></div>`;
+  if(node.phd) h += `<div class="info-section"><div class="info-label">博士</div><div class="info-value">${escapeHtml(node.phd)}</div></div>`;
+  if(node.postdoc) h += `<div class="info-section"><div class="info-label">博后 / 阶段经历</div><div class="info-value">${escapeHtml(node.postdoc)}</div></div>`;
+  if(node.research) h += `<div class="info-section"><div class="info-label">研究方向</div><div class="info-value">${escapeHtml(node.research)}</div></div>`;
+  if(node.bio) h += `<div class="info-section"><div class="info-label">说明</div><div class="info-value">${escapeHtml(node.bio)}</div></div>`;
+  if(adv.length) h += `<div class="info-section"><div class="info-label">博士导师</div>${relationList(adv)}</div>`;
+  if(post.length) h += `<div class="info-section"><div class="info-label">博士后指导</div>${relationList(post)}</div>`;
+  if(mentor.length) h += `<div class="info-section"><div class="info-label">阶段指导（非博士师承）</div>${relationList(mentor)}</div>`;
+  if(stu.length) h += `<div class="info-section"><div class="info-label">博士学生</div>${relationList(stu)}</div>`;
+  if(pd.length) h += `<div class="info-section"><div class="info-label">指导的博士后</div>${relationList(pd)}</div>`;
+  if(mentored.length) h += `<div class="info-section"><div class="info-label">阶段指导</div>${relationList(mentored)}</div>`;
+  if(context.length) h += `<div class="info-section"><div class="info-label">合作 / 学术影响（非师承）</div>${relationList(context)}</div>`;
+  if(node.sources&&node.sources.length) h += `<div class="info-section"><div class="info-label">资料来源</div>${sourceList(node.sources)}</div>`;
+  c.innerHTML = h;
+  panel.scrollTop=0;
+}
+window.showDetailById = (id) => { const n = DATA.nodes.find(x=>x.id===id); if(n) showDetail(n); };
+
+chart.on('click', p => { if(p.dataType==='node') showDetail(p.data); });
+
+function showAudit(){
+  const panel=document.getElementById('detailPanel');
+  const c=document.getElementById('detailContent');
+  panel.classList.add('show');
+  c.innerHTML=`<h2>核验说明</h2><div class="en-sub">${escapeHtml(DATA.meta.updated)} · 持续更新</div>
+    <div class="audit-card">
+      <p>${escapeHtml(DATA.meta.description)}</p>
+      <div class="info-section"><div class="info-label">收录口径</div><div class="info-value">${escapeHtml(DATA.meta.scope)}</div></div>
+      <div class="info-section"><div class="info-label">关系判定</div><ul>
+        <li>实线仅表示有明确记录的博士导师；共同导师分别画边。</li>
+        <li>虚线区分博士后和硕士/阶段指导，不自动等同于博士师承。</li>
+        <li>点线表示合作或思想影响；共同论文、专著或同机构经历本身不能推出师承。</li>
+      </ul></div>
+      <div class="info-section"><div class="info-label">本轮关键纠正</div><ul>
+        <li>删除 Rockafellar → Stephen J. Wright 的同名误连；Wright 的博士来自昆士兰大学。</li>
+        <li>确认 Gasnikov 与 Richtárik 同为 Gorbunov 博士导师，Ali H. Sayed 为 Kun Yuan 博士导师。</li>
+        <li>把 Tseng–Luo、Kunisch–Hintermüller 改为合作，把华罗庚相关边降为学科影响。</li>
+        <li>删除 Toh → Caihua Chen 的重复“联合培养”边，只保留正式博士导师边。</li>
+        <li>补齐 Lin、Bao、Toint 与 d’Aspremont 的多导师分支；将 Tapia 的 Tompkins 论文导师与 Hestenes 学术影响分开。</li>
+      </ul></div>
+      <div class="info-section"><div class="info-label">边界</div><div class="info-value">这是一张可追溯的编辑性学术网络，不是完整名录或实力排名。早期人物、跨国学位档案和部分博士后关系仍可能缺少公开一手材料；页面会保留“待核验”措辞，而不据合作关系推断导师。</div></div>
+      <div class="info-section"><div class="info-label">核验入口</div>${sourceList([
+        {label:'Stephen J. Wright 官方履历',url:'https://wid.wisc.edu/people/stephen-wright/'},
+        {label:'Gorbunov 博士答辩材料',url:'https://eduardgorbunov.github.io/assets/files/PhD_defense.pdf'},
+        {label:'Kun Yuan 个人履历',url:'https://kunyuan827.github.io/'},
+        {label:'SIAG/OPT 奖项记录',url:'https://www.siam.org/programs-initiatives/prizes-awards/activity-group-prizes/siam-activity-group-on-optimization-best-paper-prize/prize-history/'},
+        {label:'INFORMS Optimization Society 青年奖记录',url:'https://connect.informs.org/optimizationsociety/prizes/young-researchers-prize'}
+      ])}</div>
+    </div>`;
+  panel.scrollTop=0;
+}
+document.getElementById('auditBtn').addEventListener('click',showAudit);
+
+function syncHeaderHeight(){
+  const h=document.getElementById('header').offsetHeight;
+  const main=document.getElementById('main');
+  main.style.marginTop=`${h}px`;
+  main.style.height=`calc(100vh - ${h}px)`;
+  chart.resize();
+}
+window.addEventListener('resize',syncHeaderHeight);
+requestAnimationFrame(syncHeaderHeight);
+
+// Fit whole graph into view
+function fitView(){
+  try{
+    const sm = chart.getModel().getSeriesByIndex(0);
+    const ls = sm.getData()._itemLayouts;
+    if(!ls||!ls.length) return;
+    let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
+    ls.forEach(pt=>{ if(!pt)return; if(pt[0]<minX)minX=pt[0]; if(pt[0]>maxX)maxX=pt[0]; if(pt[1]<minY)minY=pt[1]; if(pt[1]>maxY)maxY=pt[1]; });
+    const dom = chart.getDom();
+    const bw=(maxX-minX)+200, bh=(maxY-minY)+200;
+    const zoom = Math.max(0.12, Math.min(1, 0.95*Math.min(dom.clientWidth/bw, dom.clientHeight/bh)));
+    chart.setOption({series:[{zoom:zoom, center:[(minX+maxX)/2,(minY+maxY)/2]}]});
+  }catch(e){}
+}
+let _fitted = false;
+chart.on('finished', ()=>{ if(!_fitted){ _fitted=true; fitView(); } });
+[2000,4000,6000,8000].forEach(t => setTimeout(fitView, t));
+</script>
+</body>
+</html>

@@ -18,6 +18,7 @@ I am Lexiao Lai 赖乐潇, an Assistant Professor in the [Department of Mathemat
 I am recruiting a postdoctoral fellow at HKU Mathematics. The start date is flexible, and the position is open until filled. Interested applicants may send a single PDF containing a CV, 1-2 representative papers, contact information for two referees, and a brief research plan by email.
 
 ## Preprints
+1. Nonsmooth Optimization via Orthogonalized Momentum (with Tianyi Lin and Jiayu Zhang), 2026 [[preprint](https://arxiv.org/abs/2609.13677)]
 1. Convergence of difference inclusions: a diameter criterion and step-size conditions (with Mingzhi Song), 2026 [[preprint](https://arxiv.org/abs/2605.14345)]
 1. Manifold constrained steepest descent for smooth and closed-set optimization (with Kaiwei Yang), 2026 [[preprint](https://arxiv.org/abs/2601.21487)]
 1. Certifying optimality in nonconvex robust PCA (with Pinxi Gong and Jianhao Ma), 2026 [[preprint](https://arxiv.org/abs/2601.21333)]

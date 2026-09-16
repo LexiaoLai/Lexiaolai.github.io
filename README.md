@@ -67,6 +67,50 @@ docker compose up
 
 You should now be able to access the website from `localhost:4000`.
 
+## Updating the CV and a preprint together
+
+The website repository includes one pipeline for keeping the homepage preprint
+list, compiled CV, and downloadable website CV synchronized. The editable
+LaTeX CV and its compiled PDF remain in `~/Desktop/CV` by default; pass
+`--cv-dir` if they are moved.
+
+Add a new arXiv preprint, or update the title of an existing one, in the LaTeX
+source, homepage, compiled CV PDF, and website PDF with one command:
+
+```bash
+python3 scripts/cv_pipeline.py preprint 2605.14345 \
+  --title "Convergence of difference inclusions: a diameter criterion and step-size conditions"
+```
+
+For a new ID, the pipeline verifies the supplied title and obtains its authors
+and year from the official arXiv page. If arXiv is unavailable, provide each
+coauthor in author order with a repeated `--coauthor "Name"` flag and optionally
+`--year YYYY`; use `--solo` for a sole-authored paper.
+
+Add `--stage` to stage exactly `_pages/about.md` and `Lai_Lexiao_CV.pdf` after
+all checks pass. The pipeline never commits or pushes changes. Most titles are
+escaped for LaTeX automatically. If `--title` itself contains LaTeX markup, use
+`--latex-title` to pass the equivalent unescaped markup; the two forms must
+reduce to the same text so later consistency checks remain reliable.
+
+After another kind of CV edit, such as adding a grant, rebuild and install the
+website PDF with:
+
+```bash
+python3 scripts/cv_pipeline.py build
+```
+
+Run a non-destructive consistency check at any time:
+
+```bash
+python3 scripts/cv_pipeline.py check
+```
+
+The pipeline requires Python 3, a full TeX Live or MacTeX installation with
+`latexmk`, and Poppler's `pdfinfo` and `pdftoppm`. Builds happen in temporary
+directories and the website files are replaced only after the LaTeX build,
+PDF hyperlink checks, and page rendering succeed.
+
 ### Using the DevContainer in VS Code
 
 If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
