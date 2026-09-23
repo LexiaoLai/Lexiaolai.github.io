@@ -62,6 +62,14 @@
   font-size: $type-size-7;
 }
 
+.page__footer-visitors {
+  width: 100%;
+  max-width: 300px;
+  // Reserve space so the sticky footer stays clear of the page while the map loads.
+  min-height: 150px;
+  margin: 1em auto 0;
+}
+
 .page__footer-follow {
   ul {
     margin: 0;
